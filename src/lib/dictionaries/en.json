@@ -1,0 +1,262 @@
+{
+  "meta": {
+    "title": "ARDICTECH — AI-Powered Digital Transformation for Manufacturing",
+    "description": "Transform your factory floor into an intelligent, data-driven operation. Proven 40% efficiency gains at scale across 16 factories."
+  },
+  "nav": {
+    "platform": "Platform",
+    "caseStudy": "Case Study",
+    "features": "Features",
+    "technology": "Technology",
+    "roi": "ROI Calculator",
+    "contact": "Contact",
+    "bookDemo": "Book a Demo"
+  },
+  "hero": {
+    "headline": "AI-Powered Digital Transformation for Manufacturing Excellence",
+    "subheadline": "Transform your factory floor into an intelligent, data-driven operation. Proven 40% efficiency gains at scale.",
+    "ctaPrimary": "Book a Demo",
+    "ctaSecondary": "Watch 2-Minute Overview",
+    "trustIndicators": [
+      "1M+ IoT Endpoints Managed",
+      "16 Factories Transformed",
+      "Europe's 4th Largest Ceramics Manufacturer"
+    ]
+  },
+  "platform": {
+    "title": "Complete Manufacturing Intelligence Platform",
+    "subtitle": "Four integrated layers working together to digitize, monitor, predict, and optimize your entire manufacturing operation.",
+    "layers": [
+      {
+        "id": "iot-ignite",
+        "name": "IoT-IGNITE",
+        "tagline": "Data Capture Layer",
+        "description": "Connect and manage millions of IoT endpoints across your factory floor. Real-time data collection from sensors, PLCs, and legacy equipment through a unified gateway infrastructure.",
+        "benefits": [
+          "1M+ endpoints managed at scale",
+          "300K+ gateway integrations",
+          "Protocol-agnostic connectivity"
+        ]
+      },
+      {
+        "id": "armes",
+        "name": "ArMES / MOM",
+        "tagline": "Manufacturing Operations Management",
+        "description": "End-to-end manufacturing execution system that orchestrates production workflows, tracks work-in-progress, and ensures quality standards across every production line.",
+        "benefits": [
+          "Real-time production tracking",
+          "Automated quality checkpoints",
+          "Cross-factory workflow orchestration"
+        ]
+      },
+      {
+        "id": "arai",
+        "name": "ArAI",
+        "tagline": "Predictive Analytics & AI",
+        "description": "Machine learning models trained on your production data to predict equipment failures, optimize energy consumption, and identify quality issues before they escalate.",
+        "benefits": [
+          "Predictive maintenance alerts",
+          "Anomaly detection in real-time",
+          "Continuous model improvement"
+        ]
+      },
+      {
+        "id": "cwf",
+        "name": "CWF",
+        "tagline": "Chat With Your Factory",
+        "description": "Conversational AI interface that lets operators and managers query factory data using natural language. Ask questions, get insights, and trigger actions — all through chat.",
+        "benefits": [
+          "Natural language factory queries",
+          "Instant KPI dashboards on demand",
+          "Role-based access and responses"
+        ]
+      }
+    ]
+  },
+  "caseStudy": {
+    "title": "Transforming Europe's 4th Largest Ceramics Manufacturer",
+    "subtitle": "How Kale Group achieved measurable results across 16 factories with the ARDICTECH platform.",
+    "company": "Kale Group",
+    "challenge": "Kale Group faced critical challenges with manual production monitoring, inconsistent quality across factories, and delayed response to equipment issues. Data silos prevented cross-factory visibility, making strategic decisions slow and reactive.",
+    "solution": "ARDICTECH deployed its full platform stack across all 16 Kale Group factories, integrating IoT sensors with existing equipment, implementing real-time quality monitoring, and enabling predictive maintenance through AI-driven analytics.",
+    "metrics": [
+      { "value": "40%", "label": "Reduction in Quality Defects" },
+      { "value": "35%", "label": "Improvement in OEE" },
+      { "value": "60%", "label": "Faster Issue Response Time" },
+      { "value": "16", "label": "Factories Connected in Real-Time" }
+    ],
+    "quote": {
+      "text": "ARDICTECH transformed how we see and manage our production. For the first time, we have real-time visibility across all 16 factories from a single dashboard.",
+      "author": "Manufacturing Director",
+      "role": "Kale Group"
+    },
+    "cta": "Read Full Case Study"
+  },
+  "roi": {
+    "title": "Calculate Your ROI",
+    "subtitle": "See how much your operation could save with ARDICTECH. Adjust the sliders to match your facility.",
+    "inputs": {
+      "productionLines": "Number of Production Lines",
+      "downtimeHours": "Avg. Downtime Hours / Month",
+      "hourlyCost": "Hourly Production Cost ($)",
+      "defectRate": "Quality Defect Rate (%)"
+    },
+    "outputs": {
+      "totalSavings": "Estimated Annual Savings",
+      "downtimeSavings": "Downtime Savings",
+      "qualitySavings": "Quality Savings",
+      "roiTimeline": "Estimated Payback Period",
+      "months": "months"
+    },
+    "cta": "Get Detailed ROI Analysis"
+  },
+  "features": {
+    "title": "Everything You Need to Modernize Manufacturing",
+    "subtitle": "Eight core capabilities that work together to transform your production floor.",
+    "items": [
+      {
+        "title": "Real-time Production Monitoring",
+        "description": "Track every production line, machine, and operator in real-time. Get instant alerts when KPIs deviate from targets."
+      },
+      {
+        "title": "Predictive Maintenance",
+        "description": "AI models analyze vibration, temperature, and operational patterns to predict equipment failures before they happen."
+      },
+      {
+        "title": "Quality Control Automation",
+        "description": "Automated inspection and defect detection powered by computer vision. Catch quality issues at the source, not the end of the line."
+      },
+      {
+        "title": "Energy Consumption Optimization",
+        "description": "Monitor and optimize energy usage across your facilities. Identify waste patterns and reduce costs with AI-driven recommendations."
+      },
+      {
+        "title": "Conversational Factory Interface",
+        "description": "Ask your factory questions in natural language. CWF turns complex data queries into simple conversations for faster decisions."
+      },
+      {
+        "title": "Cross-Factory Analytics",
+        "description": "Compare performance across all your facilities in a unified dashboard. Identify best practices and replicate success."
+      },
+      {
+        "title": "Legacy System Integration",
+        "description": "Connect with existing PLCs, SCADA, ERP, and MES systems. No rip-and-replace — we work with what you have."
+      },
+      {
+        "title": "Mobile-First Access",
+        "description": "Full platform access from any device. Managers and operators stay connected to the factory floor from anywhere."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "Enterprise-Grade Technology",
+    "subtitle": "Built on proven, scalable infrastructure trusted by the world's leading manufacturers.",
+    "layers": [
+      {
+        "name": "Edge Layer",
+        "description": "IoT devices, sensors, and gateways for data collection at the source.",
+        "technologies": ["MQTT", "OPC-UA", "Modbus", "Edge Computing"]
+      },
+      {
+        "name": "Data Layer",
+        "description": "High-performance storage and processing for time-series and operational data.",
+        "technologies": ["TimescaleDB", "Apache Kafka", "Data Lake", "Redis"]
+      },
+      {
+        "name": "AI Layer",
+        "description": "Machine learning models for prediction, optimization, and anomaly detection.",
+        "technologies": ["TensorFlow", "PyTorch", "MLflow", "Real-time Inference"]
+      },
+      {
+        "name": "Application Layer",
+        "description": "Modern web and mobile interfaces with robust API integrations.",
+        "technologies": ["React", "REST API", "GraphQL", "Mobile SDK"]
+      }
+    ],
+    "certifications": ["ISO 27001", "SOC 2 Type II", "GDPR Compliant"],
+    "cta": "View Technical Documentation"
+  },
+  "testimonials": {
+    "title": "Trusted by Industry Leaders",
+    "subtitle": "Hear from the manufacturing executives who transformed their operations with ARDICTECH.",
+    "items": [
+      {
+        "quote": "ARDICTECH transformed how we see and manage our production. For the first time, we have real-time visibility across all 16 factories from a single dashboard.",
+        "name": "Ahmet Yilmaz",
+        "role": "Manufacturing Director",
+        "company": "Kale Group"
+      },
+      {
+        "quote": "The predictive maintenance module alone saved us millions in unplanned downtime. The ROI was clear within the first quarter.",
+        "name": "Elena Vasquez",
+        "role": "COO",
+        "company": "Continental Ceramics"
+      },
+      {
+        "quote": "Integration with our legacy systems was seamless. The ARDICTECH team understood our technical constraints and worked within them.",
+        "name": "Markus Weber",
+        "role": "IT Director",
+        "company": "Schott Manufacturing"
+      },
+      {
+        "quote": "CWF changed everything for our floor managers. They can now get production insights by simply asking a question instead of navigating complex dashboards.",
+        "name": "Fatma Demir",
+        "role": "VP of Operations",
+        "company": "Eczacibasi Group"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Book Your Demo",
+    "subtitle": "See how ARDICTECH can transform your manufacturing operations. Fill out the form and our team will reach out within 24 hours.",
+    "fields": {
+      "fullName": "Full Name",
+      "email": "Business Email",
+      "company": "Company Name",
+      "jobTitle": "Job Title",
+      "phone": "Phone Number",
+      "facilities": "Number of Production Facilities",
+      "industry": "Industry",
+      "message": "Message",
+      "preferredDate": "Preferred Demo Date"
+    },
+    "facilitiesOptions": ["1", "2–5", "6–10", "11–20", "21+"],
+    "industryOptions": ["Ceramics", "Automotive", "Electronics", "Food & Beverage", "Other"],
+    "submit": "Book Your Demo",
+    "success": "Thank you! Our team will contact you within 24 hours to schedule your demo.",
+    "error": "Something went wrong. Please try again or email us directly at sales@ardictech.com.tr.",
+    "privacy": "By submitting this form, you agree to our Privacy Policy. We respect your data and comply with GDPR.",
+    "required": "Required",
+    "validation": {
+      "emailInvalid": "Please enter a valid business email address.",
+      "required": "This field is required."
+    }
+  },
+  "footer": {
+    "tagline": "AI-powered digital transformation for manufacturing excellence.",
+    "location": "Istanbul, Turkey",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "legal": "Legal",
+    "links": {
+      "about": "About Us",
+      "platform": "Platform",
+      "caseStudies": "Case Studies",
+      "blog": "Resources",
+      "contact": "Contact",
+      "careers": "Careers"
+    },
+    "legalLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "newsletter": {
+      "title": "Subscribe to Industry 4.0 Insights",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "gdpr": "I agree to receive email updates. Unsubscribe anytime."
+    },
+    "copyright": "© 2026 ARDICTECH. All rights reserved."
+  }
+}

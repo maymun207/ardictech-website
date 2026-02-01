@@ -1,10 +1,19 @@
-import type { Metadata } from "next";
+import { Inter, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "Ardic Tech",
-  description: "Ardic Tech website",
-};
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+  weight: ["400", "600", "700"],
+});
+
+const sourceSans = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-source-sans",
+  display: "swap",
+  weight: ["400", "600"],
+});
 
 export default function RootLayout({
   children,
@@ -12,8 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>{children}</body>
+    <html suppressHydrationWarning>
+      <body className={`${inter.variable} ${sourceSans.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }
