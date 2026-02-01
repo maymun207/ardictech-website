@@ -42,7 +42,9 @@ export default function Header({ dict, locale }: HeaderProps) {
         {/* Logo */}
         <a
           href={`/${locale}`}
-          className="font-heading text-xl font-bold text-primary"
+          className={`font-heading text-xl font-bold transition-colors ${
+            scrolled ? "text-primary" : "text-white"
+          }`}
         >
           ARDICTECH
         </a>
