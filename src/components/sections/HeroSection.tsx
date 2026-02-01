@@ -37,7 +37,7 @@ export default function HeroSection({ dict }: HeroSectionProps) {
               {hero.ctaPrimary}
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
-            <Button href="#platform" variant="secondary" size="lg" className="bg-transparent border-white text-white hover:bg-white hover:text-primary">
+            <Button href="#platform" variant="ghost" size="lg" className="border-2 border-white text-white hover:bg-white hover:text-primary">
               <Play className="mr-2 h-5 w-5" />
               {hero.ctaSecondary}
             </Button>
