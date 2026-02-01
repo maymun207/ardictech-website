@@ -69,6 +69,7 @@ export interface Dictionary {
       roiTimeline: string;
       months: string;
     };
+    disclaimer: string;
     cta: string;
   };
   features: {
