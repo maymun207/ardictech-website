@@ -81,7 +81,16 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
           aria-hidden={index !== currentSlide}
         >
           {/* Background Image */}
-          <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0"
+            style={
+              slide.id === "chat-with-factory"
+                ? { transform: "translateX(25%)" }
+                : slide.id === "sentient-factory"
+                ? { transform: "translateY(15%)" }
+                : undefined
+            }
+          >
             <Image
               src={slide.image}
               alt=""
@@ -90,8 +99,14 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
               priority={index === 0}
               quality={90}
             />
-            {/* Gradient Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/50 to-transparent" />
+            {/* Gradient Overlay - Extended darker area for better text readability */}
+            <div 
+              className={`absolute inset-0 ${
+                slide.id === "chat-with-factory"
+                  ? "bg-gradient-to-r from-black/95 from-0% via-black/70 via-35% to-transparent to-50%"
+                  : "bg-gradient-to-r from-black/95 from-0% via-black/80 via-40% via-black/50 via-60% to-transparent"
+              }`}
+            />
           </div>
 
           {/* Content */}
@@ -115,9 +130,13 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
                   {slide.description}
                 </p>
               )}
+            </div>
+          </div>
 
-              {/* CTAs */}
-              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          {/* CTAs - Fixed position in lower half of screen */}
+          <div className="absolute top-[65%] left-0 right-0 z-30">
+            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+              <div className="max-w-3xl flex flex-col gap-4 sm:flex-row">
                 <Button href="#contact" variant="primary" size="lg">
                   {slide.ctaPrimary}
                   <ArrowRight className="ml-2 h-5 w-5" />
