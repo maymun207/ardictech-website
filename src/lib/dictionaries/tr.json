@@ -64,21 +64,21 @@
         "id": "cwf",
         "name": "CWF",
         "tagline": "Fabrikanızla Sohbet Edin",
-        "description": "Operatörlerin ve yöneticilerin doğal dil kullanarak fabrika verilerini sorgulamasını sağlayan konuşma yapay zekası arayüzü. Soru sorun, içgörü alın ve eylemleri tetikleyin — hepsi sohbet yoluyla.",
+        "description": "Kritik üretim sorularınıza saatler değil, saniyeler içinde anında cevaplar alın. '3 numaralı hat neden durdu?' veya 'Kalite trendlerini göster' gibi sorular sorun ve hemen eyleme geçirilebilir içgörüler elde edin—panel yok, gecikme yok.",
         "benefits": [
-          "Doğal dil fabrika sorguları",
-          "İsteğe bağlı anlık KPI panoları",
-          "Rol tabanlı erişim ve yanıtlar"
+          "Karar süresini saatlerden saniyelere indirin",
+          "Teknik olmayan yöneticilere veri erişimi sağlayın",
+          "Panel navigasyon karmaşıklığını ortadan kaldırın"
         ]
       }
     ]
   },
   "caseStudy": {
     "title": "Avrupa'nın 4. Büyük Seramik Üreticisinin Dönüşümü",
-    "subtitle": "Kale Grubu'nun ARDICTECH platformu ile 16 fabrikada nasıl ölçülebilir sonuçlar elde ettiğini keşfedin.",
-    "company": "Kale Grubu",
-    "challenge": "Kale Grubu, manuel üretim izleme, fabrikalar arasında tutarsız kalite ve ekipman sorunlarına gecikmeli müdahale gibi kritik zorluklarla karşı karşıyaydı. Veri siloları, fabrikalar arası görünürlüğü engelleyerek stratejik kararları yavaş ve reaktif hale getiriyordu.",
-    "solution": "ARDICTECH, tüm 16 Kale Grubu fabrikasına tam platform yığınını dağıtarak IoT sensörlerini mevcut ekipmanla entegre etti, gerçek zamanlı kalite izleme uyguladı ve yapay zeka odaklı analitik aracılığıyla öngörücü bakımı etkinleştirdi.",
+    "subtitle": "Önde gelen bir Avrupa seramik üreticisinin ARDICTECH platformu ile 16 fabrikada nasıl ölçülebilir sonuçlar elde ettiğini keşfedin.",
+    "company": "Önde Gelen Avrupa Seramik Üreticisi",
+    "challenge": "Bu üretici, manuel üretim izleme, fabrikalar arasında tutarsız kalite ve ekipman sorunlarına gecikmeli müdahale gibi kritik zorluklarla karşı karşıyaydı. Veri siloları, fabrikalar arası görünürlüğü engelleyerek stratejik kararları yavaş ve reaktif hale getiriyordu.",
+    "solution": "ARDICTECH, tüm 16 fabrikaya tam platform yığınını dağıtarak IoT sensörlerini mevcut ekipmanla entegre etti, gerçek zamanlı kalite izleme uyguladı ve yapay zeka odaklı analitik aracılığıyla öngörücü bakımı etkinleştirdi.",
     "metrics": [
       { "value": "%40", "label": "Kalite Hatalarında Azalma" },
       { "value": "%35", "label": "OEE İyileştirmesi" },
@@ -88,7 +88,7 @@
     "quote": {
       "text": "ARDICTECH, üretimimizi görme ve yönetme şeklimizi dönüştürdü. İlk kez tek bir panodan 16 fabrikamızın tamamında gerçek zamanlı görünürlüğe sahibiz.",
       "author": "Üretim Direktörü",
-      "role": "Kale Grubu"
+      "role": "Önde Gelen Avrupa Seramik Üreticisi"
     },
     "cta": "Tam Başarı Hikayesini Oku"
   },
@@ -108,7 +108,8 @@
       "roiTimeline": "Tahmini Geri Ödeme Süresi",
       "months": "ay"
     },
-    "cta": "Detaylı ROI Analizi Alın"
+    "cta": "Detaylı ROI Analizi Alın",
+    "disclaimer": "* Tahminler üretim müşterilerinden elde edilen sektör ortalamalarına dayanmaktadır. Gerçek sonuçlar tesis, uygulama kapsamı ve operasyonel olgunluğa göre değişir."
   },
   "features": {
     "title": "Üretimi Modernize Etmek İçin İhtiyacınız Olan Her Şey",
@@ -182,25 +183,25 @@
     "items": [
       {
         "quote": "ARDICTECH, üretimimizi görme ve yönetme şeklimizi dönüştürdü. İlk kez tek bir panodan 16 fabrikamızın tamamında gerçek zamanlı görünürlüğe sahibiz.",
-        "name": "Ahmet Yılmaz",
+        "name": "Üretim Direktörü",
         "role": "Üretim Direktörü",
-        "company": "Kale Grubu"
+        "company": "Önde Gelen Avrupa Seramik Üreticisi"
       },
       {
         "quote": "Öngörücü bakım modülü tek başına plansız duruşlarda milyonlarca tasarruf sağladı. ROI ilk çeyrekte netleşti.",
-        "name": "Elena Vasquez",
+        "name": "İcra Kurulu Başkanı",
         "role": "COO",
         "company": "Continental Ceramics"
       },
       {
         "quote": "Eski sistemlerimizle entegrasyon sorunsuz oldu. ARDICTECH ekibi teknik kısıtlamalarımızı anladı ve bunlara uygun çalıştı.",
-        "name": "Markus Weber",
+        "name": "BT Direktörü",
         "role": "BT Direktörü",
         "company": "Schott Manufacturing"
       },
       {
         "quote": "CWF, saha müdürlerimiz için her şeyi değiştirdi. Artık karmaşık panolarda gezinmek yerine basitçe soru sorarak üretim içgörüleri alabiliyorlar.",
-        "name": "Fatma Demir",
+        "name": "Operasyonlardan Sorumlu Başkan Yardımcısı",
         "role": "Operasyonlardan Sorumlu Başkan Yardımcısı",
         "company": "Eczacıbaşı Grubu"
       }

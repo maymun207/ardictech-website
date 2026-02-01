@@ -64,21 +64,21 @@
         "id": "cwf",
         "name": "CWF",
         "tagline": "Chat With Your Factory",
-        "description": "Conversational AI interface that lets operators and managers query factory data using natural language. Ask questions, get insights, and trigger actions — all through chat.",
+        "description": "Get instant answers to critical production questions in seconds, not hours. Ask 'Why is Line 3 down?' or 'Show me quality trends' and receive actionable insights immediately—no dashboards, no delays.",
         "benefits": [
-          "Natural language factory queries",
-          "Instant KPI dashboards on demand",
-          "Role-based access and responses"
+          "Reduce decision time from hours to seconds",
+          "Empower non-technical managers with data access",
+          "Eliminate dashboard navigation complexity"
         ]
       }
     ]
   },
   "caseStudy": {
     "title": "Transforming Europe's 4th Largest Ceramics Manufacturer",
-    "subtitle": "How Kale Group achieved measurable results across 16 factories with the ARDICTECH platform.",
-    "company": "Kale Group",
-    "challenge": "Kale Group faced critical challenges with manual production monitoring, inconsistent quality across factories, and delayed response to equipment issues. Data silos prevented cross-factory visibility, making strategic decisions slow and reactive.",
-    "solution": "ARDICTECH deployed its full platform stack across all 16 Kale Group factories, integrating IoT sensors with existing equipment, implementing real-time quality monitoring, and enabling predictive maintenance through AI-driven analytics.",
+    "subtitle": "How a leading European ceramics manufacturer achieved measurable results across 16 factories with the ARDICTECH platform.",
+    "company": "Leading European Ceramics Manufacturer",
+    "challenge": "This manufacturer faced critical challenges with manual production monitoring, inconsistent quality across factories, and delayed response to equipment issues. Data silos prevented cross-factory visibility, making strategic decisions slow and reactive.",
+    "solution": "ARDICTECH deployed its full platform stack across all 16 factories, integrating IoT sensors with existing equipment, implementing real-time quality monitoring, and enabling predictive maintenance through AI-driven analytics.",
     "metrics": [
       { "value": "40%", "label": "Reduction in Quality Defects" },
       { "value": "35%", "label": "Improvement in OEE" },
@@ -88,7 +88,7 @@
     "quote": {
       "text": "ARDICTECH transformed how we see and manage our production. For the first time, we have real-time visibility across all 16 factories from a single dashboard.",
       "author": "Manufacturing Director",
-      "role": "Kale Group"
+      "role": "Leading European Ceramics Manufacturer"
     },
     "cta": "Read Full Case Study"
   },
@@ -108,7 +108,8 @@
       "roiTimeline": "Estimated Payback Period",
       "months": "months"
     },
-    "cta": "Get Detailed ROI Analysis"
+    "cta": "Get Detailed ROI Analysis",
+    "disclaimer": "* Estimates based on industry averages from manufacturing clients. Actual results vary by facility, implementation scope, and operational maturity."
   },
   "features": {
     "title": "Everything You Need to Modernize Manufacturing",
@@ -182,25 +183,25 @@
     "items": [
       {
         "quote": "ARDICTECH transformed how we see and manage our production. For the first time, we have real-time visibility across all 16 factories from a single dashboard.",
-        "name": "Ahmet Yilmaz",
+        "name": "Manufacturing Director",
         "role": "Manufacturing Director",
-        "company": "Kale Group"
+        "company": "Leading European Ceramics Manufacturer"
       },
       {
         "quote": "The predictive maintenance module alone saved us millions in unplanned downtime. The ROI was clear within the first quarter.",
-        "name": "Elena Vasquez",
+        "name": "Chief Operating Officer",
         "role": "COO",
         "company": "Continental Ceramics"
       },
       {
         "quote": "Integration with our legacy systems was seamless. The ARDICTECH team understood our technical constraints and worked within them.",
-        "name": "Markus Weber",
+        "name": "IT Director",
         "role": "IT Director",
         "company": "Schott Manufacturing"
       },
       {
         "quote": "CWF changed everything for our floor managers. They can now get production insights by simply asking a question instead of navigating complex dashboards.",
-        "name": "Fatma Demir",
+        "name": "VP of Operations",
         "role": "VP of Operations",
         "company": "Eczacibasi Group"
       }

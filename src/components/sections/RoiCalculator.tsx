@@ -126,6 +126,10 @@ export default function RoiCalculator({ dict }: RoiCalculatorProps) {
             </div>
           </div>
 
+          <p className="mt-4 text-xs text-neutral-400 text-center">
+            {roi.disclaimer}
+          </p>
+
           <div className="mt-8 text-center">
             <Button href="#contact">
               {roi.cta}
