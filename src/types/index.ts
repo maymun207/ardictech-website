@@ -15,11 +15,15 @@ export interface Dictionary {
     bookDemo: string;
   };
   hero: {
-    headline: string;
-    subheadline: string;
-    ctaPrimary: string;
-    ctaSecondary: string;
-    trustIndicators: string[];
+    slides: {
+      id: string;
+      headline: string;
+      subheadline: string;
+      description: string;
+      image: string;
+      ctaPrimary: string;
+      ctaSecondary: string;
+    }[];
   };
   platform: {
     title: string;

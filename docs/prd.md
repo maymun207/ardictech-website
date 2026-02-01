@@ -45,22 +45,72 @@ Build a professional, conversion-focused enterprise website for ARDICTECH showca
 
 ## Feature Requirements
 
-### F1: Hero Section (Critical)
-**Purpose:** Capture attention and communicate value proposition immediately
+### F1: Hero Section Carousel (Critical)
+**Purpose:** Capture attention and communicate value proposition through rotating hero slides showcasing different aspects of the platform
 
-**Requirements:**
-- [ ] Headline: "AI-Powered Digital Transformation for Manufacturing Excellence"
-- [ ] Subheadline: "Transform your factory floor into an intelligent, data-driven operation. Proven 40% efficiency gains at scale."
-- [ ] Primary CTA: "Book a Demo" (prominent, above fold)
-- [ ] Secondary CTA: "Watch 2-Minute Overview"
-- [ ] Background: Industrial manufacturing imagery or subtle animated data visualization
-- [ ] Trust indicators: "1M+ IoT Endpoints Managed | 16 Factories Transformed | Europe's 4th Largest Ceramics Manufacturer"
-- [ ] Mobile: Single column, hero image as background with overlay
+**Format:** Auto-rotating carousel with 3 slides (5-7 seconds each), manual navigation controls, pause on hover
+
+**Brand Elements (All Slides):**
+- [ ] Logo: ARDICTECH with purple gradient A icon
+- [ ] Tagline: "DIGITAL TRANSFORMATION FOR MANUFACTURING"
+- [ ] Navigation: Solutions, Architecture, ROI-Value, Case Studies, Company
+- [ ] Primary CTA: "Book a Demo" (prominent, consistent across slides)
+- [ ] Secondary CTA: "Explore Solutions" or slide-specific action
+
+**Slide 1: "Cultivating Intelligent Manufacturing"**
+- [ ] Headline: "Cultivating Intelligent Manufacturing"
+- [ ] Visual concept: Digital brain/neural network (cyan/purple color scheme)
+- [ ] Background image: `/assets/IMG_0827-9f13a1da-4adc-4544-87ef-3625c2c68c20.png` (digital brain network)
+- [ ] Focus: AI-driven manufacturing intelligence
+- [ ] Animation: Subtle pulse/glow on neural network connections
+- [ ] CTA: "Discover Our AI Solutions"
+
+**Slide 2: "The Sentient Factory"**
+- [ ] Headline: "The Sentient Factory."
+- [ ] Subheadline: "Talk to your Data."
+- [ ] Supporting text: "We bridge the gap between raw industrial data and manufacturing intelligence, delivering measurable uplift in OEE and optimizing energy BOM"
+- [ ] Visual concept: Holographic industrial interface with hand interaction
+- [ ] Background image: `/assets/IMG_0823-36a3a1f5-fa33-4803-99e2-de3a29070c76.png` (holographic interface)
+- [ ] Focus: Data-driven insights and measurable ROI
+- [ ] Key metrics highlighted: OEE improvement, Energy BOM optimization
+- [ ] CTA: "Calculate Your ROI"
+
+**Slide 3: "CWF: Chat With Your Factory"**
+- [ ] Headline: "CWF: Chat With Your Factory"
+- [ ] Subheadline: "From Monitoring to Conversation."
+- [ ] Supporting text: "If you could speak to your infrastructure, what would it say?"
+- [ ] Visual concept: Mobile app (Factory Bot) showing conversational AI interface
+- [ ] Background image: `/assets/IMG_0825-a1475408-97f7-45b5-94c9-5a023791f8f8.png` (Factory Bot mobile app)
+- [ ] App interface shows:
+  - Real-time status queries
+  - Line efficiency metrics (94.5K Stable)
+  - Alerts and warnings
+  - Data visualizations (throughput, temp, vibration)
+  - Recommended actions
+- [ ] Focus: Conversational AI, mobile-first access
+- [ ] CTA: "See CWF in Action"
+
+**Carousel Controls:**
+- [ ] Dot indicators (bottom center) showing current slide
+- [ ] Arrow navigation (left/right)
+- [ ] Auto-advance: 6 seconds per slide
+- [ ] Pause on hover
+- [ ] Swipe gestures on mobile
+- [ ] Keyboard navigation (arrow keys)
+
+**Mobile Optimization:**
+- [ ] Full-screen slides with vertical layout
+- [ ] Headlines scale appropriately (max 2-3 lines)
+- [ ] Touch/swipe enabled
+- [ ] Single CTA button per slide (primary only)
+- [ ] Simplified animations for performance
 
 **Success criteria:**
-- Hero visible without scrolling on all devices
-- CTA buttons >3% click-through rate
-- Page load time <2 seconds
+- Hero carousel visible without scrolling on all devices
+- Each slide viewed by >60% of visitors
+- CTA buttons >3% aggregate click-through rate
+- Page load time <2 seconds (with optimized images)
+- Carousel doesn't cause layout shift
 
 ### F2: Platform Overview Section
 **Purpose:** Explain the 4-layer platform architecture

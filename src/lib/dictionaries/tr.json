@@ -13,14 +13,34 @@
     "bookDemo": "Demo Talep Et"
   },
   "hero": {
-    "headline": "Üretim Mükemmelliği İçin Yapay Zeka Destekli Dijital Dönüşüm",
-    "subheadline": "Fabrika zemininizi akıllı, veri odaklı bir operasyona dönüştürün. Ölçekte kanıtlanmış %40 verimlilik artışı.",
-    "ctaPrimary": "Demo Talep Et",
-    "ctaSecondary": "2 Dakikalık Tanıtımı İzle",
-    "trustIndicators": [
-      "1M+ IoT Uç Noktası Yönetiliyor",
-      "16 Fabrika Dönüştürüldü",
-      "Avrupa'nın 4. Büyük Seramik Üreticisi"
+    "slides": [
+      {
+        "id": "intelligent-manufacturing",
+        "headline": "Akıllı Üretimi Geliştirmek",
+        "subheadline": "",
+        "description": "",
+        "image": "/images/hero/brain-network.png",
+        "ctaPrimary": "Yapay Zeka Çözümlerimizi Keşfedin",
+        "ctaSecondary": "Demo Talep Et"
+      },
+      {
+        "id": "sentient-factory",
+        "headline": "Duyarlı Fabrika.",
+        "subheadline": "Verilerinizle Konuşun.",
+        "description": "Ham endüstriyel veriler ile üretim zekası arasındaki boşluğu kapatıyor, OEE'de ölçülebilir artış sağlıyor ve enerji BOM'unu optimize ediyoruz",
+        "image": "/images/hero/holographic-interface.png",
+        "ctaPrimary": "ROI'nizi Hesaplayın",
+        "ctaSecondary": "Demo Talep Et"
+      },
+      {
+        "id": "chat-with-factory",
+        "headline": "CWF: Fabrikanızla Sohbet Edin",
+        "subheadline": "İzlemeden Konuşmaya.",
+        "description": "Altyapınızla konuşabilseydiniz, ne söylerdi?",
+        "image": "/images/hero/factory-bot-mobile.png",
+        "ctaPrimary": "CWF'yi Çalışırken Görün",
+        "ctaSecondary": "Demo Talep Et"
+      }
     ]
   },
   "platform": {

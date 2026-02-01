@@ -13,14 +13,34 @@
     "bookDemo": "Book a Demo"
   },
   "hero": {
-    "headline": "AI-Powered Digital Transformation for Manufacturing Excellence",
-    "subheadline": "Transform your factory floor into an intelligent, data-driven operation. Proven 40% efficiency gains at scale.",
-    "ctaPrimary": "Book a Demo",
-    "ctaSecondary": "Watch 2-Minute Overview",
-    "trustIndicators": [
-      "1M+ IoT Endpoints Managed",
-      "16 Factories Transformed",
-      "Europe's 4th Largest Ceramics Manufacturer"
+    "slides": [
+      {
+        "id": "intelligent-manufacturing",
+        "headline": "Cultivating Intelligent Manufacturing",
+        "subheadline": "",
+        "description": "",
+        "image": "/images/hero/brain-network.png",
+        "ctaPrimary": "Discover Our AI Solutions",
+        "ctaSecondary": "Book a Demo"
+      },
+      {
+        "id": "sentient-factory",
+        "headline": "The Sentient Factory.",
+        "subheadline": "Talk to your Data.",
+        "description": "We bridge the gap between raw industrial data and manufacturing intelligence, delivering measurable uplift in OEE and optimizing energy BOM",
+        "image": "/images/hero/holographic-interface.png",
+        "ctaPrimary": "Calculate Your ROI",
+        "ctaSecondary": "Book a Demo"
+      },
+      {
+        "id": "chat-with-factory",
+        "headline": "CWF: Chat With Your Factory",
+        "subheadline": "From Monitoring to Conversation.",
+        "description": "If you could speak to your infrastructure, what would it say?",
+        "image": "/images/hero/factory-bot-mobile.png",
+        "ctaPrimary": "See CWF in Action",
+        "ctaSecondary": "Book a Demo"
+      }
     ]
   },
   "platform": {

@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import HeroSection from "@/components/sections/HeroSection";
+import HeroCarousel from "@/components/sections/HeroCarousel";
 import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
@@ -20,7 +20,7 @@ export default async function HomePage({
 
   return (
     <main id="main-content">
-      <HeroSection dict={dict} />
+      <HeroCarousel dict={dict} />
       <PlatformOverview dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />
