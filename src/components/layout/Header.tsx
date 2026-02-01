@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
 import type { Dictionary, Locale } from "@/types";
 
@@ -42,11 +43,31 @@ export default function Header({ dict, locale }: HeaderProps) {
         {/* Logo */}
         <a
           href={`/${locale}`}
-          className={`font-heading text-xl font-bold transition-colors ${
-            scrolled ? "text-primary" : "text-white"
-          }`}
+          className="flex items-center gap-3"
         >
-          ARDICTECH
+          <div className="relative h-16 w-16 flex-shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="ARDICTECH"
+              width={64}
+              height={64}
+              className="h-full w-full object-contain"
+              priority
+              unoptimized
+            />
+          </div>
+          <div className="flex flex-col">
+            <span className={`font-heading text-xl font-bold leading-tight transition-colors ${
+              scrolled ? "text-primary" : "text-white"
+            }`}>
+              ARDICTECH
+            </span>
+            <span className={`text-[11px] font-medium leading-tight transition-colors ${
+              scrolled ? "text-neutral-600" : "text-white/90"
+            }`}>
+              Digital Transformation for Manufacturing
+            </span>
+          </div>
         </a>
 
         {/* Desktop nav */}
