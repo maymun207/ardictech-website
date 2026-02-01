@@ -1,11 +1,12 @@
 import type { Locale } from "@/types";
 import type { Dictionary } from "@/types";
+import en from "@/lib/dictionaries/en.json";
+import tr from "@/lib/dictionaries/tr.json";
+import { isValidLocale } from "@/lib/i18n/config";
 
-const dictionaries: Record<Locale, () => Promise<Dictionary>> = {
-  en: () => import("@/lib/dictionaries/en.json").then((m) => m.default),
-  tr: () => import("@/lib/dictionaries/tr.json").then((m) => m.default),
-};
+const dictionaries: Record<Locale, Dictionary> = { en, tr };
 
-export async function getDictionary(locale: Locale): Promise<Dictionary> {
-  return dictionaries[locale]();
+export async function getDictionary(locale: string): Promise<Dictionary | null> {
+  if (!isValidLocale(locale)) return null;
+  return dictionaries[locale];
 }

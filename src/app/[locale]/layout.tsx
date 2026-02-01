@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { locales } from "@/lib/i18n/config";
+import { notFound } from "next/navigation";
+import { locales, isValidLocale } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import type { Locale } from "@/types";
 import {
@@ -20,7 +21,10 @@ export async function generateMetadata({
   params: Promise<{ locale: string }>;
 }): Promise<Metadata> {
   const { locale } = await params;
-  const dict = await getDictionary(locale as Locale);
+  if (!isValidLocale(locale)) return {};
+
+  const dict = await getDictionary(locale);
+  if (!dict) return {};
 
   return {
     title: dict.meta.title,
@@ -50,7 +54,10 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as Locale);
+  if (!isValidLocale(locale)) notFound();
+
+  const dict = await getDictionary(locale);
+  if (!dict) notFound();
 
   return (
     <>

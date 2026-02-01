@@ -1,5 +1,5 @@
+import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import type { Locale } from "@/types";
 import HeroSection from "@/components/sections/HeroSection";
 import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
@@ -15,7 +15,8 @@ export default async function HomePage({
   params: Promise<{ locale: string }>;
 }) {
   const { locale } = await params;
-  const dict = await getDictionary(locale as Locale);
+  const dict = await getDictionary(locale);
+  if (!dict) notFound();
 
   return (
     <main id="main-content">

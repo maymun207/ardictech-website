@@ -14,9 +14,9 @@ export default function SectionWrapper({
   return (
     <section
       id={id}
-      className={`py-20 px-4 sm:px-6 lg:px-8 ${dark ? "bg-neutral-900 text-white" : "bg-white"} ${className}`}
+      className={`py-20 ${dark ? "bg-neutral-900 text-white" : "bg-white"} ${className}`}
     >
-      <div className="mx-auto max-w-7xl">{children}</div>
+      <div className="mx-auto max-w-6xl px-6 md:px-10 lg:px-20">{children}</div>
     </section>
   );
 }
