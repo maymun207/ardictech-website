@@ -9,38 +9,23 @@ interface EnsoApproachProps {
   dict: Dictionary;
 }
 
-const features = [
-  {
-    id: "architecture",
-    icon: Layers,
-    title: "4-Layer Architecture",
-    description: "From edge to insight, a complete stack built for manufacturing reality.",
-    href: "#platform",
-  },
-  {
-    id: "overlay",
-    icon: Shield,
-    title: "Non-Disruptive Overlay",
-    description: "Connect and enhance — never replace your existing systems.",
-    href: "#platform",
-  },
-  {
-    id: "cwf",
-    icon: MessageSquare,
-    title: "Chat With Your Factory",
-    description: "Ask questions in natural language. Get answers with charts.",
-    href: "#features",
-  },
-  {
-    id: "time-to-value",
-    icon: Zap,
-    title: "Time to Value: Weeks",
-    description: "Proof of value in 8-12 weeks, not years of consulting.",
-    href: "#roi",
-  },
-];
-
 export default function EnsoApproach({ dict }: EnsoApproachProps) {
+  const { ensoApproach } = dict;
+
+  const icons: Record<string, any> = {
+    "architecture": Layers,
+    "overlay": Shield,
+    "cwf": MessageSquare,
+    "time-to-value": Zap,
+  };
+
+  const featureLinks: Record<string, string> = {
+    "architecture": "#platform",
+    "overlay": "#platform",
+    "cwf": "#features",
+    "time-to-value": "#roi",
+  };
+
   return (
     <section className="relative overflow-hidden bg-black py-20 text-white lg:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -49,32 +34,31 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
           <div className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/5 px-5 py-2">
             <span className="h-2 w-2 rounded-full bg-accent" />
             <span className="font-heading text-xs font-semibold uppercase tracking-widest text-accent">
-              The Ensō Approach
+              {ensoApproach.badge}
             </span>
           </div>
         </div>
 
         {/* Heading */}
         <h2 className="mb-6 font-heading text-[2.75rem] font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.5rem]">
-          Connect & enhance — don&apos;t replace
+          {ensoApproach.title}
         </h2>
 
         {/* Description */}
         <p className="mb-12 text-base leading-relaxed text-neutral-400 lg:text-lg lg:max-w-2xl">
-          Our intelligence wrapper reads from your existing systems through secure
-          APIs, building a unified data lake without disrupting operations.
+          {ensoApproach.description}
         </p>
 
         {/* Cards and Image Grid - Aligned */}
         <div className="mb-10 grid gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-20">
           {/* LEFT: Feature Cards Grid */}
           <div className="grid gap-5 sm:grid-cols-2">
-            {features.map((feature) => {
-              const Icon = feature.icon;
+            {ensoApproach.features.map((feature) => {
+              const Icon = icons[feature.id] || Layers;
               return (
                 <a
                   key={feature.id}
-                  href={feature.href}
+                  href={featureLinks[feature.id] || "#"}
                   className="group flex flex-col rounded-2xl border border-neutral-800 bg-neutral-900/40 p-6 transition-all duration-300 hover:border-accent/40 hover:bg-neutral-900/60"
                 >
                   {/* Icon and Title Row */}
@@ -118,7 +102,7 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
             size="lg"
             className="group border-2 border-accent bg-transparent text-accent transition-all duration-300 hover:bg-accent hover:text-black"
           >
-            Learn Our Approach
+            {ensoApproach.cta}
             <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
           </Button>
         </div>

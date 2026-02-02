@@ -8,61 +8,16 @@ interface ValueFirstProps {
   dict: Dictionary;
 }
 
-interface ValueCard {
-  id: string;
-  icon: React.ReactNode;
-  title: string;
-  category: string;
-  metric: string;
-  metricLabel: string;
-  description: string;
-}
-
 export default function ValueFirst({ dict }: ValueFirstProps) {
+  const { valueFirst } = dict;
   const [hoveredCard, setHoveredCard] = useState<string | null>(null);
 
-  const valueCards: ValueCard[] = [
-    {
-      id: "hidden-losses",
-      icon: <Plus className="h-6 w-6" />,
-      title: "Eliminate Hidden Losses",
-      category: "PERFORMANCE OPTIMIZATION",
-      metric: "30%",
-      metricLabel: "TARGET THROUGHPUT",
-      description:
-        "Expose the 'Hidden Factory' by surfacing micro-stops and speed losses that paper logs miss. Typically recovers $8M-$12M in previously dark data loss.",
-    },
-    {
-      id: "quality-drift",
-      icon: <Target className="h-6 w-6" />,
-      title: "Reduce Quality Drift",
-      category: "YIELD MAXIMIZATION",
-      metric: "22%",
-      metricLabel: "YIELD IMPROVEMENT",
-      description:
-        "Identify and eliminate quality variations before they impact yield. Real-time monitoring surfaces defects that traditional QC processes miss, typically improving yield by 15-25%.",
-    },
-    {
-      id: "energy-bom",
-      icon: <Zap className="h-6 w-6" />,
-      title: "Optimize Energy BOM",
-      category: "RESOURCE INTENSITY",
-      metric: "28%",
-      metricLabel: "ENERGY REDUCTION",
-      description:
-        "Reduce energy consumption and material waste through intelligent resource allocation. Typically achieves 20-30% reduction in energy costs and 10-15% reduction in material waste.",
-    },
-    {
-      id: "lead-times",
-      icon: <Clock className="h-6 w-6" />,
-      title: "Sync Lead Times",
-      category: "OPERATIONAL AGILITY",
-      metric: "32%",
-      metricLabel: "LEAD TIME REDUCTION",
-      description:
-        "Synchronize production schedules with demand signals to eliminate bottlenecks and reduce lead times. Typically reduces lead times by 25-35% while improving on-time delivery.",
-    },
-  ];
+  const icons: Record<string, React.ReactNode> = {
+    "hidden-losses": <Plus className="h-6 w-6" />,
+    "quality-drift": <Target className="h-6 w-6" />,
+    "energy-bom": <Zap className="h-6 w-6" />,
+    "lead-times": <Clock className="h-6 w-6" />,
+  };
 
   return (
     <section className="relative bg-black py-24 text-white">
@@ -70,43 +25,45 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
         {/* Section Header */}
         <div className="mb-16">
           <h2 className="font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
-            Where should{" "}
-            <span className="bg-gradient-to-r from-purple-400 via-purple-600 to-blue-500 bg-clip-text text-transparent">
-              digital deliver
-            </span>
-            <br />
-            <span className="bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
-              value first?
-            </span>
+            {valueFirst.title.split(' ').map((word, i) => (
+              i >= 2 && i <= 3 ? (
+                <span key={i} className="bg-gradient-to-r from-purple-400 via-purple-600 to-blue-500 bg-clip-text text-transparent">
+                  {word}{' '}
+                </span>
+              ) : i >= 4 && i <= 5 ? (
+                <span key={i} className="bg-gradient-to-r from-purple-600 via-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                  {word}{' '}
+                </span>
+              ) : (
+                <span key={i}>{word} </span>
+              )
+            ))}
           </h2>
           <p className="mt-6 max-w-3xl text-lg text-neutral-300">
-            Respect your legacy. Reinvent your factory. We identify addressable
-            losses using your existing data before proposing architecture.
+            {valueFirst.subtitle}
           </p>
         </div>
 
         {/* Value Cards Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {valueCards.map((card) => (
+          {valueFirst.cards.map((card) => (
             <div
               key={card.id}
               onMouseEnter={() => setHoveredCard(card.id)}
               onMouseLeave={() => setHoveredCard(null)}
-              className={`group relative overflow-hidden rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 to-black p-6 transition-all duration-500 ${
-                hoveredCard === card.id
+              className={`group relative overflow-hidden rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 to-black p-6 transition-all duration-500 ${hoveredCard === card.id
                   ? "scale-105 border-accent shadow-2xl shadow-accent/20"
                   : "hover:border-neutral-700"
-              }`}
+                }`}
             >
               {/* Icon */}
               <div
-                className={`mb-4 inline-flex rounded-lg p-3 transition-colors ${
-                  hoveredCard === card.id
+                className={`mb-4 inline-flex rounded-lg p-3 transition-colors ${hoveredCard === card.id
                     ? "bg-accent/20 text-accent"
                     : "bg-neutral-800 text-neutral-400"
-                }`}
+                  }`}
               >
-                {card.icon}
+                {icons[card.id] || <Plus className="h-6 w-6" />}
               </div>
 
               {/* Title and Category */}
@@ -117,11 +74,10 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
 
               {/* Hover Content */}
               <div
-                className={`mt-6 transition-all duration-500 ${
-                  hoveredCard === card.id
+                className={`mt-6 transition-all duration-500 ${hoveredCard === card.id
                     ? "max-h-96 opacity-100"
                     : "max-h-0 opacity-0"
-                }`}
+                  }`}
               >
                 <div className="border-l-2 border-accent pl-4">
                   <p className="mb-1 text-xs font-medium uppercase tracking-wider text-neutral-400">
@@ -143,9 +99,8 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
 
               {/* Gradient Overlay */}
               <div
-                className={`pointer-events-none absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 ${
-                  hoveredCard === card.id ? "opacity-100" : ""
-                }`}
+                className={`pointer-events-none absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 transition-opacity duration-500 ${hoveredCard === card.id ? "opacity-100" : ""
+                  }`}
               />
             </div>
           ))}
@@ -158,7 +113,7 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
             className="group relative inline-flex items-center gap-2 rounded-xl border-2 border-accent px-8 py-4 transition-all hover:scale-105 hover:border-accent-light hover:bg-accent/5 hover:shadow-2xl hover:shadow-accent/20"
           >
             <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-accent bg-clip-text text-lg font-bold uppercase tracking-wide text-transparent">
-              Request Executive Assessment
+              {valueFirst.cta}
             </span>
             <span className="text-accent transition-transform group-hover:translate-x-1">
               →

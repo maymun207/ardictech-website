@@ -9,6 +9,7 @@ interface OperationalEnsoProps {
 }
 
 export default function OperationalEnso({ dict }: OperationalEnsoProps) {
+  const { operationalEnso } = dict;
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -18,23 +19,25 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
           {/* Left: Text Content */}
           <div>
             <p className="mb-6 font-heading text-lg font-semibold uppercase tracking-wider text-accent">
-              Operational Ensō:
+              {operationalEnso.badge}
             </p>
-            
+
             <h2 className="mb-8 font-heading text-4xl font-bold uppercase leading-tight sm:text-5xl lg:text-6xl">
-              COMPLETE AND
-              <br />
-              INCOMPLETE
-              <br />
-              AT THE SAME TIME
+              {operationalEnso.title.split(' ').map((word, i) => (
+                <span key={i}>
+                  {word}
+                  {(i === 1 || i === 3) && <br />}
+                  {' '}
+                </span>
+              ))}
             </h2>
 
             <p className="mb-6 text-xl leading-relaxed text-neutral-300">
-              Real Transformation is not a one-time project; It is is a living circle!
+              {operationalEnso.description}
             </p>
 
             <p className="font-heading text-2xl font-bold text-white">
-              Alive, Evolving and Always in Motion.
+              {operationalEnso.tagline}
             </p>
           </div>
 
@@ -58,12 +61,11 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
 
                 {/* Center Text - Hidden by default, visible on hover */}
                 <div
-                  className={`absolute inset-0 flex items-center justify-center p-12 transition-opacity duration-500 ${
-                    isHovered ? "opacity-100" : "opacity-0"
-                  }`}
+                  className={`absolute inset-0 flex items-center justify-center p-12 transition-opacity duration-500 ${isHovered ? "opacity-100" : "opacity-0"
+                    }`}
                 >
                   <p className="text-center text-base italic leading-relaxed text-white sm:text-lg">
-                    Enso is a hand-drawn circle in Japanese Zen art, simple shape with a deep message: presence, clarity, and the idea that everything is connected.
+                    {operationalEnso.hover}
                   </p>
                 </div>
               </div>
@@ -71,9 +73,9 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
               {/* Bottom Text */}
               <div className="mt-8 text-center">
                 <p className="font-heading text-xl font-bold uppercase leading-tight sm:text-2xl">
-                  NOT STATIC PERFECTION
+                  {operationalEnso.bottom1}
                   <br />
-                  BUT DYNAMIC PRECISION
+                  {operationalEnso.bottom2}
                 </p>
               </div>
             </div>

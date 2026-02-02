@@ -154,4 +154,62 @@ export interface Dictionary {
     };
     copyright: string;
   };
+  valueFirst: {
+    title: string;
+    subtitle: string;
+    cta: string;
+    cards: {
+      id: string;
+      title: string;
+      category: string;
+      metric: string;
+      metricLabel: string;
+      description: string;
+    }[];
+  };
+  untappedPotential: {
+    title1: string;
+    title2: string;
+    title3: string;
+    subtitle: string;
+    annualLoss: string;
+    payback: string;
+    roi: string;
+    cards: {
+      id: string;
+      title: string;
+      range: string;
+      category: string;
+      quote: string;
+    }[];
+  };
+  journeyState: {
+    question: string;
+    title: string;
+    states: {
+      id: string;
+      title: string;
+      description: string;
+    }[];
+  };
+  operationalEnso: {
+    badge: string;
+    title: string;
+    description: string;
+    tagline: string;
+    hover: string;
+    bottom1: string;
+    bottom2: string;
+  };
+  ensoApproach: {
+    badge: string;
+    title: string;
+    description: string;
+    cta: string;
+    features: {
+      id: string;
+      title: string;
+      description: string;
+    }[];
+  };
 }

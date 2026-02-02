@@ -8,23 +8,7 @@ interface JourneyStateProps {
 }
 
 export default function JourneyState({ dict }: JourneyStateProps) {
-  const states = [
-    {
-      id: "searcher",
-      title: "THE SEARCHER",
-      description: "Overwhelmed by buzzwords (AI, IIoT, 4.0) but unsure where to start.",
-    },
-    {
-      id: "pilot-prisoner",
-      title: "THE PILOT PRISONER",
-      description: "Successful pilot that failed to scale. 70% of initiatives die here.",
-    },
-    {
-      id: "restart",
-      title: "THE RESTART",
-      description: "Tried, failed, burned budget. Now skeptical of 'blackbox' solutions.",
-    },
-  ];
+  const { journeyState } = dict;
 
   return (
     <section className="relative overflow-hidden bg-black py-24 text-white">
@@ -34,27 +18,24 @@ export default function JourneyState({ dict }: JourneyStateProps) {
           {/* Left: Main Question */}
           <div>
             <h2 className="font-heading text-5xl font-bold uppercase leading-tight sm:text-6xl lg:text-7xl">
-              Which
-              <br />
-              State
-              <br />
-              Are
-              <br />
-              You
-              <br />
-              In?
+              {journeyState.question.split(' ').map((word, i) => (
+                <span key={i}>
+                  {word}
+                  <br />
+                </span>
+              ))}
             </h2>
           </div>
 
           {/* Right: Title + State Cards */}
           <div>
             <h3 className="mb-8 font-heading text-3xl font-bold sm:text-4xl lg:text-5xl">
-              The Path to Digitalization is Rarely Straight
+              {journeyState.title}
             </h3>
 
             {/* Three State Cards */}
             <div className="grid gap-6 md:grid-cols-3">
-              {states.map((state) => (
+              {journeyState.states.map((state) => (
                 <div
                   key={state.id}
                   className="border-l-2 border-accent bg-gradient-to-br from-neutral-900 to-black p-6"
