@@ -3,6 +3,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import HeroCarousel from "@/components/sections/HeroCarousel";
 import ValueFirst from "@/components/sections/ValueFirst";
 import UntappedPotential from "@/components/sections/UntappedPotential";
+import JourneyState from "@/components/sections/JourneyState";
 import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
@@ -25,6 +26,7 @@ export default async function HomePage({
       <HeroCarousel dict={dict} />
       <ValueFirst dict={dict} />
       <UntappedPotential dict={dict} />
+      <JourneyState dict={dict} />
       <PlatformOverview dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />

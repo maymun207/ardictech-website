@@ -179,25 +179,6 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
         </>
       )}
 
-      {/* Dot Indicators */}
-      {slides.length > 1 && (
-        <div className="absolute bottom-8 left-1/2 z-30 flex -translate-x-1/2 gap-2">
-          {slides.map((slide, index) => (
-            <button
-              key={slide.id}
-              onClick={() => goToSlide(index)}
-              disabled={isTransitioning}
-              className={`h-3 w-3 rounded-full transition-all ${
-                index === currentSlide
-                  ? "w-8 bg-white"
-                  : "bg-white/50 hover:bg-white/75"
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-              aria-current={index === currentSlide}
-            />
-          ))}
-        </div>
-      )}
 
       {/* Pause indicator (optional, subtle) */}
       {isPaused && slides.length > 1 && (
