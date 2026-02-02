@@ -4,6 +4,7 @@ import HeroCarousel from "@/components/sections/HeroCarousel";
 import ValueFirst from "@/components/sections/ValueFirst";
 import UntappedPotential from "@/components/sections/UntappedPotential";
 import JourneyState from "@/components/sections/JourneyState";
+import OperationalEnso from "@/components/sections/OperationalEnso";
 import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
@@ -27,6 +28,7 @@ export default async function HomePage({
       <ValueFirst dict={dict} />
       <UntappedPotential dict={dict} />
       <JourneyState dict={dict} />
+      <OperationalEnso dict={dict} />
       <PlatformOverview dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />
