@@ -5,6 +5,8 @@ import ValueFirst from "@/components/sections/ValueFirst";
 import UntappedPotential from "@/components/sections/UntappedPotential";
 import JourneyState from "@/components/sections/JourneyState";
 import OperationalEnso from "@/components/sections/OperationalEnso";
+import EnsoApproach from "@/components/sections/EnsoApproach";
+import PlatformArchitecture from "@/components/sections/PlatformArchitecture";
 import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
@@ -29,6 +31,8 @@ export default async function HomePage({
       <UntappedPotential dict={dict} />
       <JourneyState dict={dict} />
       <OperationalEnso dict={dict} />
+      <EnsoApproach dict={dict} />
+      <PlatformArchitecture dict={dict} />
       <PlatformOverview dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />

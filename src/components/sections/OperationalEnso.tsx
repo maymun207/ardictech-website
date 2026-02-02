@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import type { Dictionary } from "@/types";
 
 interface OperationalEnsoProps {
@@ -44,14 +45,15 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
-              {/* Ensō Circle - You'll need to add the actual image */}
+              {/* Ensō Circle */}
               <div className="relative h-full w-full">
-                {/* Placeholder for Ensō circle - replace with actual image */}
-                <div className="absolute inset-0 rounded-full border-8 border-transparent bg-gradient-to-br from-purple-600 via-purple-400 to-cyan-400 opacity-80" 
-                     style={{
-                       WebkitMask: 'radial-gradient(circle at center, transparent 45%, black 48%)',
-                       mask: 'radial-gradient(circle at center, transparent 45%, black 48%)'
-                     }}
+                {/* Ensō Image */}
+                <Image
+                  src="/images/enso-nobg.png"
+                  alt="Operational Ensō Circle"
+                  fill
+                  className="object-contain"
+                  priority
                 />
 
                 {/* Center Text - Hidden by default, visible on hover */}

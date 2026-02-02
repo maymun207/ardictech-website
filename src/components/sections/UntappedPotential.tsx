@@ -145,7 +145,7 @@ export default function UntappedPotential({ dict }: UntappedPotentialProps) {
                 }`}
               >
                 <p className="text-center text-lg italic leading-relaxed text-white">
-                  "{card.quote}"
+                  &ldquo;{card.quote}&rdquo;
                 </p>
               </div>
             </div>
