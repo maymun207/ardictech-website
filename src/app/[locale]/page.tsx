@@ -1,6 +1,8 @@
 import { notFound } from "next/navigation";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import HeroCarousel from "@/components/sections/HeroCarousel";
+import ValueFirst from "@/components/sections/ValueFirst";
+import UntappedPotential from "@/components/sections/UntappedPotential";
 import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
@@ -21,6 +23,8 @@ export default async function HomePage({
   return (
     <main id="main-content">
       <HeroCarousel dict={dict} />
+      <ValueFirst dict={dict} />
+      <UntappedPotential dict={dict} />
       <PlatformOverview dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />
