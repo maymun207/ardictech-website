@@ -72,8 +72,8 @@ export default function JourneyState({ dict }: JourneyStateProps) {
         </div>
 
         {/* Journey Flow Visualization */}
-        <div className="relative mt-8">
-          <div className="relative mx-auto max-w-6xl">
+        <div className="relative -mt-40 lg:ml-[332px]">
+          <div className="relative max-w-4xl">
             <Image
               src="/images/journey-flow.png"
               alt="Journey to Digitalization Flow"
