@@ -13,30 +13,30 @@ interface JourneyStateProps {
 const HOTSPOT_ZONES = [
   {
     id: 'searcher',
+    nodeId: 'A',
     left: '21.5%',
     top: '80%',
     width: '22%',
     height: '14%',
     cardPos: 'top',
-    label: 'Node A'
   },
   {
     id: 'pilot-prisoner',
+    nodeId: 'pilot-purgatory',
     left: '74%',
     top: '41.5%',
     width: '22%',
     height: '14%',
     cardPos: 'top',
-    label: 'Pilot Purgatory'
   },
   {
     id: 'restart',
+    nodeId: 'E',
     left: '74%',
     top: '6%',
     width: '22%',
     height: '14%',
     cardPos: 'bottom',
-    label: 'Node E'
   },
 ];
 
@@ -63,7 +63,7 @@ export default function JourneyState({ dict }: JourneyStateProps) {
             </h2>
             <div className="mt-8 h-1 w-24 bg-accent/50" />
             <p className="mt-12 text-lg text-neutral-400 max-w-[300px] leading-relaxed">
-              Hover over the <span className="text-accent font-bold">specific labels</span> (Node A, Pilot Purgatory, Node E) to uncover the hidden costs of each state.
+              Hover over the <span className="text-accent font-bold">specific labels</span> to uncover the hidden costs of each state.
             </p>
           </div>
 
@@ -102,56 +102,61 @@ export default function JourneyState({ dict }: JourneyStateProps) {
 
                 {/* Hotspot Hover Zones (Invisible Hit-boxes) */}
                 <div className="absolute inset-0 z-20">
-                  {HOTSPOT_ZONES.map((zone) => (
-                    <div
-                      key={zone.id}
-                      style={{
-                        left: zone.left,
-                        top: zone.top,
-                        width: zone.width,
-                        height: zone.height
-                      }}
-                      className="absolute group/hotspot cursor-help"
-                      onMouseEnter={() => setHoveredNode(zone.id)}
-                      onMouseLeave={() => setHoveredNode(null)}
-                    >
-                      {/* Subtly indicate the hotspot on hover */}
-                      <div className={cn(
-                        "absolute inset-0 rounded-xl border border-accent/0 transition-all duration-500",
-                        hoveredNode === zone.id ? "border-accent/40 bg-accent/5" : "bg-transparent"
-                      )} />
-
-                      {/* Floating Card for Map */}
-                      <div className={cn(
-                        "absolute left-1/2 w-72 -translate-x-1/2 rounded-2xl border border-white/10 bg-black/90 p-6 shadow-[0_0_50px_rgba(0,0,0,0.8)] backdrop-blur-2xl transition-all duration-500 z-50",
-                        zone.cardPos === 'bottom' ? 'top-full mt-6' : 'bottom-full mb-6',
-                        hoveredNode === zone.id ? "visible translate-y-0 opacity-100 scale-100" : "invisible translate-y-4 opacity-0 scale-95"
-                      )}>
-                        {/* Status Badge */}
-                        <div className="mb-3 flex items-center gap-2">
-                          <div className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
-                          <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent/80">Diagnostic Insight</span>
-                        </div>
-
-                        <h4 className="mb-2 text-xl font-bold text-white tracking-tight">
-                          {journeyState.states.find(s => s.id === zone.id)?.title}
-                        </h4>
-
-                        <p className="text-sm leading-relaxed text-neutral-300">
-                          {journeyState.states.find(s => s.id === zone.id)?.description}
-                        </p>
-
-                        {/* Connection Arrow */}
+                  {HOTSPOT_ZONES.map((zone) => {
+                    const nodeLabel = journeyState.nodes.find(n => n.id === zone.nodeId)?.label ||
+                      journeyState.traps.find(t => t.id === zone.nodeId)?.label ||
+                      zone.nodeId;
+                    return (
+                      <div
+                        key={zone.id}
+                        style={{
+                          left: zone.left,
+                          top: zone.top,
+                          width: zone.width,
+                          height: zone.height
+                        }}
+                        className="absolute group/hotspot cursor-help"
+                        onMouseEnter={() => setHoveredNode(zone.id)}
+                        onMouseLeave={() => setHoveredNode(null)}
+                      >
+                        {/* Subtly indicate the hotspot on hover */}
                         <div className={cn(
-                          "absolute left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 border-white/10 bg-black/90",
-                          zone.cardPos === 'bottom' ? "-top-2 border-t border-l" : "-bottom-2 border-b border-r"
+                          "absolute inset-0 rounded-xl border border-accent/0 transition-all duration-500",
+                          hoveredNode === zone.id ? "border-accent/40 bg-accent/5" : "bg-transparent"
                         )} />
 
-                        {/* Decorative glow line */}
-                        <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+                        {/* Floating Card for Map */}
+                        <div className={cn(
+                          "absolute left-1/2 w-72 -translate-x-1/2 rounded-2xl border border-white/10 bg-black/90 p-6 shadow-[0_0_50px_rgba(0,0,0,0.8)] backdrop-blur-2xl transition-all duration-500 z-50",
+                          zone.cardPos === 'bottom' ? 'top-full mt-6' : 'bottom-full mb-6',
+                          hoveredNode === zone.id ? "visible translate-y-0 opacity-100 scale-100" : "invisible translate-y-4 opacity-0 scale-95"
+                        )}>
+                          {/* Status Badge */}
+                          <div className="mb-3 flex items-center gap-2">
+                            <div className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                            <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-accent/80">Diagnostic Insight</span>
+                          </div>
+
+                          <h4 className="mb-2 text-xl font-bold text-white tracking-tight">
+                            {journeyState.states.find(s => s.id === zone.id)?.title}
+                          </h4>
+
+                          <p className="text-sm leading-relaxed text-neutral-300">
+                            {journeyState.states.find(s => s.id === zone.id)?.description}
+                          </p>
+
+                          {/* Connection Arrow */}
+                          <div className={cn(
+                            "absolute left-1/2 h-4 w-4 -translate-x-1/2 rotate-45 border-white/10 bg-black/90",
+                            zone.cardPos === 'bottom' ? "-top-2 border-t border-l" : "-bottom-2 border-b border-r"
+                          )} />
+
+                          {/* Decorative glow line */}
+                          <div className="absolute inset-x-0 bottom-0 h-[1px] bg-gradient-to-r from-transparent via-accent/20 to-transparent" />
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 {/* Ambient Glows */}

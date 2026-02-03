@@ -33,11 +33,10 @@ export default function Header({ dict, locale }: HeaderProps) {
 
   return (
     <header
-      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-white/95 shadow-md backdrop-blur-sm"
-          : "bg-transparent"
-      }`}
+      className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-black/80 border-b border-white/10 backdrop-blur-md"
+        : "bg-transparent"
+        }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         {/* Logo */}
@@ -57,14 +56,12 @@ export default function Header({ dict, locale }: HeaderProps) {
             />
           </div>
           <div className="flex flex-col">
-            <span className={`font-heading text-xl font-bold leading-tight transition-colors ${
-              scrolled ? "text-primary" : "text-white"
-            }`}>
+            <span className={`font-heading text-xl font-bold leading-tight transition-colors ${scrolled ? "text-white" : "text-white"
+              }`}>
               ARDICTECH
             </span>
-            <span className={`text-[11px] font-medium leading-tight transition-colors ${
-              scrolled ? "text-neutral-600" : "text-white/90"
-            }`}>
+            <span className={`text-[11px] font-medium leading-tight transition-colors ${scrolled ? "text-neutral-400" : "text-white/90"
+              }`}>
               Digital Transformation for Manufacturing
             </span>
           </div>
@@ -76,9 +73,8 @@ export default function Header({ dict, locale }: HeaderProps) {
             <a
               key={item.href}
               href={item.href}
-              className={`text-sm font-medium transition-colors hover:text-secondary ${
-                scrolled ? "text-neutral-700" : "text-white"
-              }`}
+              className={`text-sm font-medium transition-colors hover:text-accent ${scrolled ? "text-neutral-300" : "text-white"
+                }`}
             >
               {item.label}
             </a>
@@ -87,9 +83,8 @@ export default function Header({ dict, locale }: HeaderProps) {
           {/* Language switcher */}
           <a
             href={`/${otherLocale}`}
-            className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-secondary ${
-              scrolled ? "text-neutral-700" : "text-white"
-            }`}
+            className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-accent ${scrolled ? "text-neutral-300" : "text-white"
+              }`}
             aria-label={`Switch to ${otherLocale === "en" ? "English" : "Turkish"}`}
           >
             <Globe className="h-4 w-4" />
@@ -109,7 +104,7 @@ export default function Header({ dict, locale }: HeaderProps) {
         <button
           type="button"
           onClick={() => setMobileOpen(!mobileOpen)}
-          className={`lg:hidden ${scrolled ? "text-neutral-900" : "text-white"}`}
+          className={`lg:hidden ${scrolled ? "text-white" : "text-white"}`}
           aria-label="Toggle menu"
           aria-expanded={mobileOpen}
         >

@@ -212,6 +212,16 @@ export interface Dictionary {
       title: string;
       description: string;
     }[];
+    nodes: {
+      id: string;
+      label: string;
+      description: string;
+    }[];
+    traps: {
+      id: string;
+      label: string;
+      description: string;
+    }[];
   };
   operationalEnso: {
     badge: string;
