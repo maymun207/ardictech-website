@@ -44,40 +44,40 @@
     ]
   },
   "valueFirst": {
-    "title": "Dijitalleşme ilk nerede değer yaratmalı?",
+    "title": "Dijitalleşme İlk Nerede Değer Yaratmalı?",
     "subtitle": "Tahmin Etmeyi Bırakın. Hissetmeye Başlayın. Herhangi bir mimari değişiklik önermeden önce, milyonlarca liralık kayıpları bulmak için 'Karanlık Verilerinizi' denetliyoruz.",
     "cta": "Yönetici Değerlendirmesi Talep Et",
     "cards": [
       {
         "id": "hidden-losses",
         "title": "Gizli Kayıpları Ortadan Kaldırın",
-        "category": "PERFORMANS OPTİMİZASYONU",
+        "category": "Performans Optimizasyonu",
         "metric": "%30",
-        "metricLabel": "HEDEF KAPASİTE ARTIŞI",
+        "metricLabel": "Hedef Kapasite Artışı",
         "description": "Kağıt üzerindeki kayıtların kaçırdığı mikro duruşları ve hız kayıplarını yüzeye çıkararak 'Gizli Fabrikayı' ifşa edin. Tipik olarak 8-12 milyon dolarlık karanlık veri kaybını geri kazandırır."
       },
       {
         "id": "quality-drift",
         "title": "Kalite Sapmalarını Azaltın",
-        "category": "VERİM MAKSİMİZASYONU",
+        "category": "Verim Maksimizasyonu",
         "metric": "%22",
-        "metricLabel": "VERİM İYİLEŞTİRMESİ",
+        "metricLabel": "Verim İyileştirmesi",
         "description": "Kalite varyasyonlarını verimi etkilemeden önce belirleyin ve ortadan kaldırın. Gerçek zamanlı izleme, geleneksel kontrol süreçlerinin kaçırdığı hataları yüzeye çıkarır."
       },
       {
         "id": "energy-bom",
         "title": "Enerji Reçetesini Optimize Edin",
-        "category": "KAYNAK YOĞUNLUĞU",
+        "category": "Kaynak Yoğunluğu",
         "metric": "%28",
-        "metricLabel": "ENERJİ TASARRUFU",
+        "metricLabel": "Enerji Tasarrufu",
         "description": "Akıllı kaynak tahsisi yoluyla enerji tüketimini ve malzeme israfını azaltın. Tipik olarak enerji maliyetlerinde %20-30, malzeme israfında %10-15 azalma sağlar."
       },
       {
         "id": "lead-times",
         "title": "Teslimat Sürelerini Senkronize Edin",
-        "category": "OPERASYONEL ÇEVİKLİK",
+        "category": "Operasyonel Çeviklik",
         "metric": "%32",
-        "metricLabel": "TERMİN SÜRESİ AZALTIMI",
+        "metricLabel": "Termin Süresi Azaltımı",
         "description": "Darboğazları ortadan kaldırmak ve termin sürelerini azaltmak için üretim planlarını talep sinyalleriyle senkronize edin. Zamanında teslimatı iyileştirirken süreleri %25-35 kısaltır."
       }
     ]
@@ -93,30 +93,30 @@
     "cards": [
       {
         "id": "dark-data",
-        "title": "KARANLIK VERİ KAYBI",
+        "title": "Karanlık Veri Kaybı",
         "range": "8M$-12M$",
-        "category": "GERİ KAZANILMAMIŞ KAPASİTE",
+        "category": "Geri Kazanılmamış Kapasite",
         "quote": "Değerli sinyaller eski silolarda hapsolmuş durumda. Üretim gerçeği için bu 'Karanlık Veriyi' açığa çıkarıyoruz."
       },
       {
         "id": "reactive-maintenance",
-        "title": "REAKTİF BAKIM",
+        "title": "Reaktif Bakım",
         "range": "15M$-25M$",
-        "category": "DURUŞ KAYBI",
+        "category": "Duruş Kaybı",
         "quote": "Geleneksel sistemlerin göremediği mikro duruşlar nedeniyle kaybedilen gizli kapasiteyi geri kazanıyoruz."
       },
       {
         "id": "quality-escapes",
-        "title": "KALİTE KAÇAKLARI",
+        "title": "Kalite Kaçakları",
         "range": "10M$-18M$",
-        "category": "VERİM VARYANSI",
+        "category": "Verim Varyansı",
         "quote": "Gerçek zamanlı düzenlemeler yoluyla parti varyasyonlarını ve kalite hatalarını ortadan kaldırıyoruz."
       },
       {
         "id": "oee-uplift",
-        "title": "OEE ARTIŞI",
+        "title": "Oee Artışı",
         "range": "%8-%12",
-        "category": "VERİMLİLİK KAZANCI",
+        "category": "Verimlilik Kazancı",
         "quote": "Operasyonel verimliliği, israf azaltımı ve enerji optimizasyonu yoluyla doğrudan marj artışına dönüştürüyoruz."
       }
     ]
@@ -127,56 +127,83 @@
     "states": [
       {
         "id": "searcher",
-        "title": "ARAYIŞTAKİLER",
+        "title": "Arayıştaki̇ler",
         "description": "Moda sözcüklerden (AI, IIoT, 4.0) bunalmış ama nereden başlayacağından emin değil."
       },
       {
         "id": "pilot-prisoner",
-        "title": "PİLOT MAHKUMLARI",
+        "title": "Pilot Mahkumları",
         "description": "Ölçeklenemeyen başarılı pilot çalışma. Girişimlerin %70'i burada ölür."
       },
       {
         "id": "restart",
-        "title": "YENİDEN BAŞLAYANLAR",
+        "title": "Yeniden Başlayanlar",
         "description": "Denedi, başaramadı, bütçesini yaktı. Şimdi 'kapalı kutu' çözümlere şüpheyle bakıyor."
       }
     ],
-    "hotspots": {
-      "nodeA": {
-        "title": "Düğüm A. Arayış",
+    "nodes": [
+      {
+        "id": "A",
+        "label": "Düğüm A. Arayış",
         "description": "Keşif ve ROI tanımlama aşaması."
       },
-      "nodeB": {
-        "title": "Düğüm B. Plan",
+      {
+        "id": "B",
+        "label": "Düğüm B. Plan",
         "description": "İş senaryosu oluşturma, bütçe ayırma, iç engellerle yüzleşme."
       },
-      "nodeC": {
-        "title": "Düğüm C. Atılım",
+      {
+        "id": "C",
+        "label": "Düğüm C. Atılım",
         "description": "Proje devrede ancak ölçeklenmekte veya işletme genelinde değer göstermekte zorlanıyor."
       },
-      "nodeD": {
-        "title": "Düğüm D. Pilot Tuzağı",
+      {
+        "id": "D",
+        "label": "Düğüm D. Pilot Tuzağı",
         "description": "Tam üretime hiç geçememiş başarılı bir kavram kanıtlama çalışması."
       },
-      "nodeE": {
-        "title": "Düğüm E. Yanlış Başlangıç",
+      {
+        "id": "E",
+        "label": "Düğüm E. Yanlış Başlangıç",
         "description": "Karmaşıklık, maliyet veya benimseme eksikliği nedeniyle başarısız olmuş önceki bir girişim."
       }
-    }
+    ],
+    "traps": [
+      {
+        "id": "rip-replace",
+        "label": "Sök ve Değiştir (%40)",
+        "description": "Üretimi bozar ve ROI'yi yok eder."
+      },
+      {
+        "id": "vendor-lockin",
+        "label": "Tedariciye Bağımlılık (%10)",
+        "description": "Özel protokoller çevikliği engeller."
+      },
+      {
+        "id": "pilot-purgatory",
+        "label": "Pilot Arafı (%15)",
+        "description": "Asla ölçeklenemeyen başarılı kanıt çalışmaları."
+      },
+      {
+        "id": "dashboard-cemetery",
+        "label": "Panel Mezarlığı (%35)",
+        "description": "Güzel grafikler, sıfır karar."
+      }
+    ]
   },
   "operationalEnso": {
     "badge": "Operasyonel Ensō:",
-    "title": "AYNI ANDA HEM TAM HEM EKSİK",
+    "title": "Aynı Anda Hem Tam Hem Eksik",
     "description": "Bir fabrika bir varış noktası değildir; yaşayan bir geri bildirim döngüsüdür. Algılayan, öğrenen ve büyüyen sistemler kuruyoruz.",
     "tagline": "Duyarlı Fabrika: Canlı, Gelişen ve Daima Hareket Halinde.",
     "hover": "Duyarlı Fabrikada her düğüm birbiriyle bağlantılıdır. Ensō, ham veriyi bilinçli eyleme dönüştüren, uçtan merkeze kesintisiz zeka akışını temsil eder.",
     "definition": "Enso, Japon Zen sanatında elle çizilmiş bir dairedir; mevcudiyet, berraklık ve her şeyin birbirine bağlı olduğu düşüncesi gibi derin anlamlar barındıran sade bir formdur.",
-    "bottom1": "STATİK MÜKEMMELLİK DEĞİL",
-    "bottom2": "DİNAMİK HASSASİYET"
+    "bottom1": "Statik Mükemmellik Değil",
+    "bottom2": "Dinamik Hassasiyet"
   },
   "ensoApproach": {
     "badge": "Ensō Yaklaşımı",
-    "title": "Değiştirmeyin — Bağlayın ve Geliştirin",
+    "title": "Değiştirmeyin — Bağlayın Ve Geliştirin",
     "description": "Zeka Katmanı: Devrim Değil, Evrim. Zeka katmanımız, operasyonları bozmadan mevcut sistemlerinizden güvenli API'ler aracılığıyla veri okur ve birleşik bir veri gölü oluşturur.",
     "cta": "Yaklaşımımızı Keşfedin",
     "features": [
@@ -192,7 +219,7 @@
       },
       {
         "id": "cwf",
-        "title": "Fabriknızla Sohbet Edin",
+        "title": "Fabrikanızla Sohbet Edin",
         "description": "Doğal dilde sorular sorun. Canlı metrik grafiklerle yanıtlar alın."
       },
       {
@@ -242,7 +269,7 @@
       {
         "id": "cwf",
         "name": "CWF",
-        "tagline": "Fabriknızla Sohbet Edin",
+        "tagline": "Fabrikanızla Sohbet Edin",
         "description": "Konuşma tabanlı arayüz. Paydaşların doğal insan dilini kullanarak üretim verilerini sorgulamasına olanak tanıyan üretken yapay zeka katmanı.",
         "benefits": [
           "Doğal dil sorguları",
@@ -465,7 +492,7 @@
     "existingStack": {
       "title": "Mevcut Teknoloji Yığınınız İçin",
       "description": "Değiştirmeyiz, bağlar ve geliştiririz. Platformlarımız tasarım gereği açıktır.",
-      "subtitle": "KESİNTİSİZ ENTEGRASYON",
+      "subtitle": "Kesintisiz Entegrasyon",
       "features": [
         "Salt okunur API'ler ile bağlantı",
         "Karanlık Veriyi Veri Gölüne aktarın",
@@ -476,7 +503,7 @@
     "cleanState": {
       "title": "Yeni Bir Başlangıç İçin",
       "description": "Sıfırdan tam kapsamlı 4 katmanlı kurulum. Sıfırdan tam görünürlüğe geçin.",
-      "subtitle": "HIZLI KURULUM",
+      "subtitle": "Hızlı Kurulum",
       "features": [
         "IoT-Ignite sensörleri ve ağ geçitleri",
         "Tam ArMES uygulaması",
@@ -485,7 +512,7 @@
       "idealFor": "Dijital yolculuğuna yeni başlayan veya sistemlerini yeniden yapılandıran şirketler için idealdir."
     },
     "ourApproach": {
-      "title": "YAKLAŞIMIMIZ:",
+      "title": "Yaklaşımımız:",
       "items": [
         "'Zeka Sarmalı' olarak hareket etme",
         "Eski sistemlerden API'ler aracılığıyla veri çekme",

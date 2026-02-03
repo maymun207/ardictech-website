@@ -52,15 +52,15 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
               onMouseEnter={() => setHoveredCard(card.id)}
               onMouseLeave={() => setHoveredCard(null)}
               className={`group relative overflow-hidden rounded-2xl border border-neutral-800 bg-gradient-to-br from-neutral-900 to-black p-6 transition-all duration-500 ${hoveredCard === card.id
-                  ? "scale-105 border-accent shadow-2xl shadow-accent/20"
-                  : "hover:border-neutral-700"
+                ? "scale-105 border-accent shadow-2xl shadow-accent/20"
+                : "hover:border-neutral-700"
                 }`}
             >
               {/* Icon */}
               <div
                 className={`mb-4 inline-flex rounded-lg p-3 transition-colors ${hoveredCard === card.id
-                    ? "bg-accent/20 text-accent"
-                    : "bg-neutral-800 text-neutral-400"
+                  ? "bg-accent/20 text-accent"
+                  : "bg-neutral-800 text-neutral-400"
                   }`}
               >
                 {icons[card.id] || <Plus className="h-6 w-6" />}
@@ -68,19 +68,19 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
 
               {/* Title and Category */}
               <h3 className="mb-2 text-xl font-bold">{card.title}</h3>
-              <p className="text-xs font-medium uppercase tracking-wider text-neutral-500">
+              <p className="text-xs font-medium tracking-wider text-neutral-500">
                 {card.category}
               </p>
 
               {/* Hover Content */}
               <div
                 className={`mt-6 transition-all duration-500 ${hoveredCard === card.id
-                    ? "max-h-96 opacity-100"
-                    : "max-h-0 opacity-0"
+                  ? "max-h-96 opacity-100"
+                  : "max-h-0 opacity-0"
                   }`}
               >
                 <div className="border-l-2 border-accent pl-4">
-                  <p className="mb-1 text-xs font-medium uppercase tracking-wider text-neutral-400">
+                  <p className="mb-1 text-xs font-medium tracking-wider text-neutral-400">
                     Live Diagnostic Benchmarking
                   </p>
                   <p className="mb-4 text-sm leading-relaxed text-neutral-300">
@@ -112,7 +112,7 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
             href="#contact"
             className="group relative inline-flex items-center gap-2 rounded-xl border-2 border-accent px-8 py-4 transition-all hover:scale-105 hover:border-accent-light hover:bg-accent/5 hover:shadow-2xl hover:shadow-accent/20"
           >
-            <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-accent bg-clip-text text-lg font-bold uppercase tracking-wide text-transparent">
+            <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-accent bg-clip-text text-lg font-bold tracking-wide text-transparent">
               {valueFirst.cta}
             </span>
             <span className="text-accent transition-transform group-hover:translate-x-1">

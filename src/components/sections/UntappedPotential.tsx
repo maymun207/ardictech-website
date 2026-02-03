@@ -48,12 +48,12 @@ export default function UntappedPotential({ dict }: UntappedPotentialProps) {
                   <span>73M</span>
                 </div>
               </div>
-              <div className="mb-4 flex items-center gap-4 text-sm font-medium uppercase tracking-wider text-neutral-400">
+              <div className="mb-4 flex items-center gap-4 text-sm font-medium tracking-wider text-neutral-400">
                 <span>{untappedPotential.payback}</span>
                 <span className="text-accent">•</span>
                 <span>{untappedPotential.roi}</span>
               </div>
-              <div className="inline-block border border-neutral-700 px-4 py-2 text-xs font-medium uppercase tracking-wider text-neutral-400">
+              <div className="inline-block border border-neutral-700 px-4 py-2 text-xs font-medium tracking-wider text-neutral-400">
                 {untappedPotential.annualLoss}
               </div>
             </div>
@@ -68,8 +68,8 @@ export default function UntappedPotential({ dict }: UntappedPotentialProps) {
               onMouseEnter={() => setHoveredCard(card.id)}
               onMouseLeave={() => setHoveredCard(null)}
               className={`group relative overflow-hidden rounded-2xl border transition-all duration-500 ${hoveredCard === card.id
-                  ? "border-blue-500 bg-gradient-to-br from-blue-900 to-blue-950 shadow-2xl shadow-blue-500/20"
-                  : "border-neutral-800 bg-gradient-to-br from-neutral-900 to-black"
+                ? "border-blue-500 bg-gradient-to-br from-blue-900 to-blue-950 shadow-2xl shadow-blue-500/20"
+                : "border-neutral-800 bg-gradient-to-br from-neutral-900 to-black"
                 }`}
             >
               {/* Default Card Content */}
@@ -83,7 +83,7 @@ export default function UntappedPotential({ dict }: UntappedPotentialProps) {
                 </div>
 
                 {/* Title */}
-                <h3 className="mb-2 text-xs font-bold uppercase tracking-wider text-neutral-400">
+                <h3 className="mb-2 text-xs font-bold tracking-wider text-neutral-400">
                   {card.title}
                 </h3>
 
@@ -91,7 +91,7 @@ export default function UntappedPotential({ dict }: UntappedPotentialProps) {
                 <p className="mb-4 text-3xl font-bold">{card.range}</p>
 
                 {/* Category */}
-                <p className="text-xs font-medium uppercase tracking-wider text-accent">
+                <p className="text-xs font-medium tracking-wider text-accent">
                   {card.category}
                 </p>
               </div>

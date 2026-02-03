@@ -18,11 +18,11 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
         <div className="grid gap-16 lg:grid-cols-2 lg:items-center">
           {/* Left: Text Content */}
           <div>
-            <p className="mb-6 font-heading text-lg font-semibold uppercase tracking-wider text-accent">
+            <p className="mb-6 font-heading text-lg font-semibold tracking-wider text-accent">
               {operationalEnso.badge}
             </p>
 
-            <h2 className="mb-8 font-heading text-4xl font-bold uppercase leading-tight sm:text-5xl lg:text-6xl">
+            <h2 className="mb-8 font-heading text-4xl font-bold leading-tight sm:text-5xl lg:text-6xl">
               {operationalEnso.title.split(' ').map((word, i) => (
                 <span key={i}>
                   {word}
@@ -76,7 +76,7 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
 
               {/* Bottom Text */}
               <div className="mt-8 text-center">
-                <p className="font-heading text-xl font-bold uppercase leading-tight sm:text-2xl">
+                <p className="font-heading text-xl font-bold leading-tight sm:text-2xl">
                   {operationalEnso.bottom1}
                   <br />
                   {operationalEnso.bottom2}

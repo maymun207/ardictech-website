@@ -44,40 +44,40 @@
     ]
   },
   "valueFirst": {
-    "title": "Where should digital deliver value first?",
+    "title": "Where Should Digital Deliver Value First?",
     "subtitle": "Stop Guessing. Start Sensing. We audit your 'Dark Data' to find millions in addressable losses before we propose a single architecture change.",
     "cta": "Request Executive assessment",
     "cards": [
       {
         "id": "hidden-losses",
         "title": "Eliminate Hidden Losses",
-        "category": "PERFORMANCE OPTIMIZATION",
+        "category": "Performance Optimization",
         "metric": "30%",
-        "metricLabel": "TARGET THROUGHPUT",
+        "metricLabel": "Target Throughput",
         "description": "Expose the 'Hidden Factory' by surfacing micro-stops and speed losses that paper logs miss. Typically recovers $8M-$12M in previously dark data loss."
       },
       {
         "id": "quality-drift",
         "title": "Reduce Quality Drift",
-        "category": "YIELD MAXIMIZATION",
+        "category": "Yield Maximization",
         "metric": "22%",
-        "metricLabel": "YIELD IMPROVEMENT",
+        "metricLabel": "Yield Improvement",
         "description": "Identify and eliminate quality variations before they impact yield. Real-time monitoring surfaces defects that traditional QC processes miss, typically improving yield by 15-25%."
       },
       {
         "id": "energy-bom",
         "title": "Optimize Energy BOM",
-        "category": "RESOURCE INTENSITY",
+        "category": "Resource Intensity",
         "metric": "28%",
-        "metricLabel": "ENERGY REDUCTION",
+        "metricLabel": "Energy Reduction",
         "description": "Reduce energy consumption and material waste through intelligent resource allocation. Typically achieves 20-30% reduction in energy costs and 10-15% reduction in material waste."
       },
       {
         "id": "lead-times",
         "title": "Sync Lead Times",
-        "category": "OPERATIONAL AGILITY",
+        "category": "Operational Agility",
         "metric": "32%",
-        "metricLabel": "LEAD TIME REDUCTION",
+        "metricLabel": "Lead Time Reduction",
         "description": "Synchronize production schedules with demand signals to eliminate bottlenecks and reduce lead times. Typically reduces lead times by 25-35% while improving on-time delivery."
       }
     ]
@@ -93,90 +93,117 @@
     "cards": [
       {
         "id": "dark-data",
-        "title": "DARK DATA LOSS",
+        "title": "Dark Data Loss",
         "range": "$8M-$12M",
-        "category": "UNRECOVERED CAPACITY",
+        "category": "Unrecovered Capacity",
         "quote": "Valuable signals are trapped in legacy silos. We unlock this 'Dark Data' for production truth."
       },
       {
         "id": "reactive-maintenance",
-        "title": "REACTIVE MAINTENANCE",
+        "title": "Reactive Maintenance",
         "range": "$15M-$25M",
-        "category": "DOWNTIME DRAIN",
+        "category": "Downtime Drain",
         "quote": "Recovering hidden capacity lost to micro-stoppages that traditional systems cannot see."
       },
       {
         "id": "quality-escapes",
-        "title": "QUALITY ESCAPES",
+        "title": "Quality Escapes",
         "range": "$10M-$18M",
-        "category": "YIELD VARIANCE",
+        "category": "Yield Variance",
         "quote": "Eliminating batch variations and quality defects through real-time prescriptive adjustments."
       },
       {
         "id": "oee-uplift",
-        "title": "OEE UPLIFT",
+        "title": "OEE Uplift",
         "range": "8%-12%",
-        "category": "EFFICIENCY GAIN",
+        "category": "Efficiency Gain",
         "quote": "Converting operational efficiency directly into margin expansion via waste reduction and energy optimization."
       }
     ]
   },
   "journeyState": {
     "question": "Which State Are You In?",
-    "title": "The Path to Digitalization is Rarely Straight",
+    "title": "The Path To Digitalization Is Rarely Straight",
     "states": [
       {
         "id": "searcher",
-        "title": "THE SEARCHER",
+        "title": "The Searcher",
         "description": "Overwhelmed by buzzwords (AI, IIoT, 4.0) but unsure where to start."
       },
       {
         "id": "pilot-prisoner",
-        "title": "THE PILOT PRISONER",
+        "title": "The Pilot Prisoner",
         "description": "Successful pilot that failed to scale. 70% of initiatives die here."
       },
       {
         "id": "restart",
-        "title": "THE RESTART",
+        "title": "The Restart",
         "description": "Tried, failed, burned budget. Now skeptical of 'blackbox' solutions."
       }
     ],
-    "hotspots": {
-      "nodeA": {
-        "title": "Node A. The Search",
-        "description": "Exploration and ROI definition phase."
+    "nodes": [
+      {
+        "id": "A",
+        "label": "Node A. The Search",
+        "description": "Exploring options, defining the problem and potential ROI."
       },
-      "nodeB": {
-        "title": "Node B. The Plan",
+      {
+        "id": "B",
+        "label": "Node B. The Plan",
         "description": "Building the business case, allocating budget, facing internal hurdles."
       },
-      "nodeC": {
-        "title": "Node C. The Push",
+      {
+        "id": "C",
+        "label": "Node C. The Push",
         "description": "A project is underway but struggling to scale or show enterprise-wide value."
       },
-      "nodeD": {
-        "title": "Node D. The Pilot Trap",
+      {
+        "id": "D",
+        "label": "Node D. The Pilot Trap",
         "description": "A successful proof-of-concept that never moved into full production."
       },
-      "nodeE": {
-        "title": "Node E. The False Start",
+      {
+        "id": "E",
+        "label": "Node E. The False Start",
         "description": "A previous initiative failed due to complexity, cost, or lack of adoption."
       }
-    }
+    ],
+    "traps": [
+      {
+        "id": "rip-replace",
+        "label": "Rip & Replace (40%)",
+        "description": "Disrupts production and kills ROI."
+      },
+      {
+        "id": "vendor-lockin",
+        "label": "Vendor Lock-in (10%)",
+        "description": "Proprietary protocols prevent agility."
+      },
+      {
+        "id": "pilot-purgatory",
+        "label": "Pilot Purgatory (15%)",
+        "description": "Successful proofs-of-concept that never scale."
+      },
+      {
+        "id": "dashboard-cemetery",
+        "label": "Dashboard Cemetery (35%)",
+        "description": "Pretty charts, no decisions."
+      }
+    ]
   },
   "operationalEnso": {
     "badge": "Operational Ensō:",
-    "title": "COMPLETE AND INCOMPLETE AT THE SAME TIME",
+    "title": "Complete And Incomplete At The Same Time",
     "description": "A factory is not a destination; it's a living feedback loop. We build systems that perceive, learn, and grow.",
     "tagline": "The Sentient Factory: Alive, Evolving and Always in Motion.",
     "hover": "In the Sentient Factory, every node is connected. The Ensō represents the seamless flow of intelligence from edge to core, turning raw data into conscious action.",
     "definition": "Enso is a hand-drawn circle in Japanese Zen art, a simple shape with a deep message: presence, clarity, and the idea that everything is connected.",
-    "bottom1": "DYNAMIC PRECISION",
-    "bottom2": "OVER STATIC PERFECTION"
+    "bottom1": "Dynamic Precision",
+    "bottom2": "Over Static Perfection"
   },
   "ensoApproach": {
     "badge": "The Ensō Approach",
-    "title": "Connect & enhance — don't replace",
+    "title": "Connect & Enhance — Don't Replace",
     "description": "The Intelligence Overlay: Evolution, Not Revolution. Our intelligence wrapper reads from your existing systems through secure APIs, building a unified data lake without disrupting operations.",
     "cta": "Learn Our Approach",
     "features": [
@@ -197,7 +224,7 @@
       },
       {
         "id": "time-to-value",
-        "title": "Time to Value: Weeks",
+        "title": "Time To Value: Weeks",
         "description": "Proof of value in 8-12 weeks, not years of traditional consulting."
       }
     ]
@@ -303,7 +330,7 @@
     "disclaimer": "* Estimates based on industry averages from manufacturing clients. Actual results vary by facility, implementation scope, and operational maturity."
   },
   "features": {
-    "title": "Everything You Need to Modernize Manufacturing",
+    "title": "Everything You Need To Modernize Manufacturing",
     "subtitle": "Eight core capabilities that work together to transform your production floor.",
     "items": [
       {
@@ -393,7 +420,7 @@
     "cta": "View Technical Documentation"
   },
   "testimonials": {
-    "title": "Trusted by Industry Leaders",
+    "title": "Trusted By Industry Leaders",
     "subtitle": "Hear from the manufacturing executives who transformed their operations with ARDICTECH.",
     "items": [
       {
@@ -461,11 +488,11 @@
     }
   },
   "deploymentModel": {
-    "title": "Your Path to Ensō, at Your Pace",
+    "title": "Your Path To Ensō, At Your Pace",
     "existingStack": {
-      "title": "For an Existing Stack",
+      "title": "For An Existing Stack",
       "description": "We connect and enhance, don't replace. Our platforms are open by design.",
-      "subtitle": "SEAMLESS INTEGRATION",
+      "subtitle": "Seamless Integration",
       "features": [
         "Connect via read-only APIs",
         "Ingest 'Dark Data' to a Data Lake",
@@ -474,9 +501,9 @@
       "idealFor": "Ideal for: companies looking to augment current systems or unlock stalled projects."
     },
     "cleanState": {
-      "title": "For a Clean State",
+      "title": "For A Clean State",
       "description": "A full-stack 4-layer deployment from scratch. Go from zero to full visibility.",
-      "subtitle": "RAPID DEPLOYMENT",
+      "subtitle": "Rapid Deployment",
       "features": [
         "IoT-Ignite sensors and gateways",
         "Full ArMES implementation",
@@ -485,7 +512,7 @@
       "idealFor": "Ideal for: companies starting or re-platforming their digital journey."
     },
     "ourApproach": {
-      "title": "OUR APPROACH:",
+      "title": "Our Approach:",
       "items": [
         "Act as the 'Intelligence Wrapper'",
         "Pull data from legacy systems via APIs",

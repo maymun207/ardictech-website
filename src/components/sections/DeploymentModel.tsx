@@ -19,7 +19,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
 
                 {/* Title Section */}
                 <div className="mb-24 text-center">
-                    <h2 className="font-heading text-4xl font-bold sm:text-5xl lg:text-6xl text-white tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 uppercase leading-tight">
+                    <h2 className="font-heading text-4xl font-bold sm:text-5xl lg:text-6xl text-white tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 leading-tight">
                         {deploymentModel.title}
                     </h2>
                     <div className="mx-auto h-[1px] w-24 bg-accent" />
@@ -34,7 +34,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     {/* Left Path: Existing Stack */}
                     <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-accent/[0.02] flex flex-col">
                         <div className="relative z-10 flex-1 flex flex-col">
-                            <span className="inline-block px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-bold tracking-[0.2em] uppercase mb-8 w-fit">
+                            <span className="inline-block px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-bold tracking-[0.2em] mb-8 w-fit">
                                 Path A
                             </span>
 
@@ -50,7 +50,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
 
                             <div className="space-y-10 flex-1 flex flex-col">
                                 <div className="flex-1">
-                                    <h4 className="mb-6 font-heading text-sm font-bold tracking-[0.2em] text-accent/80 uppercase">
+                                    <h4 className="mb-6 font-heading text-sm font-bold tracking-[0.2em] text-accent/80">
                                         {deploymentModel.existingStack.subtitle}
                                     </h4>
                                     <ul className="space-y-5">
@@ -75,7 +75,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     {/* Right Path: Clean State */}
                     <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-secondary/[0.02] border-t md:border-t-0 md:border-l border-white/5 flex flex-col">
                         <div className="relative z-10 flex-1 flex flex-col">
-                            <span className="inline-block px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 text-secondary text-xs font-bold tracking-[0.2em] uppercase mb-8 w-fit">
+                            <span className="inline-block px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 text-secondary text-xs font-bold tracking-[0.2em] mb-8 w-fit">
                                 Path B
                             </span>
 
@@ -91,7 +91,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
 
                             <div className="space-y-10 flex-1 flex flex-col">
                                 <div className="flex-1">
-                                    <h4 className="mb-6 font-heading text-sm font-bold tracking-[0.2em] text-secondary/80 uppercase">
+                                    <h4 className="mb-6 font-heading text-sm font-bold tracking-[0.2em] text-secondary/80">
                                         {deploymentModel.cleanState.subtitle}
                                     </h4>
                                     <ul className="space-y-5">
@@ -118,7 +118,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                 <div className="mt-32 relative">
                     <div className="absolute inset-0 bg-accent/5 blur-[80px] rounded-full -z-10" />
                     <div className="flex flex-col items-center py-20 px-8 rounded-[3rem] border border-white/5 bg-neutral-900/40 backdrop-blur-2xl">
-                        <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent uppercase text-center">
+                        <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center">
                             {deploymentModel.ourApproach.title}
                         </h4>
                         <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl">

@@ -33,7 +33,7 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
         <div className="mb-8">
           <div className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/5 px-5 py-2">
             <span className="h-2 w-2 rounded-full bg-accent" />
-            <span className="font-heading text-xs font-semibold uppercase tracking-widest text-accent">
+            <span className="font-heading text-xs font-semibold tracking-widest text-accent">
               {ensoApproach.badge}
             </span>
           </div>
