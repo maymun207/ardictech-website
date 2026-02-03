@@ -140,7 +140,29 @@
         "title": "THE RESTART",
         "description": "Tried, failed, burned budget. Now skeptical of 'blackbox' solutions."
       }
-    ]
+    ],
+    "hotspots": {
+      "nodeA": {
+        "title": "Node A. The Search",
+        "description": "Exploration and ROI definition phase."
+      },
+      "nodeB": {
+        "title": "Node B. The Plan",
+        "description": "Building the business case, allocating budget, facing internal hurdles."
+      },
+      "nodeC": {
+        "title": "Node C. The Push",
+        "description": "A project is underway but struggling to scale or show enterprise-wide value."
+      },
+      "nodeD": {
+        "title": "Node D. The Pilot Trap",
+        "description": "A successful proof-of-concept that never moved into full production."
+      },
+      "nodeE": {
+        "title": "Node E. The False Start",
+        "description": "A previous initiative failed due to complexity, cost, or lack of adoption."
+      }
+    }
   },
   "operationalEnso": {
     "badge": "Operational Ensō:",
@@ -148,6 +170,7 @@
     "description": "A factory is not a destination; it's a living feedback loop. We build systems that perceive, learn, and grow.",
     "tagline": "The Sentient Factory: Alive, Evolving and Always in Motion.",
     "hover": "In the Sentient Factory, every node is connected. The Ensō represents the seamless flow of intelligence from edge to core, turning raw data into conscious action.",
+    "definition": "Enso is a hand-drawn circle in Japanese Zen art, a simple shape with a deep message: presence, clarity, and the idea that everything is connected.",
     "bottom1": "DYNAMIC PRECISION",
     "bottom2": "OVER STATIC PERFECTION"
   },
@@ -435,6 +458,40 @@
     "validation": {
       "emailInvalid": "Please enter a valid business email address.",
       "required": "This field is required."
+    }
+  },
+  "deploymentModel": {
+    "title": "Your Path to Ensō, at Your Pace",
+    "existingStack": {
+      "title": "For an Existing Stack",
+      "description": "We connect and enhance, don't replace. Our platforms are open by design.",
+      "subtitle": "SEAMLESS INTEGRATION",
+      "features": [
+        "Connect via read-only APIs",
+        "Ingest 'Dark Data' to a Data Lake",
+        "Deploy the CWF - 'Truth Layer'"
+      ],
+      "idealFor": "Ideal for: companies looking to augment current systems or unlock stalled projects."
+    },
+    "cleanState": {
+      "title": "For a Clean State",
+      "description": "A full-stack 4-layer deployment from scratch. Go from zero to full visibility.",
+      "subtitle": "RAPID DEPLOYMENT",
+      "features": [
+        "IoT-Ignite sensors and gateways",
+        "Full ArMES implementation",
+        "Immediate Visibility (weeks, not years)"
+      ],
+      "idealFor": "Ideal for: companies starting or re-platforming their digital journey."
+    },
+    "ourApproach": {
+      "title": "OUR APPROACH:",
+      "items": [
+        "Act as the 'Intelligence Wrapper'",
+        "Pull data from legacy systems via APIs",
+        "Enrich it with AI",
+        "Deliver it via conversational Interface"
+      ]
     }
   },
   "footer": {

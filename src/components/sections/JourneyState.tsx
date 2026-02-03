@@ -17,11 +17,10 @@ export default function JourneyState({ dict }: JourneyStateProps) {
         <div className="mb-16 grid gap-8 lg:grid-cols-[300px_1fr] lg:items-start">
           {/* Left: Main Question */}
           <div>
-            <h2 className="font-heading text-5xl font-bold uppercase leading-tight sm:text-6xl lg:text-7xl">
-              {journeyState.question.split(' ').map((word, i) => (
-                <span key={i}>
+            <h2 className="font-heading text-5xl font-bold uppercase leading-[0.9] sm:text-6xl lg:text-7xl">
+              {journeyState.question.split(' ').map((word, i, arr) => (
+                <span key={i} className="block">
                   {word}
-                  <br />
                 </span>
               ))}
             </h2>
@@ -60,10 +59,44 @@ export default function JourneyState({ dict }: JourneyStateProps) {
               alt="Journey to Digitalization Flow"
               width={1600}
               height={600}
-              className="h-auto w-full"
+              className="h-auto w-full opacity-90 transition-all duration-700 hover:opacity-100"
+              style={{
+                maskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)',
+                WebkitMaskImage: 'radial-gradient(circle at center, black 60%, transparent 100%)'
+              }}
               priority
               unoptimized
             />
+
+            {/* Hotspots Overlay */}
+            <div className="absolute inset-0 z-20">
+              {/* Node A Area */}
+              <div className="absolute left-[15%] bottom-[25%] h-20 w-20 cursor-help rounded-full group">
+                <div className="absolute inset-0 animate-ping rounded-full bg-accent/20" />
+                <div className="invisible absolute bottom-full left-1/2 mb-4 w-48 -translate-x-1/2 rounded-lg border border-accent/20 bg-black/90 p-3 text-xs backdrop-blur-md group-hover:visible">
+                  <p className="font-bold text-accent uppercase mb-1">Node A</p>
+                  <p className="text-neutral-300">Exploration and ROI definition phase.</p>
+                </div>
+              </div>
+
+              {/* Node B Area */}
+              <div className="absolute left-[40%] bottom-[15%] h-20 w-20 cursor-help rounded-full group">
+                <div className="absolute inset-0 animate-ping rounded-full bg-accent/20" />
+                <div className="invisible absolute bottom-full left-1/2 mb-4 w-48 -translate-x-1/2 rounded-lg border border-accent/20 bg-black/90 p-3 text-xs backdrop-blur-md group-hover:visible">
+                  <p className="font-bold text-accent uppercase mb-1">Node B</p>
+                  <p className="text-neutral-300">Business case and budgeting.</p>
+                </div>
+              </div>
+
+              {/* Node C Area */}
+              <div className="absolute left-[55%] top-[25%] h-20 w-20 cursor-help rounded-full group">
+                <div className="absolute inset-0 animate-ping rounded-full bg-accent/20" />
+                <div className="invisible absolute bottom-full left-1/2 mb-4 w-48 -translate-x-1/2 rounded-lg border border-accent/20 bg-black/90 p-3 text-xs backdrop-blur-md group-hover:visible">
+                  <p className="font-bold text-accent uppercase mb-1">Node C</p>
+                  <p className="text-neutral-300">Pilot execution and initial value proof.</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

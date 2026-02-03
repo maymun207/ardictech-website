@@ -6,6 +6,7 @@ import UntappedPotential from "@/components/sections/UntappedPotential";
 import JourneyState from "@/components/sections/JourneyState";
 import OperationalEnso from "@/components/sections/OperationalEnso";
 import EnsoApproach from "@/components/sections/EnsoApproach";
+import DeploymentModel from "@/components/sections/DeploymentModel";
 import PlatformArchitecture from "@/components/sections/PlatformArchitecture";
 import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
@@ -32,6 +33,7 @@ export default async function HomePage({
       <JourneyState dict={dict} />
       <OperationalEnso dict={dict} />
       <EnsoApproach dict={dict} />
+      <DeploymentModel dict={dict} />
       <PlatformArchitecture dict={dict} />
       <PlatformOverview dict={dict} />
       <CaseStudy dict={dict} />

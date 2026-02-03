@@ -140,7 +140,29 @@
         "title": "YENİDEN BAŞLAYANLAR",
         "description": "Denedi, başaramadı, bütçesini yaktı. Şimdi 'kapalı kutu' çözümlere şüpheyle bakıyor."
       }
-    ]
+    ],
+    "hotspots": {
+      "nodeA": {
+        "title": "Düğüm A. Arayış",
+        "description": "Keşif ve ROI tanımlama aşaması."
+      },
+      "nodeB": {
+        "title": "Düğüm B. Plan",
+        "description": "İş senaryosu oluşturma, bütçe ayırma, iç engellerle yüzleşme."
+      },
+      "nodeC": {
+        "title": "Düğüm C. Atılım",
+        "description": "Proje devrede ancak ölçeklenmekte veya işletme genelinde değer göstermekte zorlanıyor."
+      },
+      "nodeD": {
+        "title": "Düğüm D. Pilot Tuzağı",
+        "description": "Tam üretime hiç geçememiş başarılı bir kavram kanıtlama çalışması."
+      },
+      "nodeE": {
+        "title": "Düğüm E. Yanlış Başlangıç",
+        "description": "Karmaşıklık, maliyet veya benimseme eksikliği nedeniyle başarısız olmuş önceki bir girişim."
+      }
+    }
   },
   "operationalEnso": {
     "badge": "Operasyonel Ensō:",
@@ -148,6 +170,7 @@
     "description": "Bir fabrika bir varış noktası değildir; yaşayan bir geri bildirim döngüsüdür. Algılayan, öğrenen ve büyüyen sistemler kuruyoruz.",
     "tagline": "Duyarlı Fabrika: Canlı, Gelişen ve Daima Hareket Halinde.",
     "hover": "Duyarlı Fabrikada her düğüm birbiriyle bağlantılıdır. Ensō, ham veriyi bilinçli eyleme dönüştüren, uçtan merkeze kesintisiz zeka akışını temsil eder.",
+    "definition": "Enso, Japon Zen sanatında elle çizilmiş bir dairedir; mevcudiyet, berraklık ve her şeyin birbirine bağlı olduğu düşüncesi gibi derin anlamlar barındıran sade bir formdur.",
     "bottom1": "STATİK MÜKEMMELLİK DEĞİL",
     "bottom2": "DİNAMİK HASSASİYET"
   },
@@ -435,6 +458,40 @@
     "validation": {
       "emailInvalid": "Lütfen geçerli bir iş e-posta adresi girin.",
       "required": "Bu alan zorunludur."
+    }
+  },
+  "deploymentModel": {
+    "title": "Ensō Yolculuğunuz, Sizin Hızınızda",
+    "existingStack": {
+      "title": "Mevcut Teknoloji Yığınınız İçin",
+      "description": "Değiştirmeyiz, bağlar ve geliştiririz. Platformlarımız tasarım gereği açıktır.",
+      "subtitle": "KESİNTİSİZ ENTEGRASYON",
+      "features": [
+        "Salt okunur API'ler ile bağlantı",
+        "Karanlık Veriyi Veri Gölüne aktarın",
+        "CWF - 'Gerçeklik Katmanı'nı devreye alın"
+      ],
+      "idealFor": "Mevcut sistemlerini güçlendirmek veya durma noktasına gelmiş projeleri hayata geçirmek isteyen şirketler için idealdir."
+    },
+    "cleanState": {
+      "title": "Yeni Bir Başlangıç İçin",
+      "description": "Sıfırdan tam kapsamlı 4 katmanlı kurulum. Sıfırdan tam görünürlüğe geçin.",
+      "subtitle": "HIZLI KURULUM",
+      "features": [
+        "IoT-Ignite sensörleri ve ağ geçitleri",
+        "Tam ArMES uygulaması",
+        "Anında Görünürlük (yıllar değil, haftalar içinde)"
+      ],
+      "idealFor": "Dijital yolculuğuna yeni başlayan veya sistemlerini yeniden yapılandıran şirketler için idealdir."
+    },
+    "ourApproach": {
+      "title": "YAKLAŞIMIMIZ:",
+      "items": [
+        "'Zeka Sarmalı' olarak hareket etme",
+        "Eski sistemlerden API'ler aracılığıyla veri çekme",
+        "Yapay zeka ile zenginleştirme",
+        "Konuşma tabanlı arayüz ile sunma"
+      ]
     }
   },
   "footer": {

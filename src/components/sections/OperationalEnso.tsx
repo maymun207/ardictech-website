@@ -55,16 +55,20 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
                   src="/images/enso-nobg.png"
                   alt="Operational Ensō Circle"
                   fill
-                  className="object-contain"
+                  className={`object-contain transition-all duration-700 ${isHovered ? "scale-105 blur-sm opacity-20" : "scale-100 blur-0 opacity-100"}`}
                   priority
                 />
 
                 {/* Center Text - Hidden by default, visible on hover */}
                 <div
-                  className={`absolute inset-0 flex items-center justify-center p-12 transition-opacity duration-500 ${isHovered ? "opacity-100" : "opacity-0"
+                  className={`absolute inset-0 flex flex-col items-center justify-center p-8 transition-opacity duration-700 ${isHovered ? "opacity-100" : "opacity-0"
                     }`}
                 >
-                  <p className="text-center text-base italic leading-relaxed text-white sm:text-lg">
+                  <p className="mb-4 text-center text-sm font-light italic leading-relaxed text-neutral-400 sm:text-base lg:px-8">
+                    {operationalEnso.definition}
+                  </p>
+                  <div className="mb-4 h-px w-12 bg-accent/30" />
+                  <p className="text-center text-base font-medium leading-relaxed text-white sm:text-lg">
                     {operationalEnso.hover}
                   </p>
                 </div>

@@ -127,6 +127,27 @@ export interface Dictionary {
       required: string;
     };
   };
+  deploymentModel: {
+    title: string;
+    existingStack: {
+      title: string;
+      description: string;
+      subtitle: string;
+      features: string[];
+      idealFor: string;
+    };
+    cleanState: {
+      title: string;
+      description: string;
+      subtitle: string;
+      features: string[];
+      idealFor: string;
+    };
+    ourApproach: {
+      title: string;
+      items: string[];
+    };
+  };
   footer: {
     tagline: string;
     location: string;
@@ -198,6 +219,7 @@ export interface Dictionary {
     description: string;
     tagline: string;
     hover: string;
+    definition: string;
     bottom1: string;
     bottom2: string;
   };
