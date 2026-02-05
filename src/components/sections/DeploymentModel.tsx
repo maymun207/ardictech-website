@@ -19,8 +19,13 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
     return (
         <SectionWrapper id="deployment-model" dark className="bg-black !py-32 overflow-hidden">
             <div className="mx-auto max-w-7xl relative">
-                {/* Approach Items - Moved to top as requested */}
-                <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl mx-auto mb-20">
+                {/* Section Branding - Moved to top as requested */}
+                <h4 className="mb-12 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center uppercase">
+                    {deploymentModel.ourApproach.title}
+                </h4>
+
+                {/* Approach Items */}
+                <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl mx-auto mb-24">
                     {deploymentModel.ourApproach.items.map((item, i) => (
                         <div key={i} className="flex items-center gap-6 group">
                             <span className="flex items-center justify-center w-8 h-8 rounded-full border border-accent/20 text-accent text-xs font-bold group-hover:bg-accent group-hover:text-black transition-all duration-500">
@@ -46,11 +51,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
 
                 {/* Integrated Approach Section */}
                 <div className="mt-12 relative">
-                    <div className="flex flex-col items-center pb-20 px-8 bg-black">
-                        <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center">
-                            {deploymentModel.ourApproach.title}
-                        </h4>
-
+                    <div className="flex flex-col items-center pb-20 px-8 bg-black text-center">
                         <div className="relative w-full max-w-4xl mx-auto">
                             <div
                                 className="relative overflow-hidden bg-black rounded-2xl border border-white/5"
