@@ -1,6 +1,8 @@
 "use client";
 
 import NextImage from "next/image";
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
@@ -9,7 +11,10 @@ interface DeploymentModelProps {
 }
 
 export default function DeploymentModel({ dict }: DeploymentModelProps) {
-    const { deploymentModel } = dict;
+    const { deploymentModel, platform } = dict;
+    const [hoveredLayer, setHoveredLayer] = useState<string | null>(null);
+
+    const layer4 = platform.layers.find(l => l.id === "cwf");
 
     return (
         <SectionWrapper id="deployment-model" dark className="bg-black !py-32 overflow-hidden">
@@ -120,8 +125,11 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                             {deploymentModel.ourApproach.title}
                         </h4>
                         {/* Architecture Image Integration - Moved above items for better flow */}
-                        <div className="relative w-full max-w-4xl mx-auto mb-20 bg-black">
-                            <div className="relative overflow-hidden bg-black">
+                        <div className="relative w-full max-w-4xl mx-auto mb-20">
+                            <div
+                                className="relative overflow-hidden bg-black rounded-2xl border border-white/5"
+                                onMouseLeave={() => setHoveredLayer(null)}
+                            >
                                 <NextImage
                                     src="/images/platform-architecture.jpg"
                                     alt="Ardictech 4-Layer Architecture"
@@ -130,6 +138,40 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                     className="w-full h-auto object-contain"
                                     priority
                                 />
+
+                                {/* Layer 4 Hotspot */}
+                                <div
+                                    className="absolute top-[5%] left-[5%] w-[50%] h-[25%] cursor-pointer z-20"
+                                    onMouseEnter={() => setHoveredLayer("layer-4")}
+                                />
+
+                                {/* Tooltip Overlay */}
+                                <AnimatePresence>
+                                    {hoveredLayer === "layer-4" && layer4 && (
+                                        <motion.div
+                                            initial={{ opacity: 0, x: 20, scale: 0.95 }}
+                                            animate={{ opacity: 1, x: 0, scale: 1 }}
+                                            exit={{ opacity: 0, x: 10, scale: 0.95 }}
+                                            className="absolute top-[2%] left-[58%] z-30 w-80 p-6 bg-black/80 backdrop-blur-2xl border border-accent/40 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                                        >
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
+                                                    <span className="text-accent text-xs font-bold uppercase tracking-widest">{layer4.number}</span>
+                                                </div>
+                                                <h5 className="text-white font-heading font-bold text-lg">{layer4.name}</h5>
+                                            </div>
+                                            <p className="text-accent/80 text-sm font-medium mb-2 italic tracking-wide">
+                                                "{layer4.metaphor}"
+                                            </p>
+                                            <p className="text-neutral-400 text-sm leading-relaxed font-light">
+                                                {layer4.description}
+                                            </p>
+
+                                            {/* Decorative element */}
+                                            <div className="absolute -left-2 top-8 w-2 h-2 bg-accent rotate-45 border border-white/10" />
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
                             </div>
                         </div>
 
