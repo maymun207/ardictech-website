@@ -31,7 +31,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     {/* Vertical Divider removed for pure black aesthetic */}
 
                     {/* Left Path: Existing Stack */}
-                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-accent/[0.02] flex flex-col">
+                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-white/[0.01] flex flex-col bg-black">
                         <div className="relative z-10 flex-1 flex flex-col">
                             <span className="inline-block px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-bold tracking-[0.2em] mb-8 w-fit">
                                 Path A
@@ -72,7 +72,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     </div>
 
                     {/* Right Path: Clean State */}
-                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-secondary/[0.02] flex flex-col">
+                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-white/[0.01] flex flex-col bg-black">
                         <div className="relative z-10 flex-1 flex flex-col">
                             <span className="inline-block px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 text-secondary text-xs font-bold tracking-[0.2em] mb-8 w-fit">
                                 Path B
@@ -115,13 +115,13 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
 
                 {/* Integrated Approach Footer */}
                 <div className="mt-32 relative">
-                    <div className="flex flex-col items-center py-20 px-8">
+                    <div className="flex flex-col items-center py-20 px-8 bg-black">
                         <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center">
                             {deploymentModel.ourApproach.title}
                         </h4>
                         {/* Architecture Image Integration - Moved above items for better flow */}
-                        <div className="relative w-full max-w-4xl mx-auto mb-20">
-                            <div className="relative overflow-hidden">
+                        <div className="relative w-full max-w-4xl mx-auto mb-20 bg-black">
+                            <div className="relative overflow-hidden bg-black">
                                 <NextImage
                                     src="/images/platform-architecture.jpg"
                                     alt="Ardictech 4-Layer Architecture"
