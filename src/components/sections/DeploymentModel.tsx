@@ -19,7 +19,19 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
     return (
         <SectionWrapper id="deployment-model" dark className="bg-black !py-32 overflow-hidden">
             <div className="mx-auto max-w-7xl relative">
-                {/* Background Glows removed for pure black aesthetic */}
+                {/* Approach Items - Moved to top as requested */}
+                <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl mx-auto mb-20">
+                    {deploymentModel.ourApproach.items.map((item, i) => (
+                        <div key={i} className="flex items-center gap-6 group">
+                            <span className="flex items-center justify-center w-8 h-8 rounded-full border border-accent/20 text-accent text-xs font-bold group-hover:bg-accent group-hover:text-black transition-all duration-500">
+                                {i + 1}
+                            </span>
+                            <span className="text-xl italic font-light text-neutral-200 group-hover:text-white transition-colors">
+                                {item}
+                            </span>
+                        </div>
+                    ))}
+                </div>
 
                 {/* Title Section */}
                 <div className="mb-24 text-center">
@@ -32,14 +44,14 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     <div className="mx-auto h-[1px] w-24 bg-accent" />
                 </div>
 
-                {/* Integrated Approach Section - Moved above Paths for better flow */}
+                {/* Integrated Approach Section */}
                 <div className="mt-12 relative">
-                    <div className="flex flex-col items-center py-20 px-8 bg-black">
+                    <div className="flex flex-col items-center pb-20 px-8 bg-black">
                         <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center">
                             {deploymentModel.ourApproach.title}
                         </h4>
 
-                        <div className="relative w-full max-w-4xl mx-auto mb-20">
+                        <div className="relative w-full max-w-4xl mx-auto">
                             <div
                                 className="relative overflow-hidden bg-black rounded-2xl border border-white/5"
                                 onMouseLeave={() => setHoveredLayer(null)}
@@ -87,19 +99,6 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                     )}
                                 </AnimatePresence>
                             </div>
-                        </div>
-
-                        <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl mb-20">
-                            {deploymentModel.ourApproach.items.map((item, i) => (
-                                <div key={i} className="flex items-center gap-6 group">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full border border-accent/20 text-accent text-xs font-bold group-hover:bg-accent group-hover:text-black transition-all duration-500">
-                                        {i + 1}
-                                    </span>
-                                    <span className="text-xl italic font-light text-neutral-200 group-hover:text-white transition-colors">
-                                        {item}
-                                    </span>
-                                </div>
-                            ))}
                         </div>
                     </div>
                 </div>
