@@ -32,9 +32,80 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     <div className="mx-auto h-[1px] w-24 bg-accent" />
                 </div>
 
-                <div className="relative grid gap-0 md:grid-cols-2 bg-black overflow-hidden">
-                    {/* Vertical Divider removed for pure black aesthetic */}
+                {/* Integrated Approach Section - Moved above Paths for better flow */}
+                <div className="mt-12 relative">
+                    <div className="flex flex-col items-center py-20 px-8 bg-black">
+                        <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center">
+                            {deploymentModel.ourApproach.title}
+                        </h4>
 
+                        <div className="relative w-full max-w-4xl mx-auto mb-20">
+                            <div
+                                className="relative overflow-hidden bg-black rounded-2xl border border-white/5"
+                                onMouseLeave={() => setHoveredLayer(null)}
+                            >
+                                <NextImage
+                                    src="/images/platform-architecture.jpg"
+                                    alt="Ardictech 4-Layer Architecture"
+                                    width={1200}
+                                    height={800}
+                                    className="w-full h-auto object-contain"
+                                    priority
+                                />
+
+                                {/* Layer 4 Hotspot */}
+                                <div
+                                    className="absolute top-[5%] left-[5%] w-[50%] h-[25%] cursor-pointer z-20"
+                                    onMouseEnter={() => setHoveredLayer("layer-4")}
+                                />
+
+                                {/* Tooltip Overlay */}
+                                <AnimatePresence>
+                                    {hoveredLayer === "layer-4" && layer4 && (
+                                        <motion.div
+                                            initial={{ opacity: 0, x: 20, scale: 0.95 }}
+                                            animate={{ opacity: 1, x: 0, scale: 1 }}
+                                            exit={{ opacity: 0, x: 10, scale: 0.95 }}
+                                            className="absolute top-[2%] left-[58%] z-30 w-80 p-6 bg-black/80 backdrop-blur-2xl border border-accent/40 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                                        >
+                                            <div className="flex items-center gap-3 mb-3">
+                                                <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
+                                                    <span className="text-accent text-xs font-bold uppercase tracking-widest">{layer4.number}</span>
+                                                </div>
+                                                <h5 className="text-white font-heading font-bold text-lg">{layer4.name}</h5>
+                                            </div>
+                                            <p className="text-accent/80 text-sm font-medium mb-2 italic tracking-wide">
+                                                "{layer4.metaphor}"
+                                            </p>
+                                            <p className="text-neutral-400 text-sm leading-relaxed font-light">
+                                                {layer4.description}
+                                            </p>
+
+                                            {/* Decorative element */}
+                                            <div className="absolute -left-2 top-8 w-2 h-2 bg-accent rotate-45 border border-white/10" />
+                                        </motion.div>
+                                    )}
+                                </AnimatePresence>
+                            </div>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl mb-20">
+                            {deploymentModel.ourApproach.items.map((item, i) => (
+                                <div key={i} className="flex items-center gap-6 group">
+                                    <span className="flex items-center justify-center w-8 h-8 rounded-full border border-accent/20 text-accent text-xs font-bold group-hover:bg-accent group-hover:text-black transition-all duration-500">
+                                        {i + 1}
+                                    </span>
+                                    <span className="text-xl italic font-light text-neutral-200 group-hover:text-white transition-colors">
+                                        {item}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+
+                {/* Paths Comparison Grid - Moved below Integrated Approach */}
+                <div className="relative grid gap-0 md:grid-cols-2 bg-black overflow-hidden mt-20">
                     {/* Left Path: Existing Stack */}
                     <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-white/[0.01] flex flex-col bg-black">
                         <div className="relative z-10 flex-1 flex flex-col">
@@ -118,77 +189,6 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     </div>
                 </div>
 
-                {/* Integrated Approach Footer */}
-                <div className="mt-32 relative">
-                    <div className="flex flex-col items-center py-20 px-8 bg-black">
-                        <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center">
-                            {deploymentModel.ourApproach.title}
-                        </h4>
-                        {/* Architecture Image Integration - Moved above items for better flow */}
-                        <div className="relative w-full max-w-4xl mx-auto mb-20">
-                            <div
-                                className="relative overflow-hidden bg-black rounded-2xl border border-white/5"
-                                onMouseLeave={() => setHoveredLayer(null)}
-                            >
-                                <NextImage
-                                    src="/images/platform-architecture.jpg"
-                                    alt="Ardictech 4-Layer Architecture"
-                                    width={1200}
-                                    height={800}
-                                    className="w-full h-auto object-contain"
-                                    priority
-                                />
-
-                                {/* Layer 4 Hotspot */}
-                                <div
-                                    className="absolute top-[5%] left-[5%] w-[50%] h-[25%] cursor-pointer z-20"
-                                    onMouseEnter={() => setHoveredLayer("layer-4")}
-                                />
-
-                                {/* Tooltip Overlay */}
-                                <AnimatePresence>
-                                    {hoveredLayer === "layer-4" && layer4 && (
-                                        <motion.div
-                                            initial={{ opacity: 0, x: 20, scale: 0.95 }}
-                                            animate={{ opacity: 1, x: 0, scale: 1 }}
-                                            exit={{ opacity: 0, x: 10, scale: 0.95 }}
-                                            className="absolute top-[2%] left-[58%] z-30 w-80 p-6 bg-black/80 backdrop-blur-2xl border border-accent/40 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
-                                        >
-                                            <div className="flex items-center gap-3 mb-3">
-                                                <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-                                                    <span className="text-accent text-xs font-bold uppercase tracking-widest">{layer4.number}</span>
-                                                </div>
-                                                <h5 className="text-white font-heading font-bold text-lg">{layer4.name}</h5>
-                                            </div>
-                                            <p className="text-accent/80 text-sm font-medium mb-2 italic tracking-wide">
-                                                "{layer4.metaphor}"
-                                            </p>
-                                            <p className="text-neutral-400 text-sm leading-relaxed font-light">
-                                                {layer4.description}
-                                            </p>
-
-                                            {/* Decorative element */}
-                                            <div className="absolute -left-2 top-8 w-2 h-2 bg-accent rotate-45 border border-white/10" />
-                                        </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </div>
-                        </div>
-
-                        <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl mb-20">
-                            {deploymentModel.ourApproach.items.map((item, i) => (
-                                <div key={i} className="flex items-center gap-6 group">
-                                    <span className="flex items-center justify-center w-8 h-8 rounded-full border border-accent/20 text-accent text-xs font-bold group-hover:bg-accent group-hover:text-black transition-all duration-500">
-                                        {i + 1}
-                                    </span>
-                                    <span className="text-xl italic font-light text-neutral-200 group-hover:text-white transition-colors">
-                                        {item}
-                                    </span>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
             </div>
         </SectionWrapper>
     );
