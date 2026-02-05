@@ -7,8 +7,6 @@ import JourneyState from "@/components/sections/JourneyState";
 import OperationalEnso from "@/components/sections/OperationalEnso";
 import EnsoApproach from "@/components/sections/EnsoApproach";
 import DeploymentModel from "@/components/sections/DeploymentModel";
-import PlatformArchitecture from "@/components/sections/PlatformArchitecture";
-import PlatformOverview from "@/components/sections/PlatformOverview";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
@@ -34,8 +32,6 @@ export default async function HomePage({
       <OperationalEnso dict={dict} />
       <EnsoApproach dict={dict} />
       <DeploymentModel dict={dict} />
-      <PlatformArchitecture dict={dict} />
-      <PlatformOverview dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />
       <TechStack dict={dict} />

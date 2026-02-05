@@ -49,10 +49,9 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
           {ensoApproach.description}
         </p>
 
-        {/* Cards and Image Grid - Aligned */}
-        <div className="mb-10 grid gap-8 lg:grid-cols-2 lg:gap-12 xl:gap-20">
-          {/* LEFT: Feature Cards Grid */}
-          <div className="grid gap-5 sm:grid-cols-2">
+        {/* Feature Cards Grid - Full Width */}
+        <div className="mb-10">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {ensoApproach.features.map((feature) => {
               const Icon = icons[feature.id] || Layers;
               return (
@@ -63,8 +62,8 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
                 >
                   {/* Icon and Title Row */}
                   <div className="mb-4 flex items-center gap-4">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-105">
-                      <Icon className="h-7 w-7 stroke-[2.5]" />
+                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent transition-all duration-300 group-hover:bg-accent/20 group-hover:scale-105">
+                      <Icon className="h-6 w-6 stroke-[2.5]" />
                     </div>
                     <h3 className="font-heading text-lg font-bold leading-tight text-white">
                       {feature.title}
@@ -78,19 +77,6 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
                 </a>
               );
             })}
-          </div>
-
-          {/* RIGHT: Platform Layers Image */}
-          <div className="flex items-stretch justify-center lg:justify-end">
-            <div className="relative w-full max-w-2xl">
-              <Image
-                src="/images/platform-layers.png"
-                alt="ARDICTECH Unified Intelligence Platform - 4 Layer Architecture"
-                fill
-                className="object-contain"
-                priority
-              />
-            </div>
           </div>
         </div>
 

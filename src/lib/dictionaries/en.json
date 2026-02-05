@@ -230,52 +230,44 @@
     ]
   },
   "platform": {
-    "title": "Complete Manufacturing Intelligence Platform",
-    "subtitle": "Our 4-layer architecture bridges the gap between raw data and conscious manufacturing action.",
+    "title": "MANUFACTURING INTELLIGENCE",
+    "subtitle": "4 layer architecture",
     "layers": [
       {
         "id": "iot-ignite",
-        "name": "IoT-IGNITE",
-        "tagline": "Data Capture Layer",
-        "description": "The foundation of the sentient factory. Connects to any industrial endpoint, from legacy PLCs to modern sensors, capturing high-fidelity telemetry at scale.",
-        "benefits": [
-          "Connects 1M+ endpoints",
-          "300K+ gateways deployed",
-          "Secure edge processing"
-        ]
+        "number": "Layer 1",
+        "name": "IoT-Ignite",
+        "type": "Edge Foundation",
+        "metaphor": "The Senses",
+        "description": "The physical foundation that perceives the factory floor. Captures high-fidelity data streams from any sensor, machine, or legacy PLC.",
+        "icon": "Radio"
       },
       {
-        "id": "armes-mom",
-        "name": "ArMES / MOM",
-        "tagline": "Manufacturing Operations Management",
-        "description": "The nervous system of production. Orchestrates real-time operations, tracks every movement on the floor, and ensures process compliance across facilities.",
-        "benefits": [
-          "Real-time line visibility",
-          "Digital twin synchronization",
-          "Paperless shop floor"
-        ]
+        "id": "armes",
+        "number": "Layer 2",
+        "name": "ArMES",
+        "type": "Operations Management",
+        "metaphor": "The Nervous System",
+        "description": "Orchestrates complex operations in real-time. Translates raw signals into actionable tasks and ensures seamless process flow.",
+        "icon": "Activity"
       },
       {
         "id": "arai",
+        "number": "Layer 3",
         "name": "ArAI",
-        "tagline": "Predictive Analytics & AI",
-        "description": "The cognitive intelligence layer. Analyzes patterns to predict downtime, optimize energy recipes, and identify quality drift before it impacts yield.",
-        "benefits": [
-          "40% defect reduction",
-          "Predictive maintenance ROI",
-          "Energy BOM optimization"
-        ]
+        "type": "Prescriptive Intelligence",
+        "metaphor": "The Brain",
+        "description": "The cognitive center that predicts, prescribes, and prevents. Turns historical data into foresight for yield and efficiency.",
+        "icon": "Brain"
       },
       {
         "id": "cwf",
+        "number": "Layer 4",
         "name": "CWF",
-        "tagline": "Chat With Your Factory",
-        "description": "The conversational interface. A generative AI wrapper that allows stakeholders to interrogate production data using natural human language.",
-        "benefits": [
-          "Natural language queries",
-          "Instant metric visualization",
-          "Mobile-first oversight"
-        ]
+        "type": "Chat With Your Factory",
+        "metaphor": "The Voice",
+        "description": "The conversational interface that gives the factory a voice. Natural language queries meet instant manufacturing truth.",
+        "icon": "MessageSquare"
       }
     ]
   },
@@ -488,7 +480,8 @@
     }
   },
   "deploymentModel": {
-    "title": "Your Path To Ensō, At Your Pace",
+    "title": "MANUFACTURING INTELLIGENCE",
+    "subtitle": "4 layer architecture",
     "existingStack": {
       "title": "For An Existing Stack",
       "description": "We connect and enhance, don't replace. Our platforms are open by design.",

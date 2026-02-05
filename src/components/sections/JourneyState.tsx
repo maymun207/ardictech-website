@@ -3,8 +3,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import type { Dictionary } from "@/types";
-// Local utility for tailwind class merging
-const cn = (...classes: (string | undefined | null | boolean)[]) => classes.filter(Boolean).join(' ');
+import { cn } from "@/lib/utils";
 
 interface JourneyStateProps {
   dict: Dictionary;

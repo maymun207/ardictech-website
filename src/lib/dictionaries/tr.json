@@ -230,52 +230,44 @@
     ]
   },
   "platform": {
-    "title": "Bütünsel Üretim Zekası Platformu",
-    "subtitle": "4 katmanlı mimarimiz, ham veri ile bilinçli üretim eylemi arasındaki boşluğu kapatır.",
+    "title": "ÜRETİM ZEKASI",
+    "subtitle": "4 katmanlı mimari",
     "layers": [
       {
         "id": "iot-ignite",
-        "name": "IoT-IGNITE",
-        "tagline": "Veri Yakalama Katmanı",
-        "description": "Duyarlı fabrikanın temeli. Eski tip PLC'lerden modern sensörlere kadar her türlü endüstriyel uç noktaya bağlanarak yüksek hassasiyetli telemetri verilerini ölçeklenebilir şekilde toplar.",
-        "benefits": [
-          "1 milyondan fazla uç nokta bağlantısı",
-          "300 binden fazla ağ geçidi",
-          "Güvenli uç bilişim"
-        ]
+        "number": "Katman 1",
+        "name": "IoT-Ignite",
+        "type": "Uç Birim Temeli",
+        "metaphor": "Duyular",
+        "description": "Fabrika zeminini algılayan fiziksel temel. Herhangi bir sensör, makine veya eski tip PLC'den yüksek hassasiyetli veri akışlarını yakalar.",
+        "icon": "Radio"
       },
       {
-        "id": "armes-mom",
-        "name": "ArMES / MOM",
-        "tagline": "Üretim Operasyonları Yönetimi",
-        "description": "Üretimin sinir sistemi. Gerçek zamanlı operasyonları yönetir, sahadaki her hareketi takip eder ve tesisler genelinde süreç uyumluluğunu sağlar.",
-        "benefits": [
-          "Gerçek zamanlı hat görünürlüğü",
-          "Dijital ikiz senkronizasyonu",
-          "Kağıtsız üretim sahası"
-        ]
+        "id": "armes",
+        "number": "Katman 2",
+        "name": "ArMES",
+        "type": "Operasyon Yönetimi",
+        "metaphor": "Sinir Sistemi",
+        "description": "Karmaşık operasyonları gerçek zamanlı olarak yönetir. Ham sinyalleri aksiyon alınabilir görevlere dönüştürür ve kesintisiz süreç akışı sağlar.",
+        "icon": "Activity"
       },
       {
         "id": "arai",
+        "number": "Katman 3",
         "name": "ArAI",
-        "tagline": "Tahminleme Analitiği ve Yapay Zeka",
-        "description": "Bilişsel zeka katmanı. Duruşları tahmin etmek, enerji reçetelerini optimize etmek ve verimi etkilemeden önce kalite sapmalarını belirlemek için modelleri analiz eder.",
-        "benefits": [
-          "%40 hata azaltımı",
-          "Kestirimci bakım yatırım getirisi",
-          "Enerji reçetesi optimizasyonu"
-        ]
+        "type": "Kuralcı Zeka",
+        "metaphor": "Beyin",
+        "description": "Öngören, kural koyan ve önleyen bilişsel merkez. Geçmiş verileri verimlilik ve kazanç için öngörüye dönüştürür.",
+        "icon": "Brain"
       },
       {
         "id": "cwf",
+        "number": "Katman 4",
         "name": "CWF",
-        "tagline": "Fabrikanızla Sohbet Edin",
-        "description": "Konuşma tabanlı arayüz. Paydaşların doğal insan dilini kullanarak üretim verilerini sorgulamasına olanak tanıyan üretken yapay zeka katmanı.",
-        "benefits": [
-          "Doğal dil sorguları",
-          "Anlık metrik görselleştirme",
-          "Mobil öncelikli denetim"
-        ]
+        "type": "Fabrikanızla Sohbet Edin",
+        "metaphor": "Ses",
+        "description": "Fabrikaya bir ses veren konuşma tabanlı arayüz. Doğal dil sorguları anlık üretim gerçekleriyle buluşuyor.",
+        "icon": "MessageSquare"
       }
     ]
   },
@@ -488,7 +480,8 @@
     }
   },
   "deploymentModel": {
-    "title": "Ensō Yolculuğunuz, Sizin Hızınızda",
+    "title": "ÜRETİM ZEKASI",
+    "subtitle": "4 katmanlı mimari",
     "existingStack": {
       "title": "Mevcut Teknoloji Yığınınız İçin",
       "description": "Değiştirmeyiz, bağlar ve geliştiririz. Platformlarımız tasarım gereği açıktır.",

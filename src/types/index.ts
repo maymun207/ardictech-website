@@ -30,10 +30,12 @@ export interface Dictionary {
     subtitle: string;
     layers: {
       id: string;
+      number: string;
       name: string;
-      tagline: string;
+      type: string;
+      metaphor: string;
       description: string;
-      benefits: string[];
+      icon: string;
     }[];
   };
   caseStudy: {
@@ -129,6 +131,7 @@ export interface Dictionary {
   };
   deploymentModel: {
     title: string;
+    subtitle: string;
     existingStack: {
       title: string;
       description: string;

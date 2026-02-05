@@ -1,5 +1,6 @@
 "use client";
 
+import NextImage from "next/image";
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 
@@ -13,23 +14,21 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
     return (
         <SectionWrapper id="deployment-model" dark className="bg-black !py-32 overflow-hidden">
             <div className="mx-auto max-w-7xl relative">
-                {/* Background Glows */}
-                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
-                <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none" />
+                {/* Background Glows removed for pure black aesthetic */}
 
                 {/* Title Section */}
                 <div className="mb-24 text-center">
-                    <h2 className="font-heading text-4xl font-bold sm:text-5xl lg:text-6xl text-white tracking-tight mb-8 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 leading-tight">
+                    <h2 className="font-heading text-4xl font-bold sm:text-5xl lg:text-6xl text-white tracking-tight mb-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/50 leading-tight">
                         {deploymentModel.title}
                     </h2>
+                    <p className="text-xl text-neutral-400 font-light mb-8 tracking-wider uppercase">
+                        {deploymentModel.subtitle}
+                    </p>
                     <div className="mx-auto h-[1px] w-24 bg-accent" />
                 </div>
 
-                <div className="relative grid gap-0 md:grid-cols-2 border border-white/5 rounded-[3rem] bg-neutral-900/20 backdrop-blur-3xl overflow-hidden">
-                    {/* Vertical Divider Line with Pulse Node */}
-                    <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-white/10 to-transparent -translate-x-1/2 z-20">
-                        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3 h-3 bg-accent rounded-full blur-[4px] animate-pulse" />
-                    </div>
+                <div className="relative grid gap-0 md:grid-cols-2 bg-black overflow-hidden">
+                    {/* Vertical Divider removed for pure black aesthetic */}
 
                     {/* Left Path: Existing Stack */}
                     <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-accent/[0.02] flex flex-col">
@@ -63,7 +62,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                     </ul>
                                 </div>
 
-                                <div className="pt-10 border-t border-white/5 mt-auto">
+                                <div className="pt-10 mt-auto">
                                     <p className="text-sm italic text-neutral-500 leading-relaxed max-w-sm">
                                         {deploymentModel.existingStack.idealFor}
                                     </p>
@@ -73,7 +72,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     </div>
 
                     {/* Right Path: Clean State */}
-                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-secondary/[0.02] border-t md:border-t-0 md:border-l border-white/5 flex flex-col">
+                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-secondary/[0.02] flex flex-col">
                         <div className="relative z-10 flex-1 flex flex-col">
                             <span className="inline-block px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 text-secondary text-xs font-bold tracking-[0.2em] mb-8 w-fit">
                                 Path B
@@ -104,7 +103,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                     </ul>
                                 </div>
 
-                                <div className="pt-10 border-t border-white/5 mt-auto">
+                                <div className="pt-10 mt-auto">
                                     <p className="text-sm italic text-neutral-500 leading-relaxed max-w-sm">
                                         {deploymentModel.cleanState.idealFor}
                                     </p>
@@ -116,12 +115,25 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
 
                 {/* Integrated Approach Footer */}
                 <div className="mt-32 relative">
-                    <div className="absolute inset-0 bg-accent/5 blur-[80px] rounded-full -z-10" />
-                    <div className="flex flex-col items-center py-20 px-8 rounded-[3rem] border border-white/5 bg-neutral-900/40 backdrop-blur-2xl">
+                    <div className="flex flex-col items-center py-20 px-8">
                         <h4 className="mb-16 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center">
                             {deploymentModel.ourApproach.title}
                         </h4>
-                        <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl">
+                        {/* Architecture Image Integration - Moved above items for better flow */}
+                        <div className="relative w-full max-w-4xl mx-auto mb-20">
+                            <div className="relative overflow-hidden">
+                                <NextImage
+                                    src="/images/platform-architecture.jpg"
+                                    alt="Ardictech 4-Layer Architecture"
+                                    width={1200}
+                                    height={800}
+                                    className="w-full h-auto object-contain"
+                                    priority
+                                />
+                            </div>
+                        </div>
+
+                        <div className="flex flex-wrap justify-center gap-y-12 gap-x-16 max-w-5xl mb-20">
                             {deploymentModel.ourApproach.items.map((item, i) => (
                                 <div key={i} className="flex items-center gap-6 group">
                                     <span className="flex items-center justify-center w-8 h-8 rounded-full border border-accent/20 text-accent text-xs font-bold group-hover:bg-accent group-hover:text-black transition-all duration-500">
