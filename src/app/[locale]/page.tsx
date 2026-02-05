@@ -7,6 +7,11 @@ import JourneyState from "@/components/sections/JourneyState";
 import OperationalEnso from "@/components/sections/OperationalEnso";
 import EnsoApproach from "@/components/sections/EnsoApproach";
 import DeploymentModel from "@/components/sections/DeploymentModel";
+import LayerIoT from "@/components/sections/LayerIoT";
+import LayerArMES from "@/components/sections/LayerArMES";
+import LayerArAI from "@/components/sections/LayerArAI";
+import LayerCWF from "@/components/sections/LayerCWF";
+import UnderTheHood from "@/components/sections/UnderTheHood";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
 import FeaturesGrid from "@/components/sections/FeaturesGrid";
@@ -32,6 +37,11 @@ export default async function HomePage({
       <OperationalEnso dict={dict} />
       <EnsoApproach dict={dict} />
       <DeploymentModel dict={dict} />
+      <LayerIoT dict={dict} />
+      <LayerArMES dict={dict} />
+      <LayerArAI dict={dict} />
+      <LayerCWF dict={dict} />
+      <UnderTheHood dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />
       <TechStack dict={dict} />

@@ -247,4 +247,58 @@ export interface Dictionary {
       description: string;
     }[];
   };
+  architectureDetails: {
+    iot: {
+      title: string;
+      tagline: string;
+      description: string;
+      features: {
+        title: string;
+        description: string;
+      }[];
+    };
+    armes: {
+      title: string;
+      tagline: string;
+      description: string;
+      steps: {
+        title: string;
+        description: string;
+      }[];
+    };
+    arai: {
+      title: string;
+      tagline: string;
+      description: string;
+      points: {
+        title: string;
+        description: string;
+      }[];
+    };
+    cwf: {
+      title: string;
+      tagline: string;
+      description: string;
+      comparison: {
+        legacy: {
+          label: string;
+          value: string;
+          steps: string;
+        };
+        ardictech: {
+          label: string;
+          value: string;
+          steps: string;
+        };
+      };
+      features: string[];
+    };
+    underTheHood: {
+      title: string;
+      categories: {
+        name: string;
+        items: string[];
+      }[];
+    };
+  };
 }

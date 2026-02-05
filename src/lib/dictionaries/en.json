@@ -27,7 +27,7 @@
         "id": "sentient-factory",
         "headline": "The Sentient Factory.",
         "subheadline": "A Living Organism.",
-        "description": "Your factory is no longer a collection of machines. We bridge the gap between raw industrial data and digital consciousness, turning every sensor into a voice.",
+        "description": "Your factory is no longer a collection of machines.\nWe bridge the gap between raw industrial data and digital consciousness, turning every sensor into a voice.",
         "image": "/images/hero/holographic-interface.png",
         "ctaPrimary": "Talk to Your Factory",
         "ctaSecondary": "Book a Demo"
@@ -36,7 +36,7 @@
         "id": "chat-with-factory",
         "headline": "CWF: Chat With Your Factory",
         "subheadline": "From Monitoring to Conversation.",
-        "description": "If you could speak to your infrastructure, what would it say? Our conversational AI turns complex telemetry into simple human dialogue.",
+        "description": "If you could speak to your infrastructure, what would it say?\nOur conversational AI turns complex telemetry into simple human dialogue.",
         "image": "/images/hero/factory-bot-mobile.png",
         "ctaPrimary": "Start the Conversation",
         "ctaSecondary": "Book a Demo"
@@ -230,8 +230,8 @@
     ]
   },
   "platform": {
-    "title": "MANUFACTURING INTELLIGENCE",
-    "subtitle": "4 layer architecture",
+    "title": "Manufacturing Intelligence",
+    "subtitle": "4 Layer Architecture",
     "layers": [
       {
         "id": "iot-ignite",
@@ -540,5 +540,133 @@
       "gdpr": "I agree to receive email updates. Unsubscribe anytime."
     },
     "copyright": "© 2026 ARDICTECH. All rights reserved."
+  },
+  "architectureDetails": {
+    "iot": {
+      "title": "IoT-Ignite: Data Collection — Connectivity",
+      "tagline": "The Nervous System of the Modern Factory",
+      "description": "Our edge-foundation is built for scale. We don't just collect data; we process it at the speed of light where it's generated, ensuring your factory responds in milliseconds, not minutes.",
+      "features": [
+        {
+          "title": "Edge Computing",
+          "description": "Process data at the source. Eliminate cloud latency and ensure continuous operation even in 'air-gapped' environments."
+        },
+        {
+          "title": "Protocol Agnostic",
+          "description": "Universal connectivity for legacy PLCs (Siemens, Rockwell) and modern assets via MQTT, OPC-UA, and Modbus."
+        },
+        {
+          "title": "Secure Overlay",
+          "description": "Enterprise-grade security with Active Directory integration, Zero Trust Architecture, and read-only connection profiles."
+        }
+      ]
+    },
+    "armes": {
+      "title": "ArMES: The Digital Passport",
+      "tagline": "Structure, Integrity, and Unified Truth",
+      "description": "ArMES manages the complexity of your production lifecycle, creating a 'Digital Thread' that correlates every raw material lot to a finished unit.",
+      "steps": [
+        {
+          "title": "Raw Material Management",
+          "description": "Live tracking of silo levels, humidity, and lot numbers."
+        },
+        {
+          "title": "Digital Recipe Control",
+          "description": "Ensures 95%+ recipe accuracy across all shifts."
+        },
+        {
+          "title": "ERP Integration",
+          "description": "Seamless two-way sync with SAP/IFS. Pulls orders, sends shop-floor truth back."
+        },
+        {
+          "title": "Lab-Integrated Gating",
+          "description": "Hard pre-requisites. Production stops if quality results deviate from the recipe."
+        },
+        {
+          "title": "Full Traceability",
+          "description": "Unit-level tracking compliant with EU Digital Product Passport (DPP) standards."
+        }
+      ]
+    },
+    "arai": {
+      "title": "ArAI: From Reactive to Prescriptive",
+      "tagline": "The Digital Consciousness of Your Factory",
+      "description": "Move beyond knowing what happened. ArAI uses 'Golden Batch' fingerprinting and prescriptive modeling to detect deviations before they become defects and reduce energy consumption in real-time.",
+      "points": [
+        {
+          "title": "Predictive Quality",
+          "description": "Predicting defects and quality drift up to 2 hours in advance through real-time telemetry correlation."
+        },
+        {
+          "title": "Energy Optimization",
+          "description": "Real-time optimization of kiln curves and resource usage, typically reducing energy costs by 15-25%."
+        },
+        {
+          "title": "The Data Moat",
+          "description": "Proprietary models trained on millions of production cycles from industrial heritage, ensuring manufacturing-specific accuracy."
+        }
+      ]
+    },
+    "cwf": {
+      "title": "CWF: Give The Factory a Voice",
+      "tagline": "Natural Language. Instant Manufacturing Truth.",
+      "description": "Don't navigate menus. Just ask. CWF hides complexity behind a simple conversational interface available anywhere.",
+      "comparison": {
+        "legacy": {
+          "label": "Legacy MES Query",
+          "value": "90 Seconds",
+          "steps": "Open HMI > Navigate Tree > Select Equipment > View Chart"
+        },
+        "ardictech": {
+          "label": "ARDICTECH CWF",
+          "value": "5 Seconds",
+          "steps": "Natural Language Query on WhatsApp/Web"
+        }
+      },
+      "features": [
+        "WhatsApp Interworking Agent",
+        "Multi-modal Response (Text + Charts)",
+        "Natural Language Processing (NLP)"
+      ]
+    },
+    "underTheHood": {
+      "title": "Under the Hood: Secure, Open and Future-Proof",
+      "categories": [
+        {
+          "name": "Edge Computing",
+          "items": [
+            "Enterprise grade Android OS",
+            "Linux Support",
+            "TensorFlow Lite",
+            "Air-gapped Environments"
+          ]
+        },
+        {
+          "name": "Cloud/On-Prem Core",
+          "items": [
+            "Kubernetes",
+            "Microservices",
+            "PostgreSQL",
+            "Apache Spark"
+          ]
+        },
+        {
+          "name": "Security",
+          "items": [
+            "Zero Trust Architecture",
+            "End-to-end encryption",
+            "ISO 27001 Certified"
+          ]
+        },
+        {
+          "name": "Integration",
+          "items": [
+            "MQTT / OPC-UA / REST",
+            "No Vendor Lock-in",
+            "Your Data is Your Data"
+          ]
+        }
+      ]
+    }
   }
 }

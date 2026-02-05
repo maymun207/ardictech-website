@@ -75,20 +75,19 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
       {slides.map((slide, index) => (
         <div
           key={slide.id}
-          className={`absolute inset-0 transition-opacity duration-500 ${
-            index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
-          }`}
+          className={`absolute inset-0 transition-opacity duration-500 ${index === currentSlide ? "opacity-100 z-10" : "opacity-0 z-0"
+            }`}
           aria-hidden={index !== currentSlide}
         >
           {/* Background Image */}
-          <div 
+          <div
             className="absolute inset-0"
             style={
               slide.id === "chat-with-factory"
-                ? { transform: "translateX(25%)" }
+                ? { transform: "scale(0.7) translateX(38%)" }
                 : slide.id === "sentient-factory"
-                ? { transform: "translateY(15%)" }
-                : undefined
+                  ? { transform: "translateY(15%)" }
+                  : undefined
             }
           >
             <Image
@@ -100,12 +99,11 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
               quality={90}
             />
             {/* Gradient Overlay - Extended darker area for better text readability */}
-            <div 
-              className={`absolute inset-0 ${
-                slide.id === "chat-with-factory"
-                  ? "bg-gradient-to-r from-black/95 from-0% via-black/70 via-35% to-transparent to-50%"
-                  : "bg-gradient-to-r from-black/95 from-0% via-black/80 via-40% via-black/50 via-60% to-transparent"
-              }`}
+            <div
+              className={`absolute inset-0 ${slide.id === "chat-with-factory"
+                ? "bg-gradient-to-r from-black/95 from-0% via-black/70 via-35% to-transparent to-50%"
+                : "bg-gradient-to-r from-black/95 from-0% via-black/80 via-40% via-black/50 via-60% to-transparent"
+                }`}
             />
           </div>
 
@@ -119,14 +117,14 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
 
               {/* Subheadline */}
               {slide.subheadline && (
-                <p className="mt-4 text-2xl font-semibold text-accent sm:text-3xl">
+                <p className="mt-4 text-2xl font-semibold text-accent sm:text-3xl whitespace-pre-line">
                   {slide.subheadline}
                 </p>
               )}
 
               {/* Description */}
               {slide.description && (
-                <p className="mt-6 text-lg leading-relaxed text-neutral-200 sm:text-xl">
+                <p className="mt-6 text-lg leading-relaxed text-neutral-200 sm:text-xl whitespace-pre-line">
                   {slide.description}
                 </p>
               )}

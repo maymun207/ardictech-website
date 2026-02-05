@@ -27,7 +27,7 @@
         "id": "sentient-factory",
         "headline": "Duyarlı Fabrika.",
         "subheadline": "Canlı Bir Organizma.",
-        "description": "Fabrikanız artık sadece makinelerden oluşan bir yığın değil. Ham endüstriyel veriler ile dijital bilinç arasındaki boşluğu kapatıyor, her sensörü bir sese dönüştürüyoruz.",
+        "description": "Fabrikanız artık sadece makinelerden oluşan bir yığın değil.\nHam endüstriyel veriler ile dijital bilinç arasındaki boşluğu kapatıyor, her sensörü bir sese dönüştürüyoruz.",
         "image": "/images/hero/holographic-interface.png",
         "ctaPrimary": "Fabrikanızla Konuşun",
         "ctaSecondary": "Demo Talep Et"
@@ -36,7 +36,7 @@
         "id": "chat-with-factory",
         "headline": "CWF: Fabrikanızla Sohbet Edin",
         "subheadline": "İzlemeden Konuşmaya.",
-        "description": "Altyapınızla konuşabilseydiniz, ne söylerdi? Konuşma tabanlı yapay zekamız, karmaşık telemetriyi basit insani diyaloglara dönüştürür.",
+        "description": "Altyapınızla konuşabilseydiniz, ne söylerdi?\nKonuşma tabanlı yapay zekamız, karmaşık telemetriyi basit insani diyaloglara dönüştürür.",
         "image": "/images/hero/factory-bot-mobile.png",
         "ctaPrimary": "Sohbeti Başlatın",
         "ctaSecondary": "Demo Talep Et"
@@ -230,8 +230,8 @@
     ]
   },
   "platform": {
-    "title": "ÜRETİM ZEKASI",
-    "subtitle": "4 katmanlı mimari",
+    "title": "Üretim Zekası",
+    "subtitle": "4 Katmanlı Mimari",
     "layers": [
       {
         "id": "iot-ignite",
@@ -540,5 +540,133 @@
       "gdpr": "E-posta güncellemeleri almayı kabul ediyorum. İstediğiniz zaman abonelikten çıkabilirsiniz."
     },
     "copyright": "© 2026 ARDICTECH. Tüm hakları saklıdır."
+  },
+  "architectureDetails": {
+    "iot": {
+      "title": "IoT-Ignite: Veri Toplama — Bağlantı",
+      "tagline": "Modern Fabrikanın Sinir Sistemi",
+      "description": "Uç birim (edge) temelimiz ölçeklenebilirlik için tasarlanmıştır. Sadece veri toplamakla kalmıyor, veriyi üretildiği anda ışık hızında işleyerek fabrikanızın dakikalar değil, milisaniyeler içinde yanıt vermesini sağlıyoruz.",
+      "features": [
+        {
+          "title": "Uç Birim Hesaplama (Edge Computing)",
+          "description": "Veriyi kaynağında işleyin. Bulut gecikmesini ortadan kaldırın ve çevrimdışı (kapalı devre) ortamlarda bile kesintisiz çalışmayı sağlayın."
+        },
+        {
+          "title": "Protokol Bağımsız",
+          "description": "MQTT, OPC-UA ve Modbus aracılığıyla eski PLC'ler (Siemens, Rockwell) ve modern varlıklar için evrensel bağlantı."
+        },
+        {
+          "title": "Güvenli Katman",
+          "description": "Active Directory entegrasyonu, Sıfır Güven (Zero Trust) mimarisi ve salt okunur bağlantı profilleri ile kurumsal düzeyde güvenlik."
+        }
+      ]
+    },
+    "armes": {
+      "title": "ArMES: Dijital Pasaport",
+      "tagline": "Yapı, Bütünlük ve Birleştirilmiş Gerçeklik",
+      "description": "ArMES, üretim döngünüzün karmaşıklığını yöneterek her hammadde grubunu bitmiş bir ürünle ilişkilendiren bir 'Dijital İz' oluşturur.",
+      "steps": [
+        {
+          "title": "Hammadde Yönetimi",
+          "description": "Silo seviyelerinin, nem oranlarının ve parti numaralarının canlı takibi."
+        },
+        {
+          "title": "Dijital Reçete Kontrolü",
+          "description": "Tüm vardiyalarda %95+ reçete doğruluğu sağlar."
+        },
+        {
+          "title": "ERP Entegrasyonu",
+          "description": "SAP/IFS ile sorunsuz iki yönlü senkronizasyon. Emirleri çeker, saha gerçekliğini geri gönderir."
+        },
+        {
+          "title": "Laboratuvar Entegreli Geçiş",
+          "description": "Sert ön koşullar. Kalite sonuçları reçeteden saparsa üretim durdurulur."
+        },
+        {
+          "title": "Tam İzlenebilirlik",
+          "description": "AB Dijital Ürün Pasaportu (DPP) standartlarına uygun birim bazlı takip."
+        }
+      ]
+    },
+    "arai": {
+      "title": "ArAI: Reaktiften Yönergesele",
+      "tagline": "Fabrikanızın Dijital Bilinci",
+      "description": "Sadece ne olduğunu bilmenin ötesine geçin. ArAI, hatalar oluşmadan önce sapmaları tespit etmek ve enerji tüketimini gerçek zamanlı optimize etmek için 'Altın Reçete' parmak izini ve yönergesel modellemeyi kullanır.",
+      "points": [
+        {
+          "title": "Öngörücü Kalite",
+          "description": "Gerçek zamanlı telemetri korelasyonu yoluyla kalite sapmalarını ve kusurları 2 saate kadar önceden tahmin edin."
+        },
+        {
+          "title": "Enerji Optimizasyonu",
+          "description": "Fırın eğrilerinin ve kaynak kullanımının gerçek zamanlı optimizasyonu ile enerji maliyetlerinde genellikle %15-25 tasarruf sağlayın."
+        },
+        {
+          "title": "Veri Kalesi (Data Moat)",
+          "description": "Endüstriyel mirastan gelen milyonlarca üretim döngüsüyle eğitilmiş, üretime özel doğruluk sağlayan tescilli modeller."
+        }
+      ]
+    },
+    "cwf": {
+      "title": "CWF: Fabrikaya Bir Ses Verin",
+      "tagline": "Doğal Dil. Anlık Üretim Gerçekliği.",
+      "description": "Menüler arasında kaybolmayın. Sadece sorun. CWF, karmaşıklığı her yerden erişilebilen basit bir konuşma arayüzünün arkasına gizler.",
+      "comparison": {
+        "legacy": {
+          "label": "Geleneksel MES Sorgusu",
+          "value": "90 Saniye",
+          "steps": "HMI'ı Aç > Menüde Gezin > Ekipmanı Seç > Grafiği Görüntüle"
+        },
+        "ardictech": {
+          "label": "ARDICTECH CWF",
+          "value": "5 Saniye",
+          "steps": "WhatsApp/Web Üzerinden Doğal Dil Sorgusu"
+        }
+      },
+      "features": [
+        "WhatsApp Entegre Temsilci",
+        "Çok Modlu Yanıt (Metin + Grafikler)",
+        "Doğal Dil İşleme (NLP)"
+      ]
+    },
+    "underTheHood": {
+      "title": "Teknik Detaylar: Güvenli, Açık ve Geleceğe Hazır",
+      "categories": [
+        {
+          "name": "Uç Birim Hesaplama",
+          "items": [
+            "Kurumsal Sınıf Android İşletim Sistemi",
+            "Linux Desteği",
+            "TensorFlow Lite",
+            "İnternetsiz Çalışabilen Ortamlar"
+          ]
+        },
+        {
+          "name": "Bulut/Yerel Çekirdek",
+          "items": [
+            "Kubernetes",
+            "Mikroservisler",
+            "PostgreSQL",
+            "Apache Spark"
+          ]
+        },
+        {
+          "name": "Güvenlik",
+          "items": [
+            "Sıfır Güven Mimarisi",
+            "Uçtan Uca Şifreleme",
+            "ISO 27001 Sertifikalı"
+          ]
+        },
+        {
+          "name": "Entegrasyon",
+          "items": [
+            "MQTT / OPC-UA / REST",
+            "Üretici Kilidi Yok",
+            "Veriniz Sizin Kontrolünüzde"
+          ]
+        }
+      ]
+    }
   }
 }
