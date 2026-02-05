@@ -27,7 +27,7 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
   };
 
   return (
-    <section className="relative overflow-hidden bg-black py-20 text-white lg:py-32">
+    <section className="relative overflow-hidden bg-black pt-20 pb-10 text-white lg:pt-32 lg:pb-16">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Badge */}
         <div className="mb-8">

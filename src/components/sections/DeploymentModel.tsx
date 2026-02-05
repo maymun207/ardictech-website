@@ -17,7 +17,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
     const layer4 = platform.layers.find(l => l.id === "cwf");
 
     return (
-        <SectionWrapper id="deployment-model" dark className="bg-black !py-32 overflow-hidden">
+        <SectionWrapper id="deployment-model" dark className="bg-black !pt-16 !pb-32 overflow-hidden">
             <div className="mx-auto max-w-7xl relative">
                 {/* Section Branding - Moved to top as requested */}
                 <h4 className="mb-12 font-heading text-sm font-bold tracking-[0.5em] text-accent text-center uppercase">
