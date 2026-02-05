@@ -15,6 +15,15 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
     const [hoveredLayer, setHoveredLayer] = useState<string | null>(null);
 
     const layer4 = platform.layers.find(l => l.id === "cwf");
+    const layer3 = platform.layers.find(l => l.id === "arai");
+    const layer2 = platform.layers.find(l => l.id === "armes");
+    const layer1 = platform.layers.find(l => l.id === "iot-ignite");
+
+    const activeLayerData =
+        hoveredLayer === "layer-4" ? layer4 :
+            hoveredLayer === "layer-3" ? layer3 :
+                hoveredLayer === "layer-2" ? layer2 :
+                    hoveredLayer === "layer-1" ? layer1 : null;
 
     return (
         <SectionWrapper id="deployment-model" dark className="bg-black !pt-16 !pb-32 overflow-hidden">
@@ -66,32 +75,50 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                     priority
                                 />
 
-                                {/* Layer 4 Hotspot */}
+                                {/* Hotspots for Layers */}
                                 <div
-                                    className="absolute top-[5%] left-[5%] w-[50%] h-[25%] cursor-pointer z-20"
+                                    className="absolute top-[5%] left-[5%] w-[50%] h-[20%] cursor-pointer z-20"
                                     onMouseEnter={() => setHoveredLayer("layer-4")}
+                                />
+                                <div
+                                    className="absolute top-[25%] left-[5%] w-[50%] h-[18%] cursor-pointer z-20"
+                                    onMouseEnter={() => setHoveredLayer("layer-3")}
+                                />
+                                <div
+                                    className="absolute top-[45%] left-[5%] w-[50%] h-[18%] cursor-pointer z-20"
+                                    onMouseEnter={() => setHoveredLayer("layer-2")}
+                                />
+                                <div
+                                    className="absolute top-[68%] left-[5%] w-[50%] h-[18%] cursor-pointer z-20"
+                                    onMouseEnter={() => setHoveredLayer("layer-1")}
                                 />
 
                                 {/* Tooltip Overlay */}
                                 <AnimatePresence>
-                                    {hoveredLayer === "layer-4" && layer4 && (
+                                    {hoveredLayer && activeLayerData && (
                                         <motion.div
+                                            key={hoveredLayer}
                                             initial={{ opacity: 0, x: 20, scale: 0.95 }}
                                             animate={{ opacity: 1, x: 0, scale: 1 }}
                                             exit={{ opacity: 0, x: 10, scale: 0.95 }}
-                                            className="absolute top-[2%] left-[58%] z-30 w-80 p-6 bg-black/80 backdrop-blur-2xl border border-accent/40 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                                            className="absolute left-[58%] z-30 w-80 p-6 bg-black/80 backdrop-blur-2xl border border-accent/40 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.5)]"
+                                            style={{
+                                                top: hoveredLayer === "layer-4" ? "2%" :
+                                                    hoveredLayer === "layer-3" ? "22%" :
+                                                        hoveredLayer === "layer-2" ? "42%" : "62%"
+                                            }}
                                         >
                                             <div className="flex items-center gap-3 mb-3">
                                                 <div className="p-2 rounded-lg bg-accent/10 border border-accent/20">
-                                                    <span className="text-accent text-xs font-bold uppercase tracking-widest">{layer4.number}</span>
+                                                    <span className="text-accent text-xs font-bold uppercase tracking-widest">{activeLayerData.number}</span>
                                                 </div>
-                                                <h5 className="text-white font-heading font-bold text-lg">{layer4.name}</h5>
+                                                <h5 className="text-white font-heading font-bold text-lg">{activeLayerData.name}</h5>
                                             </div>
                                             <p className="text-accent/80 text-sm font-medium mb-2 italic tracking-wide">
-                                                "{layer4.metaphor}"
+                                                "{activeLayerData.metaphor}"
                                             </p>
                                             <p className="text-neutral-400 text-sm leading-relaxed font-light">
-                                                {layer4.description}
+                                                {activeLayerData.description}
                                             </p>
 
                                             {/* Decorative element */}
