@@ -10,6 +10,7 @@ import DeploymentModel from "@/components/sections/DeploymentModel";
 import LayerIoT from "@/components/sections/LayerIoT";
 import LayerArMES from "@/components/sections/LayerArMES";
 import LayerArAI from "@/components/sections/LayerArAI";
+import CWFConversation from "@/components/sections/CWFConversation";
 import LayerCWF from "@/components/sections/LayerCWF";
 import UnderTheHood from "@/components/sections/UnderTheHood";
 import CaseStudy from "@/components/sections/CaseStudy";
@@ -40,6 +41,7 @@ export default async function HomePage({
       <LayerIoT dict={dict} />
       <LayerArMES dict={dict} />
       <LayerArAI dict={dict} />
+      <CWFConversation dict={dict} />
       <LayerCWF dict={dict} />
       <UnderTheHood dict={dict} />
       <CaseStudy dict={dict} />

@@ -47,46 +47,77 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                         </p>
                     </motion.div>
 
-                    {/* Image Content */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
-                        className="relative lg:mt-28"
-                    >
-                        <div className="absolute inset-0 bg-accent/20 rounded-full blur-[100px] animate-pulse" />
+                    {/* Image Content - Stacked */}
+                    <div className="flex flex-col gap-12 lg:gap-16">
+                        {/* 1. Edge Device Image */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1 }}
+                            className="relative lg:mt-0"
+                        >
+                            <div className="absolute inset-0 bg-accent/20 rounded-full blur-[100px] animate-pulse" />
 
-                        <div className="relative rounded-3xl overflow-hidden aspect-[16/10] border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
-                            <NextImage
-                                src="/images/iot-gateway.png"
-                                alt="IoT-Ignite Gateway Device"
-                                fill
-                                className="object-cover transform hover:scale-105 transition-transform duration-1000"
-                            />
+                            <div className="relative rounded-3xl overflow-hidden aspect-[16/10] border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+                                <NextImage
+                                    src="/images/iot-gateway.png"
+                                    alt="IoT-Ignite Gateway Device"
+                                    fill
+                                    className="object-cover transform hover:scale-105 transition-transform duration-1000"
+                                />
 
-                            {/* Glassmorphism Badge - Moved to bottom-right and made more compact */}
-                            <div className="absolute bottom-4 right-4 p-4 bg-black/60 backdrop-blur-xl border border-white/10 rounded-2xl max-w-[160px]">
-                                <div className="flex items-center gap-3">
-                                    <div className="h-2 w-2 rounded-full bg-accent animate-ping shrink-0" />
-                                    <div>
-                                        <p className="text-white font-bold text-[10px] tracking-widest uppercase mb-0.5">Live Edge</p>
-                                        <p className="text-neutral-400 text-[9px] uppercase tracking-tighter">Active & Secure</p>
+                                {/* Glassmorphism Badge */}
+                                <div className="absolute bottom-4 right-4 p-4 bg-black/60 backdrop-blur-xl border border-white/10 rounded-2xl max-w-[160px]">
+                                    <div className="flex items-center gap-3">
+                                        <div className="h-2 w-2 rounded-full bg-accent animate-ping shrink-0" />
+                                        <div>
+                                            <p className="text-white font-bold text-[10px] tracking-widest uppercase mb-0.5">Live Edge</p>
+                                            <p className="text-neutral-400 text-[9px] uppercase tracking-tighter">Active & Secure</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* Floating technical detail tags */}
-                        <motion.div
-                            animate={{ y: [0, -10, 0] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute -top-6 -right-4 p-3 bg-black/60 backdrop-blur-md border border-accent/20 rounded-xl hidden md:block"
-                        >
-                            <p className="text-accent text-[8px] font-bold tracking-widest uppercase mb-1">Architecture</p>
-                            <p className="text-white text-[10px] font-mono">IoT-Ignite Agent 2.0</p>
+                            {/* Floating technical detail tags */}
+                            <motion.div
+                                animate={{ y: [0, -10, 0] }}
+                                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                                className="absolute -top-6 -right-4 p-3 bg-black/60 backdrop-blur-md border border-accent/20 rounded-xl hidden md:block"
+                            >
+                                <p className="text-accent text-[8px] font-bold tracking-widest uppercase mb-1">Architecture</p>
+                                <p className="text-white text-[10px] font-mono">IoT-Ignite Agent 2.0</p>
+                            </motion.div>
                         </motion.div>
-                    </motion.div>
+
+                        {/* 2. Data Flow Architecture Image */}
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            whileHover={{
+                                scale: 1.1,
+                                zIndex: 50,
+                                transition: { duration: 0.4, ease: "easeOut" }
+                            }}
+                            transition={{ duration: 1, delay: 0.3 }}
+                            className="relative cursor-zoom-in group/arch"
+                        >
+                            <div className="relative rounded-3xl overflow-hidden aspect-[4/3] border border-white/10 shadow-[0_0_40px_rgba(0,0,0,0.6)] bg-[#050505] transition-all duration-500 group-hover/arch:border-accent/40 group-hover/arch:shadow-[0_0_60px_rgba(0,209,255,0.2)]">
+                                <NextImage
+                                    src="/images/iot-data-flow.png"
+                                    alt="IoT Data Flow Architecture"
+                                    fill
+                                    className="object-contain p-0 transition-transform duration-700 scale-110 group-hover/arch:scale-125"
+                                />
+                            </div>
+
+                            {/* Interaction Label */}
+                            <div className="absolute top-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full opacity-0 group-hover/arch:opacity-100 transition-opacity">
+                                <span className="text-accent text-[10px] font-bold tracking-widest uppercase">Zoom Active</span>
+                            </div>
+                        </motion.div>
+                    </div>
                 </div>
 
                 {/* Feature Cards - Side by Side */}

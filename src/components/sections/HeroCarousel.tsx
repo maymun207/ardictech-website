@@ -108,7 +108,7 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto max-w-7xl px-4 py-32 sm:px-6 lg:px-8">
+          <div className="relative z-20 mx-auto max-w-7xl px-4 pt-[17%] pb-32 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               {/* Headline */}
               <h1 className="font-heading text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
@@ -132,7 +132,7 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
           </div>
 
           {/* CTAs - Fixed position in lower half of screen */}
-          <div className="absolute top-[65%] left-0 right-0 z-30">
+          <div className="absolute top-[70%] left-0 right-0 z-30">
             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
               <div className="max-w-3xl flex flex-col gap-4 sm:flex-row">
                 <Button href="#contact" variant="primary" size="lg">

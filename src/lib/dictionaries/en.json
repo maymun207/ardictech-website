@@ -608,9 +608,9 @@
       ]
     },
     "cwf": {
-      "title": "CWF: Give The Factory a Voice",
-      "tagline": "Natural Language. Instant Manufacturing Truth.",
-      "description": "Don't navigate menus. Just ask. CWF hides complexity behind a simple conversational interface available anywhere.",
+      "title": "CWF: Agent Native Eco-System",
+      "tagline": "Specialized Agents. Orchestrated Intelligence.",
+      "description": "More than a chatbot. A collaborative ecosystem of specialized AI agents working in cycles to transform raw industrial data into executive insight.",
       "comparison": {
         "legacy": {
           "label": "Legacy MES Query",
