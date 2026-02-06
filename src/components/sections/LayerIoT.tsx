@@ -118,7 +118,7 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
 
                             {/* Interaction Label */}
                             <div className="absolute top-4 right-4 px-3 py-1 bg-black/60 backdrop-blur-md border border-white/10 rounded-full opacity-0 group-hover/arch:opacity-100 transition-opacity whitespace-nowrap">
-                                <span className="text-accent text-[10px] font-bold tracking-widest uppercase">Click to Expand (300%)</span>
+                                <span className="text-accent text-[10px] font-bold tracking-widest uppercase">Click to Expand (400%)</span>
                             </div>
                         </motion.div>
                     </div>
@@ -149,7 +149,7 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                 </div>
             </div>
 
-            {/* Fullscreen Overlay (300% / Direct View) */}
+            {/* Fullscreen Overlay (400% / Direct View) */}
             <AnimatePresence>
                 {isExpanded && (
                     <motion.div
@@ -163,7 +163,7 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                         <motion.button
                             initial={{ scale: 0 }}
                             animate={{ scale: 1 }}
-                            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors p-2"
+                            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors p-2 z-50"
                             onClick={(e) => {
                                 e.stopPropagation();
                                 setIsExpanded(false);
@@ -178,7 +178,7 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.3, opacity: 0 }}
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="relative w-full h-full max-w-[90vw] max-h-[85vh] select-none"
+                            className="relative w-full h-full max-w-[98vw] max-h-[92vh] select-none"
                             onClick={(e) => e.stopPropagation()}
                         >
                             <NextImage
