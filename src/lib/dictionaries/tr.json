@@ -17,7 +17,7 @@
       {
         "id": "intelligent-manufacturing",
         "headline": "Akıllı Üretimi Geliştirmek",
-        "subheadline": "",
+        "subheadline": "Her sürece entegre edilmiş hassasiyet, verimlilik ve zeka.",
         "description": "",
         "image": "/images/hero/brain-network.png",
         "ctaPrimary": "Yapay Zeka Çözümlerimizi Keşfedin",
@@ -480,7 +480,7 @@
     }
   },
   "deploymentModel": {
-    "title": "ÜRETİM ZEKASI",
+    "title": "Üretim Zekası",
     "subtitle": "4 KATMANLI MİMARİ",
     "existingStack": {
       "title": "Mevcut Teknoloji Yığınınız İçin",

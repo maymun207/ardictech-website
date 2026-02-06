@@ -142,9 +142,8 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
                 {slide.ctaSecondary && (
                   <Button
                     href="#contact"
-                    variant="ghost"
+                    variant="secondary"
                     size="lg"
-                    className="border-2 border-white text-white hover:bg-white hover:text-primary"
                   >
                     {slide.ctaSecondary}
                   </Button>

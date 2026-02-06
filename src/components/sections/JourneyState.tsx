@@ -44,10 +44,7 @@ export default function JourneyState({ dict }: JourneyStateProps) {
   const [hoveredNode, setHoveredNode] = useState<string | null>(null);
 
   return (
-    <section id="journey-state" className="relative overflow-hidden bg-black pb-32 pt-24 text-white">
-      {/* Background Atmosphere */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[600px] bg-accent/5 blur-[120px] rounded-full pointer-events-none" />
-
+    <section id="journey-state" className="relative overflow-hidden bg-[#000000] pb-32 pt-24 text-white">
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Horizontal Split */}
         <div className="mb-24 grid gap-16 lg:grid-cols-[380px_1fr] lg:items-center">
@@ -70,31 +67,73 @@ export default function JourneyState({ dict }: JourneyStateProps) {
             </h3>
 
             <div className="relative group">
-              <div className="relative overflow-hidden">
+              <div className="relative shadow-[0_0_50px_rgba(0,0,0,0.5)]">
                 <Image
                   src="/images/journey-flow-v3.png"
                   alt="Journey to Digitalization Flow"
                   width={1600}
                   height={900}
                   className={cn(
-                    "h-auto w-full transition-all duration-1000 contrast-[1.3] brightness-[1.25] saturate-[1.4]",
-                    hoveredNode ? "opacity-30 scale-[1.01] grayscale blur-[2px]" : "opacity-100"
+                    "h-auto w-full transition-all duration-1000",
+                    hoveredNode ? "opacity-30 scale-[1.01] blur-[1px]" : "opacity-100"
                   )}
-                  style={{
-                    maskImage: 'radial-gradient(ellipse 95% 95% at center, black 90%, transparent 100%)',
-                    WebkitMaskImage: 'radial-gradient(ellipse 95% 95% at center, black 90%, transparent 100%)'
-                  }}
                   priority
                   unoptimized
                 />
 
-                {/* Micro-Vignettes - Minimal to hide only the very edges */}
-                <div className="absolute inset-0 z-10 pointer-events-none">
-                  <div className="absolute inset-y-0 left-0 w-8 bg-gradient-to-r from-black to-transparent" />
-                  <div className="absolute inset-y-0 right-0 w-8 bg-gradient-to-l from-black to-transparent" />
-                  <div className="absolute inset-x-0 top-0 h-8 bg-gradient-to-b from-black to-transparent" />
-                  <div className="absolute inset-x-0 bottom-0 h-8 bg-gradient-to-t from-black to-transparent" />
+                {/* Seamless Edge Blends - Keeping them very narrow to not hide text */}
+                <div className="absolute inset-0 pointer-events-none z-10 overflow-hidden">
+                  {/* Left Edge Shade */}
+                  <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-black via-black/80 to-transparent" />
+                  {/* Right Edge */}
+                  <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-black to-transparent" />
+                  {/* Top Edge */}
+                  <div className="absolute inset-x-0 top-0 h-12 bg-gradient-to-b from-black to-transparent" />
+                  {/* Bottom Edge */}
+                  <div className="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-black to-transparent" />
                 </div>
+
+                {/* Dynamic Node B Extraction & Shift */}
+                <div
+                  className="absolute z-30 pointer-events-none"
+                  style={{ left: '-12%', top: '40%' }}
+                >
+                  <div className="flex flex-col gap-2 max-w-[240px] animate-in fade-in slide-in-from-left-4 duration-1000">
+                    <div className="flex items-center gap-3">
+                      <div className="relative">
+                        <div className="absolute -inset-2 bg-accent/20 blur-md rounded-full" />
+                        <div className="relative h-11 w-11 flex items-center justify-center rounded-lg border border-accent/40 bg-black/40 backdrop-blur-sm">
+                          {/* Premium Blueprint SVG Icon */}
+                          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-accent">
+                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <path d="M8 13h8" />
+                            <path d="M8 17h8" />
+                            <path d="M10 9h1" />
+                          </svg>
+                        </div>
+                      </div>
+                      <h4 className="text-base font-bold text-white tracking-tight">
+                        {journeyState.nodes.find(n => n.id === 'B')?.label}
+                      </h4>
+                    </div>
+                    <p className="text-[11px] leading-relaxed text-neutral-300 pl-[56px]">
+                      {journeyState.nodes.find(n => n.id === 'B')?.description}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Mask to hide the original static Node B in the image */}
+                <div
+                  className="absolute z-10 pointer-events-none blur-md"
+                  style={{
+                    left: '8%',
+                    top: '35%',
+                    width: '20%',
+                    height: '30%',
+                    background: 'radial-gradient(circle at center, #0a1122 80%, transparent 100%)'
+                  }}
+                />
 
                 {/* Hotspot Hover Zones (Inside Image Container) */}
                 <div className="absolute inset-0 z-20">

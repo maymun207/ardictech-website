@@ -84,9 +84,9 @@ export default function EnsoApproach({ dict }: EnsoApproachProps) {
         <div>
           <Button
             href="#platform"
-            variant="ghost"
+            variant="primary"
             size="lg"
-            className="group border-2 border-accent bg-transparent text-accent transition-all duration-300 hover:bg-accent hover:text-black"
+            className="group"
           >
             {ensoApproach.cta}
             <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />

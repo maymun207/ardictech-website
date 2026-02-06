@@ -11,17 +11,17 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const variantStyles: Record<ButtonVariant, string> = {
   primary:
-    "bg-secondary text-white hover:bg-secondary-dark focus-visible:ring-secondary",
+    "bg-accent/10 text-white border border-accent/40 shadow-[0_0_20px_rgba(0,209,255,0.15)] hover:bg-accent/20 hover:border-accent hover:shadow-[0_0_30px_rgba(0,209,255,0.3)] backdrop-blur-md transition-all duration-500",
   secondary:
-    "bg-white text-primary border-2 border-primary hover:bg-primary hover:text-white focus-visible:ring-primary",
+    "bg-neutral-800/40 text-neutral-300 border border-neutral-700 font-mono hover:bg-neutral-800 hover:text-white transition-all backdrop-blur-sm",
   ghost:
-    "bg-transparent text-primary hover:bg-neutral-100 focus-visible:ring-primary",
+    "bg-transparent text-neutral-400 hover:text-white hover:bg-white/5 transition-colors duration-300 font-mono",
 };
 
 const sizeStyles: Record<ButtonSize, string> = {
-  sm: "px-4 py-2 text-sm",
-  md: "px-6 py-3 text-base",
-  lg: "px-8 py-4 text-lg",
+  sm: "px-3 py-1.5 text-[10px] tracking-[0.15em] uppercase",
+  md: "px-5 py-2.5 text-xs tracking-wider",
+  lg: "px-8 py-4 text-sm font-bold tracking-widest uppercase",
 };
 
 export default function Button({
@@ -32,7 +32,7 @@ export default function Button({
   children,
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center font-heading font-semibold rounded-lg transition-all duration-200 focus-visible:ring-2 focus-visible:ring-offset-2 cursor-pointer ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-lg transition-all duration-300 focus-visible:ring-1 focus-visible:ring-offset-1 cursor-pointer ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {
     return (

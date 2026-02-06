@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import { Menu, X, Globe } from "lucide-react";
 import type { Dictionary, Locale } from "@/types";
+import Button from "@/components/ui/Button";
 
 interface HeaderProps {
   dict: Dictionary;
@@ -92,12 +93,13 @@ export default function Header({ dict, locale }: HeaderProps) {
           </a>
 
           {/* CTA */}
-          <a
+          <Button
             href="#contact"
-            className="rounded-lg bg-secondary px-5 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-secondary-dark"
+            variant="primary"
+            size="md"
           >
             {dict.nav.bookDemo}
-          </a>
+          </Button>
         </div>
 
         {/* Mobile menu button */}
@@ -118,32 +120,36 @@ export default function Header({ dict, locale }: HeaderProps) {
 
       {/* Mobile menu */}
       {mobileOpen && (
-        <div className="border-t border-neutral-100 bg-white lg:hidden">
+        <div className="border-t border-white/5 bg-black/95 backdrop-blur-xl lg:hidden">
           <div className="space-y-1 px-4 py-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
                 onClick={() => setMobileOpen(false)}
-                className="block rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-neutral-50"
+                className="block rounded-lg px-4 py-3 text-base font-medium text-neutral-300 hover:bg-white/5 hover:text-accent"
               >
                 {item.label}
               </a>
             ))}
             <a
               href={`/${otherLocale}`}
-              className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-neutral-700 hover:bg-neutral-50"
+              className="flex items-center gap-2 rounded-lg px-4 py-3 text-base font-medium text-neutral-300 hover:bg-white/5"
             >
               <Globe className="h-4 w-4" />
               {otherLocale === "en" ? "English" : "Türkçe"}
             </a>
-            <a
-              href="#contact"
-              onClick={() => setMobileOpen(false)}
-              className="mt-2 block rounded-lg bg-secondary px-4 py-3 text-center font-semibold text-white hover:bg-secondary-dark"
-            >
-              {dict.nav.bookDemo}
-            </a>
+            <div className="px-4 py-3">
+              <Button
+                href="#contact"
+                variant="primary"
+                size="lg"
+                className="w-full"
+                onClick={() => setMobileOpen(false)}
+              >
+                {dict.nav.bookDemo}
+              </Button>
+            </div>
           </div>
         </div>
       )}

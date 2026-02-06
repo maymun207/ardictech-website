@@ -31,16 +31,15 @@ export default function FormField({
   value,
   onChange,
 }: FormFieldProps) {
-  const inputClasses = `w-full rounded-lg border px-4 py-3 text-neutral-900 transition-colors focus:border-primary focus:ring-1 focus:ring-primary ${
-    error ? "border-red-500" : "border-neutral-300"
-  }`;
+  const inputClasses = `w-full rounded-xl bg-white/5 border px-4 py-3 text-white transition-all duration-300 focus:border-accent/60 focus:bg-white/10 focus:ring-1 focus:ring-accent/40 outline-none ${error ? "border-red-900/50 bg-red-900/10" : "border-white/10"
+    }`;
 
   return (
     <div>
-      <label htmlFor={name} className="mb-1 block text-sm font-medium text-neutral-700">
+      <label htmlFor={name} className="mb-2 block text-xs font-bold tracking-widest uppercase text-neutral-400">
         {label}
         {required && (
-          <span className="ml-1 text-red-500" title={requiredLabel}>
+          <span className="ml-1 text-accent/60" title={requiredLabel}>
             *
           </span>
         )}

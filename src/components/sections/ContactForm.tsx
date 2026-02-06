@@ -109,25 +109,25 @@ export default function ContactForm({ dict }: ContactFormProps) {
 
   if (status === "success") {
     return (
-      <SectionWrapper id="contact" className="bg-neutral-50">
-        <div className="mx-auto max-w-lg rounded-xl bg-white p-12 text-center shadow-lg">
+      <SectionWrapper id="contact" className="bg-black">
+        <div className="mx-auto max-w-lg rounded-2xl bg-neutral-900/60 border border-white/10 p-12 text-center shadow-2xl backdrop-blur-xl">
           <CheckCircle className="mx-auto h-16 w-16 text-accent" />
-          <h2 className="mt-6 font-heading text-2xl font-bold text-neutral-900">
+          <h2 className="mt-6 font-heading text-2xl font-bold text-white">
             {contact.title}
           </h2>
-          <p className="mt-4 text-neutral-600">{contact.success}</p>
+          <p className="mt-4 text-neutral-400 font-light">{contact.success}</p>
         </div>
       </SectionWrapper>
     );
   }
 
   return (
-    <SectionWrapper id="contact" className="bg-neutral-50">
-      <SectionHeading title={contact.title} subtitle={contact.subtitle} />
+    <SectionWrapper id="contact" className="bg-black">
+      <SectionHeading title={contact.title} subtitle={contact.subtitle} light />
 
       <form
         onSubmit={handleSubmit}
-        className="mx-auto mt-12 max-w-2xl rounded-xl bg-white p-8 shadow-lg"
+        className="mx-auto mt-12 max-w-2xl rounded-3xl bg-neutral-900/40 border border-white/5 p-8 lg:p-12 shadow-2xl backdrop-blur-xl"
         noValidate
       >
         {/* Honeypot */}

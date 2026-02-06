@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus, Target, Zap, Clock } from "lucide-react";
 import type { Dictionary } from "@/types";
+import Button from "@/components/ui/Button";
 
 interface ValueFirstProps {
   dict: Dictionary;
@@ -108,17 +109,9 @@ export default function ValueFirst({ dict }: ValueFirstProps) {
 
         {/* CTA Button */}
         <div className="mt-16 flex justify-center">
-          <a
-            href="#contact"
-            className="group relative inline-flex items-center gap-2 rounded-xl border-2 border-accent px-8 py-4 transition-all hover:scale-105 hover:border-accent-light hover:bg-accent/5 hover:shadow-2xl hover:shadow-accent/20"
-          >
-            <span className="bg-gradient-to-r from-purple-400 via-purple-500 to-accent bg-clip-text text-lg font-bold tracking-wide text-transparent">
-              {valueFirst.cta}
-            </span>
-            <span className="text-accent transition-transform group-hover:translate-x-1">
-              →
-            </span>
-          </a>
+          <Button href="#contact" variant="primary" size="lg">
+            {valueFirst.cta}
+          </Button>
         </div>
       </div>
     </section>
