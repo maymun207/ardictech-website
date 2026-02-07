@@ -7,6 +7,7 @@ import JourneyState from "@/components/sections/JourneyState";
 import OperationalEnso from "@/components/sections/OperationalEnso";
 import EnsoApproach from "@/components/sections/EnsoApproach";
 import DeploymentModel from "@/components/sections/DeploymentModel";
+import PlatformArchitecture from "@/components/sections/PlatformArchitecture";
 import LayerIoT from "@/components/sections/LayerIoT";
 import LayerArMES from "@/components/sections/LayerArMES";
 import LayerArAI from "@/components/sections/LayerArAI";
@@ -38,6 +39,7 @@ export default async function HomePage({
       <OperationalEnso dict={dict} />
       <EnsoApproach dict={dict} />
       <DeploymentModel dict={dict} />
+      <PlatformArchitecture dict={dict} />
       <LayerIoT dict={dict} />
       <LayerArMES dict={dict} />
       <LayerArAI dict={dict} />

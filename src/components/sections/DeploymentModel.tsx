@@ -155,7 +155,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                 onMouseLeave={() => setHoveredLayer(null)}
                             >
                                 <NextImage
-                                    src="/images/platform-architecture.jpg"
+                                    src="/images/platform-architecture.png"
                                     alt="Ardictech 4-Layer Architecture"
                                     width={1200}
                                     height={800}
@@ -203,7 +203,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                                 <h5 className="text-white font-heading font-bold text-lg">{activeLayerData.name}</h5>
                                             </div>
                                             <p className="text-accent/80 text-sm font-medium mb-2 italic tracking-wide">
-                                                "{activeLayerData.metaphor}"
+                                                &ldquo;{activeLayerData.metaphor}&rdquo;
                                             </p>
                                             <p className="text-neutral-400 text-sm leading-relaxed font-light">
                                                 {activeLayerData.description}
