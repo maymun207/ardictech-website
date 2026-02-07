@@ -128,13 +128,9 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
                   {slide.description}
                 </p>
               )}
-            </div>
-          </div>
 
-          {/* CTAs - Fixed position in lower half of screen */}
-          <div className="absolute top-[70%] left-0 right-0 z-30">
-            <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-              <div className="max-w-3xl flex flex-col gap-4 sm:flex-row">
+              {/* CTAs - Moved into flow to prevent overlap */}
+              <div className="mt-10 flex flex-col gap-4 sm:flex-row">
                 <Button href="#contact" variant="primary" size="lg">
                   {slide.ctaPrimary}
                   <ArrowRight className="ml-2 h-5 w-5" />

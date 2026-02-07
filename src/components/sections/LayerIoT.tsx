@@ -5,7 +5,9 @@ import NextImage from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { X } from "lucide-react";
+import { X, ArrowRight } from "lucide-react";
+import Button from "@/components/ui/Button";
+import IoTArchitectureDetail from "./IoTArchitectureDetail";
 
 interface LayerIoTProps {
     dict: Dictionary;
@@ -45,7 +47,7 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                             {iot.tagline}
                         </p>
 
-                        <p className="text-xl text-neutral-400 font-light leading-relaxed max-w-2xl">
+                        <p className="text-xl text-neutral-400 font-light leading-relaxed max-w-2xl mb-10">
                             {iot.description}
                         </p>
                     </motion.div>
@@ -147,6 +149,24 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Centered CTA below cards */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="mt-20 flex justify-center"
+                >
+                    <Button
+                        onClick={() => setIsExpanded(true)}
+                        variant="primary"
+                        size="lg"
+                    >
+                        SEE OUR ARCHITECTURE
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                    </Button>
+                </motion.div>
             </div>
 
             {/* Fullscreen Overlay (400% / Direct View) */}
@@ -172,22 +192,16 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                             <X size={40} strokeWidth={1} />
                         </motion.button>
 
-                        {/* Expanded Image Container */}
+                        {/* Expanded Content Container (Replacing Image with Interactive Tour) */}
                         <motion.div
-                            initial={{ scale: 0.3, opacity: 0 }}
-                            animate={{ scale: 1, opacity: 1 }}
-                            exit={{ scale: 0.3, opacity: 0 }}
+                            initial={{ y: 50, opacity: 0 }}
+                            animate={{ y: 0, opacity: 1 }}
+                            exit={{ y: 50, opacity: 0 }}
                             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                            className="relative w-full h-full max-w-[98vw] max-h-[92vh] select-none"
+                            className="relative w-full h-full max-w-7xl max-h-[95vh] rounded-3xl overflow-hidden border border-white/10 bg-black shadow-2xl"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <NextImage
-                                src="/images/iot-data-flow.png"
-                                alt="IoT Data Flow Architecture Expanded"
-                                fill
-                                className="object-contain"
-                                priority
-                            />
+                            <IoTArchitectureDetail />
                         </motion.div>
 
                         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/40 font-mono text-xs tracking-widest uppercase">
