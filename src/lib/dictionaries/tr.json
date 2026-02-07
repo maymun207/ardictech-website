@@ -35,8 +35,8 @@
       {
         "id": "chat-with-factory",
         "headline": "CWF: Fabrikanızla Sohbet Edin",
-        "subheadline": "İzlemeden Konuşmaya.",
-        "description": "Altyapınızla konuşabilseydiniz, ne söylerdi?\nKonuşma tabanlı yapay zekamız, karmaşık telemetriyi basit insani diyaloglara dönüştürür.",
+        "subheadline": "Doğal Dil ile Üretim Gerçeği.",
+        "description": "Fabrikanız konuşabilseydi ne söylerdi?\nKonuşma tabanlı ajanlarımız, parçalanmış hafızayı birleşik bir diyaloğa dönüştürerek üretim gerçeğini saatler değil, saniyeler içinde sunar.",
         "image": "/images/hero/factory-bot-mobile.png",
         "ctaPrimary": "Sohbeti Başlatın",
         "ctaSecondary": "Demo Talep Et"
@@ -266,7 +266,7 @@
         "name": "CWF",
         "type": "Fabrikanızla Sohbet Edin",
         "metaphor": "Ses",
-        "description": "Fabrikaya bir ses veren konuşma tabanlı arayüz. Doğal dil sorguları anlık üretim gerçekleriyle buluşuyor.",
+        "description": "Fabrika bilincinin ön yüzü. Uzmanlığı demokratikleştiren, karmaşık veri sorgularını anlık ve aksiyon alınabilir üretim gerçeğine dönüştüren konuşma tabanlı bir arayüz.",
         "icon": "MessageSquare"
       }
     ]
@@ -288,7 +288,7 @@
       },
       {
         "value": "%60",
-        "label": "Daha Hızlı Sorun Müdahalesi"
+        "label": "Kritik Sorunlara Daha Hızlı Müdahale"
       },
       {
         "value": "16",
@@ -343,7 +343,7 @@
       },
       {
         "title": "Konuşma Tabanlı Fabrika Arayüzü",
-        "description": "Fabrikanıza doğal dilde sorular sorun. CWF, karmaşık veri sorgularını daha hızlı kararlar için basit konuşmalara dönüştürür."
+        "description": "Vardiya sorumlularını WhatsApp veya Web üzerinden veriyle güçlendirin. CWF, özel HMI eğitimi veya pano gezintisi ihtiyacını ortadan kaldırarak karar süresini saatlerden saniyelere indirir."
       },
       {
         "title": "Fabrikalar Arası Analitik",
@@ -434,7 +434,7 @@
         "company": "Schott Manufacturing"
       },
       {
-        "quote": "CWF, saha müdürlerimiz için her şeyi değiştirdi. Artık karmaşık panolarda gezinmek yerine basitçe soru sorarak üretim içgörüleri alabiliyorlar.",
+        "quote": "CWF saha müdürlerimiz için her şeyi değiştirdi. Artık sadece soru sorarak üretim gerçeğine ulaşabiliyor, eski silolar ile yönetici içgörüleri arasındaki boşluğu kapatıyorlar.",
         "name": "Operasyonlardan Sorumlu Başkan Yardımcısı",
         "role": "Operasyonlardan Sorumlu Başkan Yardımcısı",
         "company": "Eczacıbaşı Grubu"
@@ -610,7 +610,7 @@
     "cwf": {
       "title": "CWF: Ajan Yerleşik Ekosistem",
       "tagline": "Özelleşmiş Ajanlar. Yönetilen Zeka.",
-      "description": "Bir sohbet botundan daha fazlası. Karmaşık endüstriyel verileri yönetici içgörüsüne dönüştürmek için döngüler halinde çalışan, özelleşmiş yapay zeka ajanlarından oluşan işbirlikçi bir ekosistem.",
+      "description": "Bir sohbet botundan daha fazlası. Her endüstriyel sinyali derin bir bağlama ve yönetici öngörüsüne dönüştürmek için döngüler halinde çalışan, özelleşmiş yapay zeka ajanlarından oluşan işbirlikçi bir ekosistem.",
       "comparison": {
         "legacy": {
           "label": "Geleneksel MES Sorgusu",
@@ -620,7 +620,7 @@
         "ardictech": {
           "label": "ARDICTECH CWF",
           "value": "5 Saniye",
-          "steps": "WhatsApp/Web Üzerinden Doğal Dil Sorgusu"
+          "steps": "WhatsApp/Web Üzerinden Doğal Dil Sorgusu (Eğitim Gerektirmez)"
         }
       },
       "features": [

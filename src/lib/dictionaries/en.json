@@ -35,8 +35,8 @@
       {
         "id": "chat-with-factory",
         "headline": "CWF: Chat With Your Factory",
-        "subheadline": "From Monitoring to Conversation.",
-        "description": "If you could speak to your infrastructure, what would it say?\nOur conversational AI turns complex telemetry into simple human dialogue.",
+        "subheadline": "Natural Language Truth.",
+        "description": "If your factory could speak, what would it say?\nOur conversational agents turn fragmented memory into a unified dialogue, delivering production truth in seconds, not hours.",
         "image": "/images/hero/factory-bot-mobile.png",
         "ctaPrimary": "Start the Conversation",
         "ctaSecondary": "Book a Demo"
@@ -266,7 +266,7 @@
         "name": "CWF",
         "type": "Chat With Your Factory",
         "metaphor": "The Voice",
-        "description": "The conversational interface that gives the factory a voice. Natural language queries meet instant manufacturing truth.",
+        "description": "The front-end of factory consciousness. A conversational interface that Democratizes Expertise, turning complex data queries into instant, actionable manufacturing truth.",
         "icon": "MessageSquare"
       }
     ]
@@ -288,7 +288,7 @@
       },
       {
         "value": "60%",
-        "label": "Faster Issue Response Time"
+        "label": "Faster Critical Issue Response"
       },
       {
         "value": "16",
@@ -343,7 +343,7 @@
       },
       {
         "title": "Conversational Factory Interface",
-        "description": "Ask your factory questions in natural language. CWF turns complex data queries into simple conversations for faster decisions."
+        "description": "Empower shift leads with data via WhatsApp or Web. CWF reduces decision time from hours to seconds by eliminating the need for specialized HMI training or dashboard navigation."
       },
       {
         "title": "Cross-Factory Analytics",
@@ -434,7 +434,7 @@
         "company": "Schott Manufacturing"
       },
       {
-        "quote": "CWF changed everything for our floor managers. They can now get production insights by simply asking a question instead of navigating complex dashboards.",
+        "quote": "CWF changed everything for our floor managers. They can now get manufacturing truth by simply asking a question, bridging the gap between legacy silos and executive insight.",
         "name": "VP of Operations",
         "role": "VP of Operations",
         "company": "Eczacibasi Group"
@@ -608,9 +608,9 @@
       ]
     },
     "cwf": {
-      "title": "CWF: Agent Native Eco-System",
+      "title": "CWF: Agent Native Ecosystem",
       "tagline": "Specialized Agents. Orchestrated Intelligence.",
-      "description": "More than a chatbot. A collaborative ecosystem of specialized AI agents working in cycles to transform raw industrial data into executive insight.",
+      "description": "More than a chatbot. A collaborative ecosystem of specialized AI agents working in cycles to translate every industrial signal into deep context and executive Foresight.",
       "comparison": {
         "legacy": {
           "label": "Legacy MES Query",
@@ -620,7 +620,7 @@
         "ardictech": {
           "label": "ARDICTECH CWF",
           "value": "5 Seconds",
-          "steps": "Natural Language Query on WhatsApp/Web"
+          "steps": "Natural Language Query on WhatsApp/Web (No Training Required)"
         }
       },
       "features": [
