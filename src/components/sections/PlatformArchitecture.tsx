@@ -35,7 +35,7 @@ export default function PlatformArchitecture({ dict }: PlatformArchitectureProps
                 <div className="relative">
                     {/* Background glow */}
                     <div className="absolute inset-0 bg-accent/5 blur-[120px] rounded-full scale-75" />
-                    
+
                     <motion.div
                         initial={{ opacity: 0, scale: 0.95 }}
                         whileInView={{ opacity: 1, scale: 1 }}
@@ -45,7 +45,7 @@ export default function PlatformArchitecture({ dict }: PlatformArchitectureProps
                     >
                         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-white/5 bg-white/[0.02] backdrop-blur-3xl shadow-2xl">
                             <Image
-                                src="/images/platform-architecture.png"
+                                src="/images/platform-architecture-v2.png"
                                 alt="ARDICTECH 4-Layer Manufacturing Intelligence Architecture"
                                 fill
                                 className="object-contain p-8 md:p-12 hover:scale-[1.02] transition-transform duration-700"

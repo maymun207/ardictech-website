@@ -146,10 +146,7 @@ export interface Dictionary {
       features: string[];
       idealFor: string;
     };
-    ourApproach: {
-      title: string;
-      items: string[];
-    };
+
   };
   footer: {
     tagline: string;

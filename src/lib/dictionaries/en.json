@@ -561,15 +561,6 @@
         "Immediate Visibility (weeks, not years)"
       ],
       "idealFor": "Ideal for: companies starting or re-platforming their digital journey."
-    },
-    "ourApproach": {
-      "title": "Our Approach:",
-      "items": [
-        "Act as the 'Intelligence Wrapper'",
-        "Pull data from legacy systems via APIs",
-        "Enrich it with AI",
-        "Deliver it via conversational Interface"
-      ]
     }
   },
   "footer": {

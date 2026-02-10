@@ -561,15 +561,6 @@
         "Anında Görünürlük (yıllar değil, haftalar içinde)"
       ],
       "idealFor": "Dijital yolculuğuna yeni başlayan veya sistemlerini yeniden yapılandıran şirketler için idealdir."
-    },
-    "ourApproach": {
-      "title": "Yaklaşımımız:",
-      "items": [
-        "'Zeka Sarmalı' olarak hareket etme",
-        "Eski sistemlerden API'ler aracılığıyla veri çekme",
-        "Yapay zeka ile zenginleştirme",
-        "Konuşma tabanlı arayüz ile sunma"
-      ]
     }
   },
   "footer": {
