@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1E3A8A;
+  --color-primary-light: #2563EB;
+  --color-primary-dark: #1E2D5B;
+  --color-secondary: #F97316;
+  --color-secondary-light: #FB923C;
+  --color-secondary-dark: #EA580C;
+  --color-accent: #00D1FF;
+  --color-accent-light: #57E1FF;
+  --color-accent-dark: #00A3FF;
+  --color-neutral-50: #F9FAFB;
+  --color-neutral-100: #F3F4F6;
+  --color-neutral-200: #E5E7EB;
+  --color-neutral-300: #D1D5DB;
+  --color-neutral-400: #9CA3AF;
+  --color-neutral-500: #6B7280;
+  --color-neutral-600: #4B5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1F2937;
+  --color-neutral-900: #111827;
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-source-sans);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: var(--font-body), system-ui, sans-serif;
+    color: var(--color-neutral-300);
+    background-color: #000000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+
+  .skip-to-content {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: white;
+    font-weight: 600;
+  }
+
+  .skip-to-content:focus {
+    left: 0;
+  }
+}

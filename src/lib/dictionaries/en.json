@@ -1,0 +1,730 @@
+{
+  "meta": {
+    "title": "ARDICTECH — AI-Powered Digital Transformation for Manufacturing",
+    "description": "Transform your factory floor into an intelligent, data-driven operation. Proven 40% efficiency gains at scale across 16 factories."
+  },
+  "nav": {
+    "platform": "Platform",
+    "caseStudy": "Case Study",
+    "features": "Features",
+    "technology": "Technology",
+    "roi": "ROI Calculator",
+    "contact": "Contact",
+    "bookDemo": "Book a Demo"
+  },
+  "hero": {
+    "slides": [
+      {
+        "id": "intelligent-manufacturing",
+        "headline": "Cultivating Intelligent Manufacturing",
+        "subheadline": "Precision, efficiency, and intelligence integrated into every process.",
+        "description": "",
+        "image": "/images/hero/brain-network.png",
+        "ctaPrimary": "Discover Our AI Solutions",
+        "ctaSecondary": "Book a Demo"
+      },
+      {
+        "id": "sentient-factory",
+        "headline": "The Sentient Factory.",
+        "subheadline": "A Living Organism.",
+        "description": "Your factory is no longer a collection of machines.\nWe bridge the gap between raw industrial data and digital consciousness, turning every sensor into a voice.",
+        "image": "/images/hero/holographic-interface.png",
+        "ctaPrimary": "Talk To Your Data",
+        "ctaSecondary": "Book a Demo"
+      },
+      {
+        "id": "chat-with-factory",
+        "headline": "CWF: Chat With Your Factory",
+        "subheadline": "Natural Language Truth.",
+        "description": "If your factory could speak, what would it say?\nOur conversational agents turn fragmented memory into a unified dialogue, delivering production truth in seconds, not hours.",
+        "image": "/images/hero/factory-bot-mobile.png",
+        "ctaPrimary": "Start the Conversation",
+        "ctaSecondary": "Book a Demo"
+      }
+    ]
+  },
+  "valueFirst": {
+    "title": "Where Should Digital Deliver Value First?",
+    "subtitle": "Stop Guessing. Start Sensing. We audit your 'Dark Data' to find millions in addressable losses before we propose a single architecture change.",
+    "cta": "Request Executive assessment",
+    "cards": [
+      {
+        "id": "hidden-losses",
+        "title": "Eliminate Hidden Losses",
+        "category": "Performance Optimization",
+        "metric": "30%",
+        "metricLabel": "Target Throughput",
+        "description": "Expose the 'Hidden Factory' by surfacing micro-stops and speed losses that paper logs miss. Typically recovers $8M-$12M in previously dark data loss."
+      },
+      {
+        "id": "quality-drift",
+        "title": "Reduce Quality Drift",
+        "category": "Yield Maximization",
+        "metric": "22%",
+        "metricLabel": "Yield Improvement",
+        "description": "Identify and eliminate quality variations before they impact yield. Real-time monitoring surfaces defects that traditional QC processes miss, typically improving yield by 15-25%."
+      },
+      {
+        "id": "energy-bom",
+        "title": "Optimize Energy BOM",
+        "category": "Resource Intensity",
+        "metric": "28%",
+        "metricLabel": "Energy Reduction",
+        "description": "Reduce energy consumption and material waste through intelligent resource allocation. Typically achieves 20-30% reduction in energy costs and 10-15% reduction in material waste."
+      },
+      {
+        "id": "lead-times",
+        "title": "Sync Lead Times",
+        "category": "Operational Agility",
+        "metric": "32%",
+        "metricLabel": "Lead Time Reduction",
+        "description": "Synchronize production schedules with demand signals to eliminate bottlenecks and reduce lead times. Typically reduces lead times by 25-35% while improving on-time delivery."
+      }
+    ]
+  },
+  "untappedPotential": {
+    "title1": "Unseen Data.",
+    "title2": "Silenced Value.",
+    "title3": "Untapped Potential.",
+    "subtitle": "The Silent Factory costs you millions. We give it a voice.",
+    "annualLoss": "Annual Loss Estimate (Per $500M Revenue)",
+    "payback": "9 Months Payback",
+    "roi": "14-22 Months ROI",
+    "cards": [
+      {
+        "id": "dark-data",
+        "title": "Dark Data Loss",
+        "range": "$8M-$12M",
+        "category": "Unrecovered Capacity",
+        "quote": "Valuable signals are trapped in legacy silos. We unlock this 'Dark Data' for production truth."
+      },
+      {
+        "id": "reactive-maintenance",
+        "title": "Reactive Maintenance",
+        "range": "$15M-$25M",
+        "category": "Downtime Drain",
+        "quote": "Recovering hidden capacity lost to micro-stoppages that traditional systems cannot see."
+      },
+      {
+        "id": "quality-escapes",
+        "title": "Quality Escapes",
+        "range": "$10M-$18M",
+        "category": "Yield Variance",
+        "quote": "Eliminating batch variations and quality defects through real-time prescriptive adjustments."
+      },
+      {
+        "id": "oee-uplift",
+        "title": "OEE Uplift",
+        "range": "8%-12%",
+        "category": "Efficiency Gain",
+        "quote": "Converting operational efficiency directly into margin expansion via waste reduction and energy optimization."
+      }
+    ]
+  },
+  "journeyState": {
+    "question": "Which State Are You In?",
+    "title": "The Path To Digitalization Is Rarely Straight",
+    "states": [
+      {
+        "id": "searcher",
+        "title": "The Searcher",
+        "description": "Overwhelmed by buzzwords (AI, IIoT, 4.0) but unsure where to start."
+      },
+      {
+        "id": "pilot-prisoner",
+        "title": "The Pilot Prisoner",
+        "description": "Successful pilot that failed to scale. 70% of initiatives die here."
+      },
+      {
+        "id": "restart",
+        "title": "The Restart",
+        "description": "Tried, failed, burned budget. Now skeptical of 'blackbox' solutions."
+      }
+    ],
+    "nodes": [
+      {
+        "id": "A",
+        "label": "Node A. The Search",
+        "description": "Exploring options, defining the problem and potential ROI."
+      },
+      {
+        "id": "B",
+        "label": "Node B. The Plan",
+        "description": "Building the business case, allocating budget, facing internal hurdles."
+      },
+      {
+        "id": "C",
+        "label": "Node C. The Push",
+        "description": "A project is underway but struggling to scale or show enterprise-wide value."
+      },
+      {
+        "id": "D",
+        "label": "Node D. The Pilot Trap",
+        "description": "A successful proof-of-concept that never moved into full production."
+      },
+      {
+        "id": "E",
+        "label": "Node E. The False Start",
+        "description": "A previous initiative failed due to complexity, cost, or lack of adoption."
+      }
+    ],
+    "traps": [
+      {
+        "id": "rip-replace",
+        "label": "Rip & Replace (40%)",
+        "description": "Disrupts production and kills ROI."
+      },
+      {
+        "id": "vendor-lockin",
+        "label": "Vendor Lock-in (10%)",
+        "description": "Proprietary protocols prevent agility."
+      },
+      {
+        "id": "pilot-purgatory",
+        "label": "Pilot Purgatory (15%)",
+        "description": "Successful proofs-of-concept that never scale."
+      },
+      {
+        "id": "dashboard-cemetery",
+        "label": "Dashboard Cemetery (35%)",
+        "description": "Pretty charts, no decisions."
+      }
+    ]
+  },
+  "operationalEnso": {
+    "badge": "The Vision",
+    "title": "The Sentient Factory",
+    "subtitle": "Why Transformation is Not Enough",
+    "tagline": "Moving from Static Perfection to Dynamic Precision.",
+    "description": "Your factory is not a static machine; it is a living feedback loop. Real transformation happens when you bridge the gap between operations data and real-time decisions.",
+    "ensoTitle": "Operational Ensō",
+    "ensoSubheader": "Complete and Incomplete at the same time",
+    "ensoSubtitle": "A continuous, human-in-the-loop operational learning cycle",
+    "manufacturingExplanation": "In the Sentient Factory, every node is connected. The Ensō represents the seamless flow of intelligence from edge to core, turning raw data into conscious action.",
+    "definition": "Ensō is a symbol in Japanese Zen calligraphy, a simple circle drawn in one stroke that represents the beauty of imperfection and the seamless flow of energy. In our philosophy, it represents the continuous loop of growth, connection, and manufacturing intelligence.",
+    "steps": [
+      {
+        "id": "sense",
+        "title": "Sense",
+        "description": "Stream signals from machines, systems, and people."
+      },
+      {
+        "id": "understand",
+        "title": "Understand",
+        "description": "Add context: product, shift, spec, SOP, maintenance."
+      },
+      {
+        "id": "decide",
+        "title": "Decide",
+        "description": "Ranked recommendations + \"why\" explanations."
+      },
+      {
+        "id": "act",
+        "title": "Act",
+        "description": "Create tasks, notify owners, trigger workflows."
+      },
+      {
+        "id": "learn",
+        "title": "Learn",
+        "description": "Capture outcomes, update playbooks & models."
+      }
+    ]
+  },
+  "gapAnalysis": {
+    "title": "Digital Transformation Stalls at the Gap",
+    "subtitle": "Closing the loop between operations data and decisions",
+    "reality": {
+      "title": "The Reality on the Floor",
+      "items": [
+        "Data exists in islands (MES, ERP, historians, QMS, CMMS).",
+        "Teams spend days stitching context, not improving output.",
+        "Dashboards show what happened — but not what to do next."
+      ]
+    },
+    "good": {
+      "title": "What \"Good\" Looks Like",
+      "description": "A closed loop that:",
+      "items": [
+        "Detects deviations early",
+        "Explains root causes with context",
+        "Recommends actions",
+        "Captures outcomes to improve the system"
+      ],
+      "footer": "Operational Ensō is that loop."
+    }
+  },
+  "ensoApproach": {
+    "badge": "Our Approach",
+    "title": "Intelligence Wrapper",
+    "description": "The Evolution of Digital Implementation. We transform your operations without the risk of a full 'rip-and-replace'.",
+    "cta": "Learn Our Approach",
+    "items": [
+      "Act as the 'Intelligence Wrapper'",
+      "Pull data from legacy systems via APIs",
+      "Enrich it with AI",
+      "Deliver it via conversational Interface"
+    ],
+    "features": [
+      {
+        "id": "architecture",
+        "title": "4-Layer Architecture",
+        "description": "From edge to insight, a complete stack built for manufacturing reality."
+      },
+      {
+        "id": "overlay",
+        "title": "Non-Disruptive Overlay",
+        "description": "Connect and enhance — never replace your existing systems."
+      },
+      {
+        "id": "cwf",
+        "title": "Chat With Your Factory",
+        "description": "Ask questions in natural language. Get answers with live metric charts."
+      },
+      {
+        "id": "time-to-value",
+        "title": "Time To Value: Weeks",
+        "description": "Proof of value in 8-12 weeks, not years of traditional consulting."
+      }
+    ]
+  },
+  "platform": {
+    "title": "Manufacturing Intelligence",
+    "subtitle": "4 Layer Architecture",
+    "layers": [
+      {
+        "id": "iot-ignite",
+        "number": "Layer 1",
+        "name": "IoT-Ignite",
+        "type": "Edge Foundation",
+        "metaphor": "The Senses",
+        "description": "The physical foundation that perceives the factory floor. Captures high-fidelity data streams from any sensor, machine, or legacy PLC.",
+        "icon": "Radio"
+      },
+      {
+        "id": "armes",
+        "number": "Layer 2",
+        "name": "ArMES",
+        "type": "Operations Management",
+        "metaphor": "The Nervous System",
+        "description": "Orchestrates complex operations in real-time. Translates raw signals into actionable tasks and ensures seamless process flow.",
+        "icon": "Activity"
+      },
+      {
+        "id": "arai",
+        "number": "Layer 3",
+        "name": "ArAI",
+        "type": "Prescriptive Intelligence",
+        "metaphor": "The Brain",
+        "description": "The cognitive center that predicts, prescribes, and prevents. Turns historical data into foresight for yield and efficiency.",
+        "icon": "Brain"
+      },
+      {
+        "id": "cwf",
+        "number": "Layer 4",
+        "name": "CWF",
+        "type": "Chat With Your Factory",
+        "metaphor": "The Voice",
+        "description": "The front-end of factory consciousness. A conversational interface that Democratizes Expertise, turning complex data queries into instant, actionable manufacturing truth.",
+        "icon": "MessageSquare"
+      }
+    ]
+  },
+  "caseStudy": {
+    "title": "Transforming Europe's 4th Largest Ceramics Manufacturer",
+    "subtitle": "How a leading European ceramics manufacturer achieved measurable results across 16 factories with the ARDICTECH platform.",
+    "company": "Leading European Ceramics Manufacturer",
+    "challenge": "This manufacturer faced critical challenges with manual production monitoring, inconsistent quality across factories, and delayed response to equipment issues. Data silos prevented cross-factory visibility, making strategic decisions slow and reactive.",
+    "solution": "ARDICTECH deployed its full platform stack across all 16 factories, integrating IoT sensors with existing equipment, implementing real-time quality monitoring, and enabling predictive maintenance through AI-driven analytics.",
+    "metrics": [
+      {
+        "value": "40%",
+        "label": "Reduction in Quality Defects"
+      },
+      {
+        "value": "35%",
+        "label": "Improvement in OEE"
+      },
+      {
+        "value": "60%",
+        "label": "Faster Critical Issue Response"
+      },
+      {
+        "value": "16",
+        "label": "Factories Connected in Real-Time"
+      }
+    ],
+    "quote": {
+      "text": "ARDICTECH transformed how we see and manage our production. For the first time, we have real-time visibility across all 16 factories from a single dashboard.",
+      "author": "Manufacturing Director",
+      "role": "Leading European Ceramics Manufacturer"
+    },
+    "cta": "Read Full Case Study"
+  },
+  "roi": {
+    "title": "Calculate Your ROI",
+    "subtitle": "See how much your operation could save with ARDICTECH. Adjust the sliders to match your facility.",
+    "inputs": {
+      "productionLines": "Number of Production Lines",
+      "downtimeHours": "Avg. Downtime Hours / Month",
+      "hourlyCost": "Hourly Production Cost ($)",
+      "defectRate": "Quality Defect Rate (%)"
+    },
+    "outputs": {
+      "totalSavings": "Estimated Annual Savings",
+      "downtimeSavings": "Downtime Savings",
+      "qualitySavings": "Quality Savings",
+      "roiTimeline": "Estimated Payback Period",
+      "months": "months"
+    },
+    "cta": "Get Detailed ROI Analysis",
+    "disclaimer": "* Estimates based on industry averages from manufacturing clients. Actual results vary by facility, implementation scope, and operational maturity."
+  },
+  "features": {
+    "title": "Everything You Need To Modernize Manufacturing",
+    "subtitle": "Eight core capabilities that work together to transform your production floor.",
+    "items": [
+      {
+        "title": "Real-time Production Monitoring",
+        "description": "Track every production line, machine, and operator in real-time. Get instant alerts when KPIs deviate from targets."
+      },
+      {
+        "title": "Predictive Maintenance",
+        "description": "AI models analyze vibration, temperature, and operational patterns to predict equipment failures before they happen."
+      },
+      {
+        "title": "Quality Control Automation",
+        "description": "Automated inspection and defect detection powered by computer vision. Catch quality issues at the source, not the end of the line."
+      },
+      {
+        "title": "Energy Consumption Optimization",
+        "description": "Monitor and optimize energy usage across your facilities. Identify waste patterns and reduce costs with AI-driven recommendations."
+      },
+      {
+        "title": "Conversational Factory Interface",
+        "description": "Empower shift leads with data via WhatsApp or Web. CWF reduces decision time from hours to seconds by eliminating the need for specialized HMI training or dashboard navigation."
+      },
+      {
+        "title": "Cross-Factory Analytics",
+        "description": "Compare performance across all your facilities in a unified dashboard. Identify best practices and replicate success."
+      },
+      {
+        "title": "Legacy System Integration",
+        "description": "Connect with existing PLCs, SCADA, ERP, and MES systems. No rip-and-replace — we work with what you have."
+      },
+      {
+        "title": "Mobile-First Access",
+        "description": "Full platform access from any device. Managers and operators stay connected to the factory floor from anywhere."
+      }
+    ]
+  },
+  "techStack": {
+    "title": "Enterprise-Grade Technology",
+    "subtitle": "Built on proven, scalable infrastructure trusted by the world's leading manufacturers.",
+    "layers": [
+      {
+        "name": "Edge Layer",
+        "description": "IoT devices, sensors, and gateways for data collection at the source.",
+        "technologies": [
+          "MQTT",
+          "OPC-UA",
+          "Modbus",
+          "Edge Computing"
+        ]
+      },
+      {
+        "name": "Data Layer",
+        "description": "High-performance storage and processing for time-series and operational data.",
+        "technologies": [
+          "TimescaleDB",
+          "Apache Kafka",
+          "Data Lake",
+          "Redis"
+        ]
+      },
+      {
+        "name": "AI Layer",
+        "description": "Machine learning models for prediction, optimization, and anomaly detection.",
+        "technologies": [
+          "TensorFlow",
+          "PyTorch",
+          "MLflow",
+          "Real-time Inference"
+        ]
+      },
+      {
+        "name": "Application Layer",
+        "description": "Modern web and mobile interfaces with robust API integrations.",
+        "technologies": [
+          "React",
+          "REST API",
+          "GraphQL",
+          "Mobile SDK"
+        ]
+      }
+    ],
+    "certifications": [
+      "ISO 27001",
+      "SOC 2 Type II",
+      "GDPR Compliant"
+    ],
+    "cta": "View Technical Documentation"
+  },
+  "testimonials": {
+    "title": "Trusted By Industry Leaders",
+    "subtitle": "Hear from the manufacturing executives who transformed their operations with ARDICTECH.",
+    "items": [
+      {
+        "quote": "ARDICTECH transformed how we see and manage our production. For the first time, we have real-time visibility across all 16 factories from a single dashboard.",
+        "name": "Manufacturing Director",
+        "role": "Manufacturing Director",
+        "company": "Leading European Ceramics Manufacturer"
+      },
+      {
+        "quote": "The predictive maintenance module alone saved us millions in unplanned downtime. The ROI was clear within the first quarter.",
+        "name": "Chief Operating Officer",
+        "role": "COO",
+        "company": "Continental Ceramics"
+      },
+      {
+        "quote": "Integration with our legacy systems was seamless. The ARDICTECH team understood our technical constraints and worked within them.",
+        "name": "IT Director",
+        "role": "IT Director",
+        "company": "Schott Manufacturing"
+      },
+      {
+        "quote": "CWF changed everything for our floor managers. They can now get manufacturing truth by simply asking a question, bridging the gap between legacy silos and executive insight.",
+        "name": "VP of Operations",
+        "role": "VP of Operations",
+        "company": "Eczacibasi Group"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Book Your Demo",
+    "subtitle": "See how ARDICTECH can transform your manufacturing operations. Fill out the form and our team will reach out within 24 hours.",
+    "fields": {
+      "fullName": "Full Name",
+      "email": "Business Email",
+      "company": "Company Name",
+      "jobTitle": "Job Title",
+      "phone": "Phone Number",
+      "facilities": "Number of Production Facilities",
+      "industry": "Industry",
+      "message": "Message",
+      "preferredDate": "Preferred Demo Date"
+    },
+    "facilitiesOptions": [
+      "1",
+      "2–5",
+      "6–10",
+      "11–20",
+      "21+"
+    ],
+    "industryOptions": [
+      "Ceramics",
+      "Automotive",
+      "Electronics",
+      "Food & Beverage",
+      "Other"
+    ],
+    "submit": "Book Your Demo",
+    "success": "Thank you! Our team will contact you within 24 hours to schedule your demo.",
+    "error": "Something went wrong. Please try again or email us directly at sales@ardictech.com.tr.",
+    "privacy": "By submitting this form, you agree to our Privacy Policy. We respect your data and comply with GDPR.",
+    "required": "Required",
+    "validation": {
+      "emailInvalid": "Please enter a valid business email address.",
+      "required": "This field is required."
+    }
+  },
+  "deploymentModel": {
+    "title": "Manufacturing Intelligence",
+    "subtitle": "4 layer architecture",
+    "existingStack": {
+      "title": "For An Existing Stack",
+      "description": "We connect and enhance, don't replace. Our platforms are open by design.",
+      "subtitle": "Seamless Integration",
+      "features": [
+        "Connect via read-only APIs",
+        "Ingest 'Dark Data' to a Data Lake",
+        "Deploy the CWF - 'Truth Layer'"
+      ],
+      "idealFor": "Ideal for: companies looking to augment current systems or unlock stalled projects."
+    },
+    "cleanState": {
+      "title": "For A Clean State",
+      "description": "A full-stack 4-layer deployment from scratch. Go from zero to full visibility.",
+      "subtitle": "Rapid Deployment",
+      "features": [
+        "IoT-Ignite sensors and gateways",
+        "Full ArMES implementation",
+        "Immediate Visibility (weeks, not years)"
+      ],
+      "idealFor": "Ideal for: companies starting or re-platforming their digital journey."
+    },
+    "ourApproach": {
+      "title": "Our Approach:",
+      "items": [
+        "Act as the 'Intelligence Wrapper'",
+        "Pull data from legacy systems via APIs",
+        "Enrich it with AI",
+        "Deliver it via conversational Interface"
+      ]
+    }
+  },
+  "footer": {
+    "tagline": "AI-powered digital transformation for manufacturing excellence.",
+    "location": "Istanbul, Turkey",
+    "quickLinks": "Quick Links",
+    "resources": "Resources",
+    "legal": "Legal",
+    "links": {
+      "about": "About Us",
+      "platform": "Platform",
+      "caseStudies": "Case Studies",
+      "blog": "Resources",
+      "contact": "Contact",
+      "careers": "Careers"
+    },
+    "legalLinks": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "newsletter": {
+      "title": "Subscribe to Industry 4.0 Insights",
+      "placeholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "gdpr": "I agree to receive email updates. Unsubscribe anytime."
+    },
+    "copyright": "© 2026 ARDICTECH. All rights reserved."
+  },
+  "architectureDetails": {
+    "iot": {
+      "title": "IoT-Ignite: Data Collection — Connectivity",
+      "tagline": "The Nervous System of the Modern Factory",
+      "description": "Our edge-foundation is built for scale. We don't just collect data; we process it at the speed of light where it's generated, ensuring your factory responds in milliseconds, not minutes.",
+      "features": [
+        {
+          "title": "Edge Computing",
+          "description": "Process data at the source. Eliminate cloud latency and ensure continuous operation even in 'air-gapped' environments."
+        },
+        {
+          "title": "Protocol Agnostic",
+          "description": "Universal connectivity for legacy PLCs (Siemens, Rockwell) and modern assets via MQTT, OPC-UA, and Modbus."
+        },
+        {
+          "title": "Secure Overlay",
+          "description": "Enterprise-grade security with Active Directory integration, Zero Trust Architecture, and read-only connection profiles."
+        }
+      ]
+    },
+    "armes": {
+      "title": "ArMES: The Digital Passport",
+      "tagline": "Structure, Integrity, and Unified Truth",
+      "description": "ArMES manages the complexity of your production lifecycle, creating a 'Digital Thread' that correlates every raw material lot to a finished unit.",
+      "steps": [
+        {
+          "title": "Raw Material Management",
+          "description": "Live tracking of silo levels, humidity, and lot numbers."
+        },
+        {
+          "title": "Digital Recipe Control",
+          "description": "Ensures 95%+ recipe accuracy across all shifts."
+        },
+        {
+          "title": "ERP Integration",
+          "description": "Seamless two-way sync with SAP/IFS. Pulls orders, sends shop-floor truth back."
+        },
+        {
+          "title": "Lab-Integrated Gating",
+          "description": "Hard pre-requisites. Production stops if quality results deviate from the recipe."
+        },
+        {
+          "title": "Full Traceability",
+          "description": "Unit-level tracking compliant with EU Digital Product Passport (DPP) standards."
+        }
+      ]
+    },
+    "arai": {
+      "title": "ArAI: From Reactive to Prescriptive",
+      "tagline": "The Digital Consciousness of Your Factory",
+      "description": "Move beyond knowing what happened. ArAI uses 'Golden Batch' fingerprinting and prescriptive modeling to detect deviations before they become defects and reduce energy consumption in real-time.",
+      "points": [
+        {
+          "title": "Predictive Quality",
+          "description": "Predicting defects and quality drift up to 2 hours in advance through real-time telemetry correlation."
+        },
+        {
+          "title": "Energy Optimization",
+          "description": "Real-time optimization of kiln curves and resource usage, typically reducing energy costs by 15-25%."
+        },
+        {
+          "title": "The Data Moat",
+          "description": "Proprietary models trained on millions of production cycles from industrial heritage, ensuring manufacturing-specific accuracy."
+        }
+      ]
+    },
+    "cwf": {
+      "title": "CWF: Agent Native Ecosystem",
+      "tagline": "Specialized Agents. Orchestrated Intelligence.",
+      "description": "More than a chatbot. A collaborative ecosystem of specialized AI agents working in cycles to translate every industrial signal into deep context and executive Foresight.",
+      "comparison": {
+        "legacy": {
+          "label": "Legacy MES Query",
+          "value": "90 Seconds",
+          "steps": "Open HMI > Navigate Tree > Select Equipment > View Chart"
+        },
+        "ardictech": {
+          "label": "ARDICTECH CWF",
+          "value": "5 Seconds",
+          "steps": "Natural Language Query on WhatsApp/Web (No Training Required)"
+        }
+      },
+      "features": [
+        "WhatsApp Interworking Agent",
+        "Multi-modal Response (Text + Charts)",
+        "Natural Language Processing (NLP)"
+      ]
+    },
+    "underTheHood": {
+      "title": "Under the Hood: Secure, Open and Future-Proof",
+      "categories": [
+        {
+          "name": "Edge Computing",
+          "items": [
+            "Enterprise grade Android OS",
+            "Linux Support",
+            "TensorFlow Lite",
+            "Air-gapped Environments"
+          ]
+        },
+        {
+          "name": "Cloud/On-Prem Core",
+          "items": [
+            "Kubernetes",
+            "Microservices",
+            "PostgreSQL",
+            "Apache Spark"
+          ]
+        },
+        {
+          "name": "Security",
+          "items": [
+            "Zero Trust Architecture",
+            "End-to-end encryption",
+            "ISO 27001 Certified"
+          ]
+        },
+        {
+          "name": "Integration",
+          "items": [
+            "MQTT / OPC-UA / REST",
+            "No Vendor Lock-in",
+            "Your Data is Your Data"
+          ]
+        }
+      ]
+    }
+  }
+}
