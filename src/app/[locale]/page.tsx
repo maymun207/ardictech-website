@@ -7,12 +7,13 @@ import JourneyState from "@/components/sections/JourneyState";
 import OperationalEnso from "@/components/sections/OperationalEnso";
 import EnsoApproach from "@/components/sections/EnsoApproach";
 import DeploymentModel from "@/components/sections/DeploymentModel";
-import PlatformArchitecture from "@/components/sections/PlatformArchitecture";
+
 import LayerIoT from "@/components/sections/LayerIoT";
 import LayerArMES from "@/components/sections/LayerArMES";
 import LayerArAI from "@/components/sections/LayerArAI";
 import CWFConversation from "@/components/sections/CWFConversation";
 import LayerCWF from "@/components/sections/LayerCWF";
+import DeploymentPaths from "@/components/sections/DeploymentPaths";
 import UnderTheHood from "@/components/sections/UnderTheHood";
 import CaseStudy from "@/components/sections/CaseStudy";
 import RoiCalculator from "@/components/sections/RoiCalculator";
@@ -37,14 +38,17 @@ export default async function HomePage({
       <UntappedPotential dict={dict} />
       <JourneyState dict={dict} />
       <OperationalEnso dict={dict} />
+
+
       <DeploymentModel dict={dict} />
-      <EnsoApproach dict={dict} />
-      <PlatformArchitecture dict={dict} />
       <LayerIoT dict={dict} />
       <LayerArMES dict={dict} />
       <LayerArAI dict={dict} />
       <CWFConversation dict={dict} />
       <LayerCWF dict={dict} />
+      <DeploymentPaths dict={dict} />
+
+      <EnsoApproach dict={dict} />
       <UnderTheHood dict={dict} />
       <CaseStudy dict={dict} />
       <FeaturesGrid dict={dict} />

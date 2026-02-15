@@ -192,13 +192,13 @@
     ]
   },
   "operationalEnso": {
-    "badge": "The Vision",
+    "badge": "Beyond Digital Transformation",
     "title": "The Sentient Factory",
     "subtitle": "Why Transformation is Not Enough",
     "tagline": "Moving from Static Perfection to Dynamic Precision.",
     "description": "Your factory is not a static machine; it is a living feedback loop. Real transformation happens when you bridge the gap between operations data and real-time decisions.",
     "ensoTitle": "Operational Ensō",
-    "ensoSubheader": "Complete and Incomplete at the same time",
+    "ensoSubheader": "A Living Circle.\nComplete and Incomplete at the same time",
     "ensoSubtitle": "A continuous, human-in-the-loop operational learning cycle",
     "manufacturingExplanation": "In the Sentient Factory, every node is connected. The Ensō represents the seamless flow of intelligence from edge to core, turning raw data into conscious action.",
     "definition": "Ensō is a symbol in Japanese Zen calligraphy, a simple circle drawn in one stroke that represents the beauty of imperfection and the seamless flow of energy. In our philosophy, it represents the continuous loop of growth, connection, and manufacturing intelligence.",
@@ -540,6 +540,7 @@
   "deploymentModel": {
     "title": "Manufacturing Intelligence",
     "subtitle": "4 layer architecture",
+    "pathsTitle": "Respect your legacy, reinvent your factory.",
     "existingStack": {
       "title": "For An Existing Stack",
       "description": "We connect and enhance, don't replace. Our platforms are open by design.",
@@ -611,7 +612,7 @@
       ]
     },
     "armes": {
-      "title": "ArMES: The Digital Passport",
+      "title": "ArMES: Total Operational Control",
       "tagline": "Structure, Integrity, and Unified Truth",
       "description": "ArMES manages the complexity of your production lifecycle, creating a 'Digital Thread' that correlates every raw material lot to a finished unit.",
       "steps": [
@@ -635,12 +636,25 @@
           "title": "Full Traceability",
           "description": "Unit-level tracking compliant with EU Digital Product Passport (DPP) standards."
         }
+      ],
+      "modules": [
+        "Authorisation and Authentication",
+        "ERP Integration Order Tracking",
+        "Raw Materials & Additives",
+        "Recipe Management",
+        "Order Management",
+        "Laboratory & Forms Management",
+        "Material Transfers & Interventions",
+        "Shipment and Return Management",
+        "Reports and Monitoring",
+        "Inventory Management",
+        "Digital Factory (Live)"
       ]
     },
     "arai": {
-      "title": "ArAI: From Reactive to Prescriptive",
+      "title": "ArAI: Advanced Reasoning & Semantics",
       "tagline": "The Digital Consciousness of Your Factory",
-      "description": "Move beyond knowing what happened. ArAI uses 'Golden Batch' fingerprinting and prescriptive modeling to detect deviations before they become defects and reduce energy consumption in real-time.",
+      "description": "Intelligence is more than text prediction. This architecture employs a modular reasoning layer to understand intent, causality, and relationships before formulating a plan.",
       "points": [
         {
           "title": "Predictive Quality",
@@ -657,9 +671,9 @@
       ]
     },
     "cwf": {
-      "title": "CWF: Agent Native Ecosystem",
+      "title": "Give a Voice to the Factory Floor",
       "tagline": "Specialized Agents. Orchestrated Intelligence.",
-      "description": "More than a chatbot. A collaborative ecosystem of specialized AI agents working in cycles to translate every industrial signal into deep context and executive Foresight.",
+      "description": "Chat With Your Factory is more than a chatbot. A collaborative ecosystem of specialized AI agents working in cycles to translate every industrial signal into deep context and executive Foresight.",
       "comparison": {
         "legacy": {
           "label": "Legacy MES Query",
@@ -672,10 +686,19 @@
           "steps": "Natural Language Query on WhatsApp/Web (No Training Required)"
         }
       },
-      "features": [
-        "WhatsApp Interworking Agent",
-        "Multi-modal Response (Text + Charts)",
-        "Natural Language Processing (NLP)"
+      "points": [
+        {
+          "title": "Ubiquity",
+          "description": "Seamless integration with WhatsApp via a specialized Interworking Agent."
+        },
+        {
+          "title": "Democratization",
+          "description": "Gives a voice to the factory, accessible to everyone from the floor operator to the CEO."
+        },
+        {
+          "title": "Latency Killer",
+          "description": "Replaces complex dashboards with simple, natural language dialogue."
+        }
       ]
     },
     "underTheHood": {

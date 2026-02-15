@@ -186,7 +186,7 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
             {/* Right: Explanation Text */}
             <div className="flex flex-col justify-center">
               <h3 className="text-white text-4xl font-bold mb-4">{operationalEnso.ensoTitle}</h3>
-              <p className="text-accent text-xl font-medium mb-8 tracking-wide">
+              <p className="text-accent text-xl font-medium mb-8 tracking-wide whitespace-pre-line">
                 {operationalEnso.ensoSubheader}
               </p>
               <p className="text-neutral-400 text-lg font-light leading-relaxed italic">

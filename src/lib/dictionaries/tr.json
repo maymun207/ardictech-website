@@ -198,7 +198,7 @@
     "tagline": "Statik Mükemmellikten Dinamik Hassasiyete Geçiş.",
     "description": "Fabrikanız statik bir makine değil, yaşayan bir geri bildirim döngüsüdür. Gerçek dönüşüm, operasyon verileri ile gerçek zamanlı kararlar arasındaki boşluğu kapattığınızda gerçekleşir.",
     "ensoTitle": "Operasyonel Ensō",
-    "ensoSubheader": "Aynı anda hem tam hem de eksik",
+    "ensoSubheader": "Yaşayan Bir Döngü.\nAynı anda hem Tam hem de Eksik",
     "ensoSubtitle": "Sürekli, insan merkezli bir operasyonel öğrenme döngüsü",
     "manufacturingExplanation": "Duyarlı Fabrikada her düğüm birbiriyle bağlantılıdır. Ensō, ham veriyi bilinçli eyleme dönüştüren, uçtan merkeze kesintisiz zeka akışını temsil eder.",
     "definition": "Ensō, Japon Zen sanatında bir seferde çizilen ve kusursuz olmayan güzelliği, enerjinin kesintisiz akışını temsil eden bir semboldür. Bizim felsefemizde bu, büyüme, bağlantı ve üretim zekasının sürekli döngüsünü temsil eder.",
@@ -540,6 +540,7 @@
   "deploymentModel": {
     "title": "Üretim Zekası",
     "subtitle": "4 KATMANLI MİMARİ",
+    "pathsTitle": "Mirasınıza saygı duyun, fabrikanızı yeniden icat edin.",
     "existingStack": {
       "title": "Mevcut Teknoloji Yığınınız İçin",
       "description": "Değiştirmeyiz, bağlar ve geliştiririz. Platformlarımız tasarım gereği açıktır.",
@@ -635,6 +636,19 @@
           "title": "Tam İzlenebilirlik",
           "description": "AB Dijital Ürün Pasaportu (DPP) standartlarına uygun birim bazlı takip."
         }
+      ],
+      "modules": [
+        "Authorisation and Authentication",
+        "ERP Integration Order Tracking",
+        "Raw Materials & Additives",
+        "Recipe Management",
+        "Order Management",
+        "Laboratory & Forms Management",
+        "Material Transfers & Interventions",
+        "Shipment and Return Management",
+        "Reports and Monitoring",
+        "Inventory Management",
+        "Digital Factory (Live)"
       ]
     },
     "arai": {
@@ -672,10 +686,19 @@
           "steps": "WhatsApp/Web Üzerinden Doğal Dil Sorgusu (Eğitim Gerektirmez)"
         }
       },
-      "features": [
-        "WhatsApp Entegre Temsilci",
-        "Çok Modlu Yanıt (Metin + Grafikler)",
-        "Doğal Dil İşleme (NLP)"
+      "points": [
+        {
+          "title": "Ubiquity",
+          "description": "Seamless integration with WhatsApp via a specialized Interworking Agent."
+        },
+        {
+          "title": "Democratization",
+          "description": "Gives a voice to the factory, accessible to everyone from the floor operator to the CEO."
+        },
+        {
+          "title": "Latency Killer",
+          "description": "Replaces complex dashboards with simple, natural language dialogue."
+        }
       ]
     },
     "underTheHood": {

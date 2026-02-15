@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { X } from "lucide-react";
+import ArMESModules from "@/components/sections/ArMESModules";
 
 interface LayerArMESProps {
     dict: Dictionary;
@@ -99,7 +100,7 @@ export default function LayerArMES({ dict }: LayerArMESProps) {
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <span className="px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 text-secondary text-xs font-bold tracking-[0.2em] uppercase">
-                                Layer 2: The Digital Passport
+                                LAYER 2: THE NERVOUS SYSTEM
                             </span>
                         </div>
 
@@ -116,22 +117,14 @@ export default function LayerArMES({ dict }: LayerArMESProps) {
                         </p>
 
                         <div className="space-y-4">
-                            {armes.steps.map((step, i) => (
-                                <motion.div
-                                    key={i}
-                                    initial={{ opacity: 0, x: 20 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                                    className="relative pl-10 pb-6 border-l border-white/5 last:pb-0"
-                                >
-                                    <div className="absolute left-[-5px] top-1 h-2.5 w-2.5 rounded-full bg-secondary border border-black" />
-                                    <h3 className="text-white font-bold text-lg mb-1">{step.title}</h3>
-                                    <p className="text-neutral-400 text-sm font-light">{step.description}</p>
-                                </motion.div>
-                            ))}
+                            {/* Replaced by ArMESModules component below */}
                         </div>
                     </motion.div>
+                </div>
+
+                {/* New Honeycomb Modules Grid - Full Width */}
+                <div className="mt-24">
+                    <ArMESModules modules={armes.modules} />
                 </div>
             </div>
 

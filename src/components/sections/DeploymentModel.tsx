@@ -51,7 +51,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                                 onMouseLeave={() => setHoveredLayer(null)}
                             >
                                 <NextImage
-                                    src="/images/platform-architecture-v2.png"
+                                    src="/images/platform-architecture-v4.jpeg"
                                     alt="Ardictech 4-Layer Architecture"
                                     width={1200}
                                     height={800}
@@ -115,90 +115,7 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
                     </div>
                 </div>
 
-                {/* Paths Comparison Grid - Moved and renamed as Path A/B per user request */}
-                <div className="relative grid gap-0 md:grid-cols-2 bg-black overflow-hidden mb-8 border-b border-white/5">
-                    {/* Left Path: Existing Stack */}
-                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-white/[0.01] flex flex-col bg-black border-r border-white/5">
-                        <div className="relative z-10 flex-1 flex flex-col">
-                            <span className="inline-block px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-bold tracking-[0.2em] mb-8 w-fit">
-                                Path A
-                            </span>
 
-                            {/* Grouped Header & Description for Perfect Alignment */}
-                            <div className="md:min-h-[16rem] lg:min-h-[14rem] flex flex-col">
-                                <h3 className="mb-6 font-heading text-4xl font-bold text-white group-hover:text-accent transition-colors duration-500">
-                                    {deploymentModel.existingStack.title}
-                                </h3>
-                                <p className="mb-12 text-xl leading-relaxed text-neutral-400 font-light max-w-md">
-                                    {deploymentModel.existingStack.description}
-                                </p>
-                            </div>
-
-                            <div className="space-y-10 flex-1 flex flex-col">
-                                <div className="flex-1">
-                                    <h4 className="mb-6 font-heading text-sm font-bold tracking-[0.2em] text-accent/80">
-                                        {deploymentModel.existingStack.subtitle}
-                                    </h4>
-                                    <ul className="space-y-5">
-                                        {deploymentModel.existingStack.features.map((feature, i) => (
-                                            <li key={i} className="flex items-center gap-4 text-neutral-300 group/item">
-                                                <div className="h-px w-4 bg-accent/30 group-hover/item:w-8 transition-all duration-500" />
-                                                <span className="text-lg font-light">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="pt-10 mt-auto">
-                                    <p className="text-sm italic text-neutral-500 leading-relaxed max-w-sm">
-                                        {deploymentModel.existingStack.idealFor}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Right Path: Clean State */}
-                    <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-white/[0.01] flex flex-col bg-black">
-                        <div className="relative z-10 flex-1 flex flex-col">
-                            <span className="inline-block px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 text-secondary text-xs font-bold tracking-[0.2em] mb-8 w-fit">
-                                Path B
-                            </span>
-
-                            {/* Grouped Header & Description for Perfect Alignment */}
-                            <div className="md:min-h-[16rem] lg:min-h-[14rem] flex flex-col">
-                                <h3 className="mb-6 font-heading text-4xl font-bold text-white group-hover:text-secondary transition-colors duration-500">
-                                    {deploymentModel.cleanState.title}
-                                </h3>
-                                <p className="mb-12 text-xl leading-relaxed text-neutral-400 font-light max-w-md">
-                                    {deploymentModel.cleanState.description}
-                                </p>
-                            </div>
-
-                            <div className="space-y-10 flex-1 flex flex-col">
-                                <div className="flex-1">
-                                    <h4 className="mb-6 font-heading text-sm font-bold tracking-[0.2em] text-secondary/80">
-                                        {deploymentModel.cleanState.subtitle}
-                                    </h4>
-                                    <ul className="space-y-5">
-                                        {deploymentModel.cleanState.features.map((feature, i) => (
-                                            <li key={i} className="flex items-center gap-4 text-neutral-300 group/item">
-                                                <div className="h-px w-4 bg-secondary/30 group-hover/item:w-8 transition-all duration-500" />
-                                                <span className="text-lg font-light">{feature}</span>
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </div>
-
-                                <div className="pt-10 mt-auto">
-                                    <p className="text-sm italic text-neutral-500 leading-relaxed max-w-sm">
-                                        {deploymentModel.cleanState.idealFor}
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
 
 

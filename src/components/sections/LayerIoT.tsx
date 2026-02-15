@@ -35,7 +35,7 @@ export default function LayerIoT({ dict }: LayerIoTProps) {
                     >
                         <div className="flex items-center gap-4 mb-8">
                             <span className="px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-bold tracking-[0.2em] uppercase">
-                                Layer 1: The Nervous System
+                                LAYER 1: THE SENSES
                             </span>
                         </div>
 

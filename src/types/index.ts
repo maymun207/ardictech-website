@@ -132,6 +132,7 @@ export interface Dictionary {
   deploymentModel: {
     title: string;
     subtitle: string;
+    pathsTitle: string;
     existingStack: {
       title: string;
       description: string;
@@ -284,6 +285,7 @@ export interface Dictionary {
         title: string;
         description: string;
       }[];
+      modules: string[];
     };
     arai: {
       title: string;
@@ -310,7 +312,10 @@ export interface Dictionary {
           steps: string;
         };
       };
-      features: string[];
+      points: {
+        title: string;
+        description: string;
+      }[];
     };
     underTheHood: {
       title: string;

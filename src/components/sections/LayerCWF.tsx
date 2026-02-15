@@ -30,7 +30,7 @@ export default function LayerCWF({ dict }: LayerCWFProps) {
                 >
                     <div className="flex items-center justify-center gap-4 mb-8">
                         <span className="px-4 py-1.5 rounded-full border border-accent/20 bg-accent/5 text-accent text-xs font-bold tracking-[0.2em] uppercase">
-                            Layer 4: Agent Native Eco-System
+                            LAYER 4: THE VOICE
                         </span>
                     </div>
 

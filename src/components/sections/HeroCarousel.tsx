@@ -86,8 +86,10 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
               slide.id === "chat-with-factory"
                 ? { transform: "scale(0.7) translateX(38%)" }
                 : slide.id === "sentient-factory"
-                  ? { transform: "translateY(15%)" }
-                  : undefined
+                  ? { transform: "scale(0.7) translateX(23%)" }
+                  : slide.id === "intelligent-manufacturing"
+                    ? { transform: "scale(0.7) translateX(23%)" }
+                    : undefined
             }
           >
             <Image
