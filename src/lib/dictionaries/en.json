@@ -255,11 +255,11 @@
   },
   "ensoApproach": {
     "badge": "Our Approach",
-    "title": "Intelligence Wrapper",
-    "description": "The Evolution of Digital Implementation. We transform your operations without the risk of a full 'rip-and-replace'.",
+    "title": "Intelligent Wrapper",
+    "description": "An Intelligent Wrapper that overlays existing infrastructure to create a single thread from the sensor edge to the executive mobile device.",
     "cta": "Learn Our Approach",
     "items": [
-      "Act as the 'Intelligence Wrapper'",
+      "Act as the 'Intelligent Wrapper'",
       "Pull data from legacy systems via APIs",
       "Enrich it with AI",
       "Deliver it via conversational Interface"
@@ -637,24 +637,72 @@
           "description": "Unit-level tracking compliant with EU Digital Product Passport (DPP) standards."
         }
       ],
+      "capabilities": [
+        {
+          "title": "Contextualization",
+          "description": "ArMES transforms raw signals into operational reality by adding the 'Who, What, When' of production."
+        },
+        {
+          "title": "Orchestration",
+          "description": "Manages workflows, tracks OEE (Overall Equipment Effectiveness), and enforces quality checkpoints."
+        },
+        {
+          "title": "Integration",
+          "description": "Syncs laboratory test results directly with the production flow."
+        }
+      ],
       "modules": [
-        "Authorisation and Authentication",
-        "ERP Integration Order Tracking",
-        "Raw Materials & Additives",
-        "Recipe Management",
-        "Order Management",
-        "Laboratory & Forms Management",
-        "Material Transfers & Interventions",
-        "Shipment and Return Management",
-        "Reports and Monitoring",
-        "Inventory Management",
-        "Digital Factory (Live)"
+        {
+          "name": "Authorisation and Authentication",
+          "description": "This module handles security and user access. It supports authentication via corporate directories, standalone ARMES directories, or social accounts, with Single Sign-On (SSO) and Two-Factor Authentication available upon request. Access control is granular, allowing permissions to be set by module, screen, or even specific tabs."
+        },
+        {
+          "name": "ERP Integration Order Tracking",
+          "description": "Facilitates a two-way integration with the customer’s ERP system. It collects weekly or monthly orders, synchronizes material numbers and codes, and automatically updates the ERP with shop-floor status and raw material analysis reports."
+        },
+        {
+          "name": "Raw Materials & Additives",
+          "description": "Integrates with SCADA systems to track material levels, humidity, and utilization. It matches raw material party numbers with produced material batch/lot IDs and triggers laboratory result entries based on time, amount, or new parties."
+        },
+        {
+          "name": "Recipe Management",
+          "description": "Ensures quality criteria reporting and historic data traceability are checked against the specific recipe used on the exact date of production. Integrated with Order Management and Laboratory modules."
+        },
+        {
+          "name": "Order Management",
+          "description": "Works in tandem with ERP integration to organize production. Reporting features track processed Order_IDs over time, including details on materials, recipes, and shipped facilities."
+        },
+        {
+          "name": "Laboratory & Forms Management",
+          "description": "A digital document management system that acts as a control gate for production. Supports Maker/Checker workflows and ensures exact measurements are executed before moving to the next production step."
+        },
+        {
+          "name": "Material Transfers & Interventions",
+          "description": "Manages production flow and corrections. Enforces business rules for transfers, triggers new lot_ids, and ensures traceability by updating lot IDs with intervention details."
+        },
+        {
+          "name": "Shipment and Return Management",
+          "description": "Manages logistics of finished goods, fully integrated with the laboratory flow to ensure quality checks before shipment. Provides entity information based on material, recipe, and Lot ID."
+        },
+        {
+          "name": "Reports and Monitoring",
+          "description": "Provides comprehensive analytics including Production Analysis (Lot ID tree), Process Performance, OEE & Capacity (Overall Equipment Effectiveness), and Material Change tracking."
+        },
+        {
+          "name": "Inventory Management",
+          "description": "Tracks material levels, silo statuses, and live amounts across the factory. Integrated with Raw Materials and Digital Factory modules for real-time inventory visibility."
+        },
+        {
+          "name": "Digital Factory (Live)",
+          "description": "Creates a visual 'digital twin' of the shop floor. Displays end-to-end factory layout with live indicators for each station, showing real-time data on materials, recipes, humidity, and lot IDs."
+        }
       ]
     },
     "arai": {
       "title": "ArAI: Advanced Reasoning & Semantics",
       "tagline": "The Digital Consciousness of Your Factory",
       "description": "Intelligence is more than text prediction. This architecture employs a modular reasoning layer to understand intent, causality, and relationships before formulating a plan.",
+      "statement": "**ArAI** moves the factory beyond simple \"If/Then\" logic. By combining **Causal Reasoning** with historical data, it allows the system to understand **WHY** things happen, not just **THAT** they happened.",
       "points": [
         {
           "title": "Predictive Quality",

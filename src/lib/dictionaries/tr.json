@@ -255,11 +255,11 @@
   },
   "ensoApproach": {
     "badge": "Yaklaşımımız",
-    "title": "Zeka Sarmalı",
-    "description": "Dijital Uygulamanın Evrimi. Operasyonlarınızı tam bir 'sök-at' riski olmadan dönüştürüyoruz.",
+    "title": "Akıllı Katman",
+    "description": "Mevcut altyapıyı kapsayan, sensör ucundan yönetici mobil cihazına kadar tek bir hat oluşturan Akıllı Katman.",
     "cta": "Yaklaşımımızı Keşfedin",
     "items": [
-      "'Zeka Sarmalı' olarak hareket etme",
+      "'Akıllı Katman' olarak hareket etme",
       "Eski sistemlerden API'ler aracılığıyla veri çekme",
       "Yapay zeka ile zenginleştirme",
       "Konuşma tabanlı arayüz ile sunma"
@@ -637,24 +637,72 @@
           "description": "AB Dijital Ürün Pasaportu (DPP) standartlarına uygun birim bazlı takip."
         }
       ],
+      "capabilities": [
+        {
+          "title": "Bağlamsallaştırma",
+          "description": "ArMES, üretimin 'Kim, Ne, Ne Zaman' bilgilerini ekleyerek ham sinyalleri operasyonel gerçekliğe dönüştürür."
+        },
+        {
+          "title": "Orkestrasyon",
+          "description": "İş akışlarını yönetir, TEE (Toplam Ekipman Etkinliği) takibini yapar ve kalite kontrol noktalarını uygular."
+        },
+        {
+          "title": "Entegrasyon",
+          "description": "Laboratuvar test sonuçlarını doğrudan üretim akışıyla senkronize eder."
+        }
+      ],
       "modules": [
-        "Authorisation and Authentication",
-        "ERP Integration Order Tracking",
-        "Raw Materials & Additives",
-        "Recipe Management",
-        "Order Management",
-        "Laboratory & Forms Management",
-        "Material Transfers & Interventions",
-        "Shipment and Return Management",
-        "Reports and Monitoring",
-        "Inventory Management",
-        "Digital Factory (Live)"
+        {
+          "name": "Yetkilendirme ve Kimlik Doğrulama",
+          "description": "Bu modül güvenlik ve kullanıcı erişimini yönetir. Kurumsal dizinler, bağımsız ARMES dizinleri veya sosyal hesaplar aracılığıyla kimlik doğrulamayı destekler; talep üzerine Tek Oturum Açma (SSO) ve Çift Faktörlü Kimlik Doğrulama mevcuttur."
+        },
+        {
+          "name": "ERP Entegrasyonu Sipariş Takibi",
+          "description": "Müşterinin ERP sistemiyle iki yönlü entegrasyonu kolaylaştırır. Haftalık veya aylık siparişleri toplar, malzeme numaralarını ve kodlarını senkronize eder ve ERP'yi otomatik olarak günceller."
+        },
+        {
+          "name": "Hammaddeler ve Katkı Maddeleri",
+          "description": "Malzeme seviyelerini, nemi ve kullanımı takip etmek için SCADA sistemleriyle entegre olur. Hammadde parti numaralarını üretilen malzeme partisi/lot ID'leri ile eşleştirir."
+        },
+        {
+          "name": "Reçete Yönetimi",
+          "description": "Kalite kriterleri raporlamasının ve geçmiş veri izlenebilirliğinin, üretim tarihinde kullanılan spesifik reçeteye göre kontrol edilmesini sağlar."
+        },
+        {
+          "name": "Sipariş Yönetimi",
+          "description": "Üretimi organize etmek için ERP entegrasyonu ile uyumlu çalışır. İşlenen Sipariş ID'lerini zaman içinde takip eder, malzeme, reçete ve sevk edilen tesis detaylarını içerir."
+        },
+        {
+          "name": "Laboratuvar ve Form Yönetimi",
+          "description": "Fiziksel defterlerin ve Excel sayfalarının yerini dijital bir doküman yönetim sistemiyle alır. Üretime geçiş öncesi bir kontrol kapısı görevi görür."
+        },
+        {
+          "name": "Malzeme Transferleri ve Müdahaleler",
+          "description": "Üretim adımlarının akışını ve düzeltici eylemleri yönetir. Transferler için iş kurallarını uygular ve yeni lot ID'lerinin oluşturulmasını tetikler."
+        },
+        {
+          "name": "Sevkiyat ve İade Yönetimi",
+          "description": "Bitmiş ürünlerin lojistiğini yönetir. Laboratuvar akışıyla tam entegredir ve sevkiyat öncesi kalite kontrollerini sağlar."
+        },
+        {
+          "name": "Raporlar ve İzleme",
+          "description": "Kapsamlı analitik ve izlenebilirlik sağlar: Üretim Analizi, Süreç Performansı, OEE ve Kapasite, ve Malzeme Değişimi takibi gibi raporlar sunar."
+        },
+        {
+          "name": "Envanter Yönetimi",
+          "description": "Fabrika genelinde malzeme seviyelerini, silo durumlarını ve canlı malzeme miktarlarını takip eder."
+        },
+        {
+          "name": "Dijital Fabrika (Canlı)",
+          "description": "Üretim sahasının görsel bir 'dijital ikizi'ni oluşturur. Tüm istasyon ve ekipmanları içeren uçtan uca fabrika düzenini canlı durum göstergeleriyle sunar."
+        }
       ]
     },
     "arai": {
       "title": "ArAI: Reaktiften Yönergesele",
       "tagline": "Fabrikanızın Dijital Bilinci",
       "description": "Sadece ne olduğunu bilmenin ötesine geçin. ArAI, hatalar oluşmadan önce sapmaları tespit etmek ve enerji tüketimini gerçek zamanlı optimize etmek için 'Altın Reçete' parmak izini ve yönergesel modellemeyi kullanır.",
+      "statement": "**ArAI**, fabrikayı basit \"Eğer/O zaman\" mantığının ötesine taşır. **Nedensel Akıl Yürütmeyi** tarihsel verilerle birleştirerek, sistemin olayların sadece gerçekleştiğini değil, **NEDEN** gerçekleştiğini anlamasını sağlar.",
       "points": [
         {
           "title": "Öngörücü Kalite",

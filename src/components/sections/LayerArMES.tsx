@@ -116,8 +116,24 @@ export default function LayerArMES({ dict }: LayerArMESProps) {
                             {armes.description}
                         </p>
 
-                        <div className="space-y-4">
-                            {/* Replaced by ArMESModules component below */}
+                        <div className="space-y-6 mb-12">
+                            {armes.capabilities.map((cap, i) => (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, x: 20 }}
+                                    whileInView={{ opacity: 1, x: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                                    className="flex flex-col gap-2"
+                                >
+                                    <h3 className="text-xl font-bold text-white">
+                                        {cap.title}:
+                                    </h3>
+                                    <p className="text-lg text-neutral-400 font-light leading-relaxed">
+                                        {cap.description}
+                                    </p>
+                                </motion.div>
+                            ))}
                         </div>
                     </motion.div>
                 </div>

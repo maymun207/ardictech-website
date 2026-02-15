@@ -285,12 +285,20 @@ export interface Dictionary {
         title: string;
         description: string;
       }[];
-      modules: string[];
+      modules: {
+        name: string;
+        description: string;
+      }[];
+      capabilities: {
+        title: string;
+        description: string;
+      }[];
     };
     arai: {
       title: string;
       tagline: string;
       description: string;
+      statement: string;
       points: {
         title: string;
         description: string;
