@@ -147,7 +147,33 @@ export interface Dictionary {
       features: string[];
       idealFor: string;
     };
-
+    wrapperStrategy: {
+      title: string;
+      subtitle: string;
+      description: string;
+      features: {
+        title: string;
+        description: string;
+      }[];
+    };
+    engagementPath: {
+      title: string;
+      subtitle: string;
+      description: string;
+      steps: {
+        title: string;
+        duration: string;
+        description: string;
+      }[];
+    };
+    roadmap: {
+      title: string;
+      subtitle: string;
+      phases: {
+        title: string;
+        items: string[];
+      }[];
+    };
   };
   footer: {
     tagline: string;

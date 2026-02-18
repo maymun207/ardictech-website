@@ -110,7 +110,7 @@ export default function HeroCarousel({ dict }: HeroCarouselProps) {
           </div>
 
           {/* Content */}
-          <div className="relative z-20 mx-auto max-w-7xl px-4 pt-[17%] pb-32 sm:px-6 lg:px-8">
+          <div className="relative z-20 mx-auto max-w-7xl px-4 pt-[27%] pb-32 sm:px-6 lg:px-8">
             <div className="max-w-3xl">
               {/* Headline */}
               <h1 className="font-heading text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">

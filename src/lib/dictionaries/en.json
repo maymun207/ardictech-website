@@ -539,8 +539,8 @@
   },
   "deploymentModel": {
     "title": "Manufacturing Intelligence",
-    "subtitle": "4 layer architecture",
-    "pathsTitle": "Respect your legacy, reinvent your factory.",
+    "subtitle": "Deployment Model",
+    "pathsTitle": "Respect Your Legacy, Reinvent Your Factory.",
     "existingStack": {
       "title": "For An Existing Stack",
       "description": "We connect and enhance, don't replace. Our platforms are open by design.",
@@ -562,6 +562,78 @@
         "Immediate Visibility (weeks, not years)"
       ],
       "idealFor": "Ideal for: companies starting or re-platforming their digital journey."
+    },
+    "wrapperStrategy": {
+      "title": "The Intelligent Wrapper Strategy",
+      "subtitle": "Overlay Architecture",
+      "description": "The core of the implementation approach is the refusal to replace legacy systems entirely. Instead, the platform connects to them to extract 'Dark Data'. An Intelligent Wrapper that overlays existing infrastructure to create a single thread from the sensor edge to the executive mobile device.",
+      "features": [
+        {
+          "title": "Non-Intrusive Connection",
+          "description": "The system utilizes an 'Overlay Strategy' that connects to existing read-only data ports via standard APIs (REST, MQTT, OPC-UA). This ensures that operations are not disrupted and machines do not need to be stopped for installation."
+        },
+        {
+          "title": "Preservation of Investment",
+          "description": "By treating the new platform as an 'Intelligence Wrapper,' companies preserve their existing IT investments while unlocking the 60–80% of machine data that is typically unanalyzed."
+        }
+      ]
+    },
+    "engagementPath": {
+      "title": "The De-risked Engagement Path",
+      "subtitle": "Invest with Absolute Confidence",
+      "description": "ARDIC employs a structured, four-step engagement model designed to validate ROI before significant capital is committed. This path moves from a pilot to enterprise scale with specific financial targets.",
+      "steps": [
+        {
+          "title": "Executive Workshop",
+          "duration": "2 Hours",
+          "description": "A no-cost session to determine a Go/No-Go decision."
+        },
+        {
+          "title": "Proof of Value (POV)",
+          "duration": "8–12 Weeks",
+          "description": "A low-risk phase with a specific goal to identify a $500,000 opportunity. If this value is not identified, the service fees may be refunded."
+        },
+        {
+          "title": "Production Pilot",
+          "duration": "12–16 Weeks",
+          "description": "A KPI-based phase to validate the AI models in a live production environment."
+        },
+        {
+          "title": "Enterprise Scale",
+          "duration": "20+ Weeks",
+          "description": "Full transformation roll-out aimed at achieving the state of 'Operational Ensō'."
+        }
+      ]
+    },
+    "roadmap": {
+      "title": "Technical Implementation Road Map",
+      "subtitle": "From Foundation to Autonomy",
+      "phases": [
+        {
+          "title": "Phase 1: Foundation",
+          "items": [
+            "Establishment of the 'Lake-house' core",
+            "Deployment of the WhatsApp-integrated assistant (CWF)",
+            "Immediate visibility and RAG capabilities"
+          ]
+        },
+        {
+          "title": "Phase 2: Real-Time & ML",
+          "items": [
+            "Deployment of streaming ingestion",
+            "Initial predictive maintenance models",
+            "Address downtime and quality issues"
+          ]
+        },
+        {
+          "title": "Phase 3: Autonomous Agents",
+          "items": [
+            "Multi-agent orchestration",
+            "Specialized agents for workflows",
+            "Human-in-the-loop oversight"
+          ]
+        }
+      ]
     }
   },
   "footer": {
@@ -719,9 +791,9 @@
       ]
     },
     "cwf": {
-      "title": "Give a Voice to the Factory Floor",
+      "title": "Give a Voice|to the Factory Floor",
       "tagline": "Specialized Agents. Orchestrated Intelligence.",
-      "description": "Chat With Your Factory is more than a chatbot. A collaborative ecosystem of specialized AI agents working in cycles to translate every industrial signal into deep context and executive Foresight.",
+      "description": "Ready to Chat with your factory? A collaborative ecosystem of specialized AI agents working in cycles to translate every industrial signal into deep context and executive Foresight.",
       "comparison": {
         "legacy": {
           "label": "Legacy MES Query",

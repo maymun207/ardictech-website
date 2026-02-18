@@ -15,9 +15,12 @@ export default function DeploymentPaths({ dict }: DeploymentPathsProps) {
         <SectionWrapper id="deployment-paths" dark className="bg-black !pt-16 !pb-32 overflow-hidden">
             <div className="mx-auto max-w-7xl relative">
                 <div className="text-center mb-16 lg:mb-24 px-4 relative z-10">
-                    <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-[1.1] max-w-5xl mx-auto">
+                    <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-[1.1] max-w-5xl mx-auto">
                         {deploymentModel.pathsTitle}
                     </h2>
+                    <p className="text-accent text-xl font-medium italic">
+                        {deploymentModel.subtitle}
+                    </p>
                 </div>
 
                 {/* Paths Comparison Grid - Moved and renamed as Path A/B per user request */}
@@ -76,7 +79,7 @@ export default function DeploymentPaths({ dict }: DeploymentPathsProps) {
                     {/* Right Path: Clean State */}
                     <div className="group p-12 md:p-20 transition-all duration-700 hover:bg-white/[0.01] flex flex-col bg-black">
                         <div className="relative z-10 flex-1 flex flex-col">
-                            <span className="inline-block px-4 py-1.5 rounded-full border border-secondary/20 bg-secondary/5 text-secondary text-xs font-bold tracking-[0.2em] mb-8 w-fit">
+                            <span className="inline-block px-4 py-1.5 rounded-full border border-[#E879F9]/20 bg-[#E879F9]/5 text-[#E879F9] text-xs font-bold tracking-[0.2em] mb-8 w-fit">
                                 Path B
                             </span>
 

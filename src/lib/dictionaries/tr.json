@@ -562,6 +562,78 @@
         "Anında Görünürlük (yıllar değil, haftalar içinde)"
       ],
       "idealFor": "Dijital yolculuğuna yeni başlayan veya sistemlerini yeniden yapılandıran şirketler için idealdir."
+    },
+    "wrapperStrategy": {
+      "title": "Akıllı Katman Stratejisi",
+      "subtitle": "Tamamlayıcı Mimari",
+      "description": "Uygulama yaklaşımımızın temeli, eski sistemleri tamamen değiştirmeyi reddetmektir. Bunun yerine platform, 'Karanlık Veriyi' çıkarmak için onlara bağlanır. Sensör kenarından yönetici mobil cihazına kadar tek bir iş parçacığı oluşturmak için mevcut altyapıyı kaplayan Akıllı bir Katman.",
+      "features": [
+        {
+          "title": "Müdahalesiz Bağlantı",
+          "description": "Sistem, standart API'ler (REST, MQTT, OPC-UA) aracılığıyla mevcut salt okunur veri portlarına bağlanan bir 'Tamamlayıcı Strateji' kullanır. Bu, operasyonların kesintiye uğramamasını ve makinelerin kurulum için durdurulmasına gerek kalmamasını sağlar."
+        },
+        {
+          "title": "Yatırımın Korunması",
+          "description": "Yeni platformu bir 'Zeka Katmanı' olarak ele alarak, şirketler mevcut BT yatırımlarını korurken genellikle analiz edilmeyen makine verilerinin %60-80'ini açığa çıkarır."
+        }
+      ]
+    },
+    "engagementPath": {
+      "title": "Risksiz Katılım Yolu",
+      "subtitle": "Tam Güvenle Yatırım Yapın",
+      "description": "ARDIC, büyük sermaye taahhüt edilmeden önce ROI'yi doğrulamak için tasarlanmış yapılandırılmış, dört aşamalı bir katılım modeli kullanır. Bu yol, belirli finansal hedeflerle pilottan kurumsal ölçeğe taşınır.",
+      "steps": [
+        {
+          "title": "Yönetici Çalıştayı",
+          "duration": "2 Saat",
+          "description": "Devam/Tamam kararı vermek için ücretsiz bir oturum."
+        },
+        {
+          "title": "Değer Kanıtı (POV)",
+          "duration": "8–12 Hafta",
+          "description": "500.000 dolarlık bir fırsatı belirlemek için belirli bir hedefe sahip düşük riskli bir aşama. Bu değer belirlenmezse, hizmet ücretleri iade edilebilir."
+        },
+        {
+          "title": "Üretim Pilotu",
+          "duration": "12–16 Hafta",
+          "description": "Yapay zeka modellerini canlı bir üretim ortamında doğrulamak için KPI tabanlı bir aşama."
+        },
+        {
+          "title": "Kurumsal Ölçek",
+          "duration": "20+ Hafta",
+          "description": "'Operasyonel Ensō' durumuna ulaşmayı amaçlayan tam dönüşüm yayılımı."
+        }
+      ]
+    },
+    "roadmap": {
+      "title": "Teknik Uygulama Yol Haritası",
+      "subtitle": "Temelden Otonomiye",
+      "phases": [
+        {
+          "title": "1. Aşama: Temel",
+          "items": [
+            "'Lake-house' çekirdeğinin kurulması",
+            "WhatsApp entegreli asistanın (CWF) dağıtımı",
+            "Anında görünürlük ve RAG yetenekleri"
+          ]
+        },
+        {
+          "title": "2. Aşama: Gerçek Zamanlı ve ML",
+          "items": [
+            "Akış tabanlı veri alımının dağıtımı",
+            "İlk öngörücü bakım modelleri",
+            "Duruş süreleri ve kalite sorunlarının giderilmesi"
+          ]
+        },
+        {
+          "title": "3. Aşama: Otonom Ajanlar",
+          "items": [
+            "Çoklu ajan orkestrası",
+            "İş akışları için özelleşmiş ajanlar",
+            "İnsan denetimli süreçler"
+          ]
+        }
+      ]
     }
   },
   "footer": {
@@ -721,7 +793,7 @@
     "cwf": {
       "title": "CWF: Ajan Yerleşik Ekosistem",
       "tagline": "Özelleşmiş Ajanlar. Yönetilen Zeka.",
-      "description": "Bir sohbet botundan daha fazlası. Her endüstriyel sinyali derin bir bağlama ve yönetici öngörüsüne dönüştürmek için döngüler halinde çalışan, özelleşmiş yapay zeka ajanlarından oluşan işbirlikçi bir ekosistem.",
+      "description": "Fabrikanızla sohbete hazır mısınız? Her endüstriyel sinyali derin bir bağlama ve yönetici öngörüsüne dönüştürmek için döngüler halinde çalışan, özelleşmiş yapay zeka ajanlarından oluşan işbirlikçi bir ekosistem.",
       "comparison": {
         "legacy": {
           "label": "Geleneksel MES Sorgusu",

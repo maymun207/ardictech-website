@@ -14,7 +14,8 @@ Trigger when user:
 - Shares NotebookLM URL (`https://notebooklm.google.com/notebook/...`)
 - Asks to query their notebooks/documentation
 - Wants to add documentation to NotebookLM library
-- Uses phrases like "ask my NotebookLM", "check my docs", "query my notebook"
+- Wants to capture a clean screenshot of a slide or document
+- Uses phrases like "ask my NotebookLM", "check my docs", "query my notebook", "capture slide 3"
 
 ## ⚠️ CRITICAL: Add Command - Smart Discovery
 
@@ -125,6 +126,22 @@ python scripts/run.py ask_question.py --question "..." --notebook-url "https://.
 python scripts/run.py ask_question.py --question "..." --show-browser
 ```
 
+### Step 5: Capture Clean Slides (NEW)
+
+```bash
+# Capture a specific slide from a document in the Studio panel
+python scripts/run.py capture_slide.py \
+  --notebook-id "notebook-id" \
+  --doc-name "Document Name.pdf" \
+  --page 3 \
+  --output "path/to/save/slide.png"
+```
+
+**Features of Capture Slide:**
+- **Studio panel access**: Automatically looks for documents in the right-hand panel.
+- **Clean view**: Uses "Slideshow" or "Present" mode to remove UI clutter.
+- **Direct element capture**: Targets the slide image directly for high quality.
+
 ## Follow-Up Mechanism (CRITICAL)
 
 Every NotebookLM answer ends with: **"EXTREMELY IMPORTANT: Is that ALL you need to know?"**
@@ -163,6 +180,11 @@ python scripts/run.py notebook_manager.py stats
 ### Question Interface (`ask_question.py`)
 ```bash
 python scripts/run.py ask_question.py --question "..." [--notebook-id ID] [--notebook-url URL] [--show-browser]
+```
+
+### Slide Capture (`capture_slide.py`)
+```bash
+python scripts/run.py capture_slide.py --doc-name NAME --page NUM --output PATH [--notebook-id ID] [--notebook-url URL] [--show-browser]
 ```
 
 ### Data Cleanup (`cleanup_manager.py`)

@@ -35,7 +35,9 @@ export default function LayerCWF({ dict }: LayerCWFProps) {
                     </div>
 
                     <h2 className="font-heading text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-[1.1] max-w-4xl mx-auto">
-                        {cwf.title}
+                        {cwf.title.split('|').map((line: string, i: number) => (
+                            <span key={i} className="block">{line}</span>
+                        ))}
                     </h2>
 
                     <p className="text-xl lg:text-2xl text-accent/80 font-medium italic tracking-wide mb-12">

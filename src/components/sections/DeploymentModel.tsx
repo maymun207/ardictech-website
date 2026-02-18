@@ -30,15 +30,18 @@ export default function DeploymentModel({ dict }: DeploymentModelProps) {
             <div className="mx-auto max-w-7xl relative">
                 {/* Title Section */}
                 <div className="mb-24 text-center">
-                    <div className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/5 px-5 py-2 mb-8">
-                        <span className="h-2 w-2 rounded-full bg-accent" />
-                        <span className="font-heading text-xs font-semibold tracking-widest text-accent uppercase">
-                            {deploymentModel.subtitle}
-                        </span>
-                    </div>
+
                     <h2 className="font-heading text-4xl font-bold sm:text-5xl lg:text-7xl text-white leading-[1.1] tracking-tight">
                         {deploymentModel.title}
                     </h2>
+                    <div className="flex justify-center mt-12">
+                        <div className="inline-flex items-center gap-2.5 rounded-full border border-accent/30 bg-accent/5 px-5 py-2">
+                            <span className="h-2 w-2 rounded-full bg-accent" />
+                            <span className="font-heading text-xs font-semibold tracking-widest text-accent uppercase">
+                                {platform.subtitle}
+                            </span>
+                        </div>
+                    </div>
                     <div className="mx-auto mt-12 h-[1px] w-24 bg-accent/30" />
                 </div>
 
