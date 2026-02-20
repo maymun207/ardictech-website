@@ -1,7 +1,6 @@
 "use client";
 
 import type { Dictionary } from "@/types";
-import SectionWrapper from "@/components/ui/SectionWrapper";
 import { motion } from "framer-motion";
 import { Zap, Shield } from "lucide-react";
 import NextImage from "next/image";
@@ -15,136 +14,106 @@ export default function WrapperStrategy({ dict }: WrapperStrategyProps) {
     const { wrapperStrategy } = deploymentModel;
 
     return (
-        <SectionWrapper id="wrapper-strategy" dark className="bg-[#050505] overflow-hidden relative">
-            {/* Background decorative elements */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px] -z-10" />
-            <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-[120px] -z-10" />
+        <section id="wrapper-strategy" className="relative w-full overflow-hidden bg-[#050505]">
+            {/* Background subtle effects */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-[120px]" />
+            <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/5 rounded-full blur-[120px]" />
 
-            <div className="mx-auto max-w-7xl relative z-10">
-                <div className="text-center mb-16 lg:mb-24">
-                    <motion.h2
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="font-heading text-4xl sm:text-5xl font-bold text-white mb-6"
-                    >
-                        {wrapperStrategy.title}
-                    </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.1 }}
-                        className="text-accent text-xl font-medium italic mb-8"
-                    >
-                        {wrapperStrategy.subtitle}
-                    </motion.p>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: 0.2 }}
-                        className="text-neutral-400 text-lg max-w-3xl mx-auto leading-relaxed"
-                    >
-                        {wrapperStrategy.description}
-                    </motion.p>
-                </div>
-
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Visual Side — Image + Animated Overlays */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        className="relative aspect-square max-w-lg mx-auto w-full rounded-[40px] border border-white/10 shadow-2xl overflow-hidden group bg-[#050505]"
-                    >
-                        {/* Base Image */}
+            <div className="relative z-10 mx-auto max-w-7xl px-6 sm:px-8 py-16 lg:py-24">
+                {/* Image with Text Overlaid on the Left */}
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.1 }}
+                    className="relative w-full rounded-3xl overflow-hidden border border-white/10 shadow-[0_0_60px_rgba(0,209,255,0.08)] mb-4 group"
+                >
+                    <div className="relative w-full aspect-[2.2/1]">
                         <NextImage
-                            src="/images/intelligent-wrapper.jpeg"
+                            src="/images/intelligent-wrapper-2.jpg"
                             alt="Intelligent Wrapper — AI overlay on factory infrastructure"
                             fill
-                            className="object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110"
+                            className="object-cover object-bottom bg-black transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                             priority
+                            quality={90}
                         />
-
-                        {/* Dark vignette overlay for depth */}
-                        <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.9)] pointer-events-none z-10" />
-
-                        {/* Gradient fade at bottom */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 pointer-events-none z-10" />
-
-                        {/* Sweeping scan line */}
-                        <motion.div
-                            animate={{ top: ["-10%", "110%"] }}
-                            transition={{ duration: 4, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
-                            className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/60 to-transparent z-20 pointer-events-none"
-                            style={{ filter: "blur(1px)" }}
-                        />
-
-                        {/* Glowing AI pulse — top-right area where the chip is */}
-                        <motion.div
-                            animate={{ opacity: [0.3, 0.8, 0.3], scale: [1, 1.15, 1] }}
-                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                            className="absolute top-[12%] right-[25%] w-20 h-20 rounded-full bg-accent/20 blur-xl z-20 pointer-events-none"
-                        />
-
-                        {/* Floating data particles */}
-                        {[...Array(5)].map((_, i) => (
-                            <motion.div
-                                key={i}
-                                animate={{
-                                    y: [0, -30, 0],
-                                    x: [0, i % 2 === 0 ? 15 : -15, 0],
-                                    opacity: [0, 0.7, 0],
-                                }}
-                                transition={{
-                                    duration: 3 + i * 0.8,
-                                    repeat: Infinity,
-                                    delay: i * 0.7,
-                                    ease: "easeInOut",
-                                }}
-                                className="absolute w-2 h-2 rounded-full bg-accent/80 z-20 pointer-events-none"
-                                style={{
-                                    top: `${30 + i * 10}%`,
-                                    right: `${15 + i * 8}%`,
-                                    boxShadow: "0 0 8px rgba(0,209,255,0.6)",
-                                }}
-                            />
-                        ))}
-
-                        {/* Subtle grid overlay for tech feel */}
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:32px_32px] z-10 pointer-events-none opacity-60" />
-                    </motion.div>
-
-                    {/* Content Side */}
-                    <div className="space-y-8">
-                        {wrapperStrategy.features.map((feature: any, i: number) => (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.3 + (i * 0.1) }}
-                                className="group p-8 rounded-3xl border border-white/5 bg-white/[0.02] hover:bg-white/[0.04] transition-all duration-500"
-                            >
-                                <div className="flex gap-6 items-start">
-                                    <div className={`p-4 rounded-2xl ${i === 0 ? "bg-accent/10" : "bg-secondary/10"} border ${i === 0 ? "border-accent/20" : "border-secondary/20"}`}>
-                                        {i === 0 ? <Zap className="w-6 h-6 text-accent" /> : <Shield className="w-6 h-6 text-secondary" />}
-                                    </div>
-                                    <div>
-                                        <h4 className="text-xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
-                                            {feature.title}
-                                        </h4>
-                                        <p className="text-neutral-400 leading-relaxed font-light">
-                                            {feature.description}
-                                        </p>
-                                    </div>
-                                </div>
-                            </motion.div>
-                        ))}
                     </div>
+
+                    {/* Gradient overlay on left side for text readability */}
+                    <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent pointer-events-none" />
+
+                    {/* Text overlaid on the left side of the image */}
+                    <div className="absolute inset-0 flex items-start pt-[10%] pointer-events-none">
+                        <div className="max-w-lg px-8 lg:px-12">
+                            <motion.h2
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg"
+                            >
+                                {wrapperStrategy.title}
+                            </motion.h2>
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.1 }}
+                                className="text-accent text-lg lg:text-xl font-medium italic mb-6 drop-shadow-md"
+                            >
+                                {wrapperStrategy.subtitle}
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: 0.2 }}
+                                className="text-neutral-200 text-sm lg:text-base leading-relaxed drop-shadow-md"
+                            >
+                                {wrapperStrategy.description}
+                            </motion.p>
+                        </div>
+                    </div>
+
+                    {/* Subtle inner shadow */}
+                    <div className="absolute inset-0 shadow-[inset_0_0_80px_rgba(0,0,0,0.6)] pointer-events-none rounded-3xl" />
+
+                    {/* Sweeping scan line */}
+                    <motion.div
+                        animate={{ top: ["-5%", "105%"] }}
+                        transition={{ duration: 4, repeat: Infinity, ease: "linear", repeatDelay: 3 }}
+                        className="absolute left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-accent/50 to-transparent pointer-events-none"
+                        style={{ filter: "blur(1px)" }}
+                    />
+                </motion.div>
+
+                {/* 2 Feature Cards — Tight Below the Image */}
+                <div className="grid md:grid-cols-2 gap-6">
+                    {wrapperStrategy.features.map((feature: any, i: number) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: 0.3 + (i * 0.15) }}
+                            className="group p-8 rounded-3xl border border-white/10 bg-white/[0.02] hover:bg-white/[0.04] hover:border-white/20 transition-all duration-500"
+                        >
+                            <div className="flex gap-6 items-start">
+                                <div className={`p-4 rounded-2xl ${i === 0 ? "bg-accent/10" : "bg-secondary/10"} border ${i === 0 ? "border-accent/20" : "border-secondary/20"}`}>
+                                    {i === 0 ? <Zap className="w-6 h-6 text-accent" /> : <Shield className="w-6 h-6 text-secondary" />}
+                                </div>
+                                <div>
+                                    <h4 className="text-xl font-bold text-white mb-4 group-hover:text-accent transition-colors">
+                                        {feature.title}
+                                    </h4>
+                                    <p className="text-neutral-400 leading-relaxed font-light">
+                                        {feature.description}
+                                    </p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    ))}
                 </div>
             </div>
-        </SectionWrapper>
+        </section>
     );
 }
