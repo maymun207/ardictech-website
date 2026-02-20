@@ -113,7 +113,7 @@ const ConnectionLine = ({ className }: { className?: string }) => (
 
 export default function ArAIArchitectureDiagram() {
     return (
-        <div className="w-full relative py-6 md:py-8 px-4 md:px-8 font-mono bg-[#050505] overflow-hidden rounded-3xl border border-white/5">
+        <div className="w-full relative py-2 md:py-3 px-4 md:px-8 font-mono bg-[#050505] overflow-hidden rounded-3xl border border-white/5">
             {/* Background Grid */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
 
@@ -163,7 +163,7 @@ export default function ArAIArchitectureDiagram() {
                                 <div className="absolute inset-0 opacity-[0.03] bg-[repeating-linear-gradient(45deg,transparent,transparent_10px,#fff_10px,#fff_20px)] pointer-events-none"></div>
 
                                 <div className="text-center mb-3 relative z-10">
-                                    <h3 className={`text-base md:text-sm lg:text-base font-bold tracking-widest uppercase ${pillar.iconColor} drop-shadow-md`}>
+                                    <h3 className={`min-h-[48px] flex items-center justify-center text-base md:text-sm lg:text-base font-bold tracking-widest uppercase ${pillar.iconColor} drop-shadow-md`}>
                                         {pillar.title}
                                     </h3>
                                     <div className={`h-1 w-8 mx-auto mt-2 rounded-full bg-current opacity-50 ${pillar.iconColor}`} />

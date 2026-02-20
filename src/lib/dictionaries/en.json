@@ -772,7 +772,7 @@
     },
     "arai": {
       "title": "ArAI: Advanced Reasoning & Semantics",
-      "tagline": "The Digital Consciousness of Your Factory",
+      "tagline": "The Digital Consciousness of the Factory",
       "description": "Intelligence is more than text prediction. This architecture employs a modular reasoning layer to understand intent, causality, and relationships before formulating a plan.",
       "statement": "**ArAI** moves the factory beyond simple \"If/Then\" logic. By combining **Causal Reasoning** with historical data, it allows the system to understand **WHY** things happen, not just **THAT** they happened.",
       "points": [

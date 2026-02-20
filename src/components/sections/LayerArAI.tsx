@@ -160,7 +160,7 @@ export default function LayerArAI({ dict }: LayerArAIProps) {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
                             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                            className="relative w-full max-w-[95vw] lg:max-w-[85vw] max-h-[90vh] mt-6 mb-6 flex flex-col items-center bg-[#050505] rounded-3xl overflow-y-auto custom-scrollbar"
+                            className="relative w-full max-w-[95vw] lg:max-w-[85vw] max-h-[95vh] lg:max-h-[90vh] mt-2 mb-6 md:mt-4 flex flex-col items-center bg-[#050505] rounded-3xl overflow-y-auto custom-scrollbar"
                             onClick={(e) => e.stopPropagation()}
                         >
                             {/* Dynamically Coded Architecture Diagram Component */}

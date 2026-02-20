@@ -3,7 +3,8 @@
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import { motion } from "framer-motion";
-import { Database, Zap, Shield, Cpu } from "lucide-react";
+import { Zap, Shield } from "lucide-react";
+import NextImage from "next/image";
 
 interface WrapperStrategyProps {
     dict: Dictionary;
@@ -50,56 +51,69 @@ export default function WrapperStrategy({ dict }: WrapperStrategyProps) {
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Visual Side */}
+                    {/* Visual Side — Image + Animated Overlays */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         whileInView={{ opacity: 1, scale: 1 }}
                         viewport={{ once: true }}
-                        className="relative aspect-square max-w-lg mx-auto w-full flex items-center justify-center p-8 bg-[#0A0A0A] rounded-[40px] border border-white/5 shadow-2xl overflow-hidden group"
+                        className="relative aspect-square max-w-lg mx-auto w-full rounded-[40px] border border-white/10 shadow-2xl overflow-hidden group bg-[#050505]"
                     >
-                        {/* Animated Grid Lines */}
-                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,black,transparent)]" />
+                        {/* Base Image */}
+                        <NextImage
+                            src="/images/intelligent-wrapper.jpeg"
+                            alt="Intelligent Wrapper — AI overlay on factory infrastructure"
+                            fill
+                            className="object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-110"
+                            priority
+                        />
 
-                        {/* The "Wrapper" Circle */}
-                        <div className="relative w-full h-full border-2 border-dashed border-accent/20 rounded-full flex items-center justify-center animate-[spin_60s_linear_infinite]">
-                            <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-accent rounded-full blur-sm animate-pulse" />
-                            <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-6 h-6 bg-secondary rounded-full blur-sm animate-pulse" />
-                        </div>
+                        {/* Dark vignette overlay for depth */}
+                        <div className="absolute inset-0 shadow-[inset_0_0_120px_rgba(0,0,0,0.9)] pointer-events-none z-10" />
 
-                        {/* Central Icon */}
-                        <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="relative w-48 h-48 bg-gradient-to-br from-accent/20 to-secondary/20 rounded-3xl p-[1px]">
-                                <div className="w-full h-full bg-[#0D0D0D] rounded-3xl flex flex-col items-center justify-center p-6 text-center border border-white/10">
-                                    <Cpu className="w-12 h-12 text-accent mb-4" />
-                                    <span className="text-white font-bold text-sm tracking-widest uppercase">Intelligent Wrapper</span>
-                                </div>
-                            </div>
-                        </div>
+                        {/* Gradient fade at bottom */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30 pointer-events-none z-10" />
 
-                        {/* Floating Legacy Data Points */}
-                        {[...Array(6)].map((_, i) => (
+                        {/* Sweeping scan line */}
+                        <motion.div
+                            animate={{ top: ["-10%", "110%"] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "linear", repeatDelay: 2 }}
+                            className="absolute left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/60 to-transparent z-20 pointer-events-none"
+                            style={{ filter: "blur(1px)" }}
+                        />
+
+                        {/* Glowing AI pulse — top-right area where the chip is */}
+                        <motion.div
+                            animate={{ opacity: [0.3, 0.8, 0.3], scale: [1, 1.15, 1] }}
+                            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                            className="absolute top-[12%] right-[25%] w-20 h-20 rounded-full bg-accent/20 blur-xl z-20 pointer-events-none"
+                        />
+
+                        {/* Floating data particles */}
+                        {[...Array(5)].map((_, i) => (
                             <motion.div
                                 key={i}
                                 animate={{
-                                    y: [0, -20, 0],
-                                    x: [0, i % 2 === 0 ? 10 : -10, 0],
-                                    opacity: [0.3, 0.6, 0.3]
+                                    y: [0, -30, 0],
+                                    x: [0, i % 2 === 0 ? 15 : -15, 0],
+                                    opacity: [0, 0.7, 0],
                                 }}
                                 transition={{
-                                    duration: 3 + i,
+                                    duration: 3 + i * 0.8,
                                     repeat: Infinity,
-                                    delay: i * 0.5
+                                    delay: i * 0.7,
+                                    ease: "easeInOut",
                                 }}
-                                className="absolute p-3 bg-white/5 border border-white/10 rounded-xl backdrop-blur-md"
+                                className="absolute w-2 h-2 rounded-full bg-accent/80 z-20 pointer-events-none"
                                 style={{
-                                    top: `${20 + (i * 12)}%`,
-                                    left: `${10 + (i * 15)}%`,
-                                    zIndex: 0
+                                    top: `${30 + i * 10}%`,
+                                    right: `${15 + i * 8}%`,
+                                    boxShadow: "0 0 8px rgba(0,209,255,0.6)",
                                 }}
-                            >
-                                <Database className="w-4 h-4 text-neutral-500" />
-                            </motion.div>
+                            />
                         ))}
+
+                        {/* Subtle grid overlay for tech feel */}
+                        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.015)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.015)_1px,transparent_1px)] bg-[size:32px_32px] z-10 pointer-events-none opacity-60" />
                     </motion.div>
 
                     {/* Content Side */}
