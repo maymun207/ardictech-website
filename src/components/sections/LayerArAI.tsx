@@ -167,16 +167,6 @@ export default function LayerArAI({ dict }: LayerArAIProps) {
                             <div className="w-full">
                                 <ArAIArchitectureDiagram />
                             </div>
-
-                            {/* Diagram Title Overlay */}
-                            <div className="mt-8 text-center">
-                                <h3 className="text-accent text-lg md:text-2xl font-bold tracking-[0.3em] uppercase">ArAI Neural Orchestration Architecture</h3>
-                                <div className="flex items-center justify-center gap-4 mt-3">
-                                    <div className="h-[1px] w-8 md:w-16 bg-accent/30" />
-                                    <p className="text-neutral-400 text-xs md:text-sm tracking-widest font-light">Intelligence, Orchestration, Cognition & Action</p>
-                                    <div className="h-[1px] w-8 md:w-16 bg-accent/30" />
-                                </div>
-                            </div>
                         </motion.div>
                     </motion.div>
                 )}
