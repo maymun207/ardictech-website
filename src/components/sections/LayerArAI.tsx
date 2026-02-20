@@ -7,6 +7,7 @@ import { X, Maximize2 } from "lucide-react";
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import Button from "@/components/ui/Button";
+import ArAIArchitectureDiagram from "./ArAIArchitectureDiagram";
 
 interface LayerArAIProps {
     dict: Dictionary;
@@ -159,19 +160,12 @@ export default function LayerArAI({ dict }: LayerArAIProps) {
                             animate={{ opacity: 1, scale: 1, y: 0 }}
                             exit={{ opacity: 0, scale: 0.9, y: 20 }}
                             transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                            className="relative w-full max-w-[95vw] mt-12 mb-12"
+                            className="relative w-full max-w-[95vw] lg:max-w-[85vw] max-h-[90vh] mt-6 mb-6 flex flex-col items-center bg-[#050505] rounded-3xl overflow-y-auto custom-scrollbar"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            {/* Diagram Container with aspect ratio forcing */}
-                            <div className="relative w-full aspect-[3168/1344] rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(0,209,255,0.2)] bg-[#050505]">
-                                <NextImage
-                                    src="/images/arai-architecture-v2.jpeg"
-                                    alt="ArAI Full Architecture Diagram"
-                                    fill
-                                    priority
-                                    quality={100}
-                                    className="object-contain"
-                                />
+                            {/* Dynamically Coded Architecture Diagram Component */}
+                            <div className="w-full">
+                                <ArAIArchitectureDiagram />
                             </div>
 
                             {/* Diagram Title Overlay */}

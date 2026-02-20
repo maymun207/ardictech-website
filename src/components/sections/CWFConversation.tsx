@@ -1,9 +1,12 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Maximize2 } from "lucide-react";
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
+import Button from "@/components/ui/Button";
 
 interface CWFConversationProps {
     dict: Dictionary;
@@ -11,6 +14,7 @@ interface CWFConversationProps {
 
 export default function CWFConversation({ dict }: CWFConversationProps) {
     const { cwf } = dict.architectureDetails;
+    const [isExpanded, setIsExpanded] = useState(false);
 
     return (
         <SectionWrapper id="cwf-conversation" dark className="bg-[#020202] py-24 sm:py-32 overflow-hidden relative">
@@ -100,7 +104,93 @@ export default function CWFConversation({ dict }: CWFConversationProps) {
                         <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-accent/5 rounded-full blur-[60px] -z-10" />
                     </motion.div>
                 </div>
+
+                {/* CWF Ecosystem — See our architecture */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.8 }}
+                    className="mt-24 text-center"
+                >
+                    <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+                        {cwf.ecosystemTitle}
+                    </h3>
+                    <p className="text-neutral-400 font-light text-lg max-w-2xl mx-auto mb-10">
+                        {cwf.ecosystemDescription}
+                    </p>
+                    <Button
+                        onClick={() => setIsExpanded(true)}
+                        variant="primary"
+                        size="lg"
+                    >
+                        <Maximize2 className="mr-3 h-5 w-5" />
+                        See our architecture
+                    </Button>
+                </motion.div>
             </div>
+
+            {/* Architecture Modal Overlay */}
+            <AnimatePresence>
+                {isExpanded && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-xl p-4 md:p-12"
+                        onClick={() => setIsExpanded(false)}
+                    >
+                        <motion.button
+                            initial={{ opacity: 0, scale: 0.5 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            className="absolute top-8 right-8 text-white/50 hover:text-white transition-colors z-[110]"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                setIsExpanded(false);
+                            }}
+                        >
+                            <X className="w-8 h-8" />
+                        </motion.button>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9, y: 20 }}
+                            animate={{ opacity: 1, scale: 1, y: 0 }}
+                            exit={{ opacity: 0, scale: 0.9, y: 20 }}
+                            transition={{ type: "spring", damping: 30, stiffness: 300 }}
+                            className="relative w-full max-w-[95vw] mt-12 mb-12"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <div className="relative w-full aspect-[2/1] rounded-2xl overflow-hidden border border-white/10 shadow-[0_0_100px_rgba(0,209,255,0.2)] bg-[#050505]">
+                                <Image
+                                    src="/images/CWF Ecosystem.jpeg"
+                                    alt="CWF Ecosystem Architecture Diagram"
+                                    fill
+                                    priority
+                                    quality={100}
+                                    className="object-contain"
+                                />
+                            </div>
+
+                            <div className="mt-8 text-center">
+                                <h3 className="text-accent text-lg md:text-2xl font-bold tracking-[0.3em] uppercase">
+                                    {cwf.ecosystemTitle}
+                                </h3>
+                                <div className="flex items-center justify-center gap-4 mt-3">
+                                    <div className="h-[1px] w-8 md:w-16 bg-accent/30" />
+                                    <p className="text-neutral-400 text-xs md:text-sm tracking-widest font-light">
+                                        {cwf.ecosystemDescription}
+                                    </p>
+                                    <div className="h-[1px] w-8 md:w-16 bg-accent/30" />
+                                </div>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            {/* Decorative background grid */}
+            <div className="absolute inset-0 z-0 opacity-[0.03] pointer-events-none"
+                style={{ backgroundImage: 'linear-gradient(to right, #fff 1px, transparent 1px), linear-gradient(to bottom, #fff 1px, transparent 1px)', backgroundSize: '80px 80px' }} />
         </SectionWrapper>
     );
 }

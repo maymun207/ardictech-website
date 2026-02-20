@@ -806,6 +806,8 @@
           "steps": "Natural Language Query on WhatsApp/Web (No Training Required)"
         }
       },
+      "ecosystemTitle": "CWF Ecosystem",
+      "ecosystemDescription": "This hierarchy transforms raw industrial data into conversational intelligence.",
       "points": [
         {
           "title": "Ubiquity",

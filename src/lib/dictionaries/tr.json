@@ -806,6 +806,8 @@
           "steps": "WhatsApp/Web Üzerinden Doğal Dil Sorgusu (Eğitim Gerektirmez)"
         }
       },
+      "ecosystemTitle": "CWF Ekosistemi",
+      "ecosystemDescription": "Bu hiyerarşi, ham endüstriyel veriyi konuşma tabanlı zekaya dönüştürür.",
       "points": [
         {
           "title": "Ubiquity",

@@ -334,6 +334,8 @@ export interface Dictionary {
       title: string;
       tagline: string;
       description: string;
+      ecosystemTitle: string;
+      ecosystemDescription: string;
       comparison: {
         legacy: {
           label: string;

@@ -12,7 +12,6 @@ import LayerIoT from "@/components/sections/LayerIoT";
 import LayerArMES from "@/components/sections/LayerArMES";
 import LayerArAI from "@/components/sections/LayerArAI";
 import CWFConversation from "@/components/sections/CWFConversation";
-import LayerCWF from "@/components/sections/LayerCWF";
 import DeploymentPaths from "@/components/sections/DeploymentPaths";
 import UnderTheHood from "@/components/sections/UnderTheHood";
 import CaseStudy from "@/components/sections/CaseStudy";
@@ -48,7 +47,6 @@ export default async function HomePage({
       <LayerArMES dict={dict} />
       <LayerArAI dict={dict} />
       <CWFConversation dict={dict} />
-      <LayerCWF dict={dict} />
       <DeploymentPaths dict={dict} />
       <WrapperStrategy dict={dict} />
       <EngagementPath dict={dict} />
