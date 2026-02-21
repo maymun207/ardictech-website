@@ -201,6 +201,23 @@
     "ensoSubheader": "A Living Circle.\nComplete and Incomplete at the same time",
     "ensoSubtitle": "A continuous, human-in-the-loop operational learning cycle",
     "manufacturingExplanation": "In the Sentient Factory, every node is connected. The Ensō represents the seamless flow of intelligence from edge to core, turning raw data into conscious action.",
+    "pillars": [
+      {
+        "title": "The Intelligence Wrapper",
+        "subtitle": "Overlay Strategy",
+        "description": "Rather than 'rip-and-replace,' the ecosystem respects legacy investments by overlaying them. It connects to read-only APIs to unlock 'Dark Data'—the 60–80% of machine data that typically goes unanalyzed—converting it into value without disrupting operations."
+      },
+      {
+        "title": "Democratization of Data",
+        "subtitle": "Conversational Access",
+        "description": "By utilizing conversational interfaces and mobile-first agents (WhatsApp), the system removes the barrier of complex technical dashboards. It enables any authorized stakeholder to query the factory as if it were a colleague, fostering a culture where data is accessible to all."
+      },
+      {
+        "title": "Prescriptive Operations",
+        "subtitle": "Shaping the Future",
+        "description": "The future defined by this ecosystem is one where systems do not just report on the past but actively shape the future. The platform identifies specific financial losses (e.g., $8–12M in Dark Data Loss) and provides actionable, agent-driven prescriptions to recover that value, driving metrics like OEE up by 8–15%."
+      }
+    ],
     "definition": "Ensō is a symbol in Japanese Zen calligraphy, a simple circle drawn in one stroke that represents the beauty of imperfection and the seamless flow of energy. In our philosophy, it represents the continuous loop of growth, connection, and manufacturing intelligence.",
     "steps": [
       {

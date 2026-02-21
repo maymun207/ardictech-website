@@ -201,6 +201,23 @@
     "ensoSubheader": "Yaşayan Bir Döngü.\nAynı anda hem Tam hem de Eksik",
     "ensoSubtitle": "Sürekli, insan merkezli bir operasyonel öğrenme döngüsü",
     "manufacturingExplanation": "Duyarlı Fabrikada her düğüm birbiriyle bağlantılıdır. Ensō, ham veriyi bilinçli eyleme dönüştüren, uçtan merkeze kesintisiz zeka akışını temsil eder.",
+    "pillars": [
+      {
+        "title": "Akıllı Katman",
+        "subtitle": "Tamamlayıcı Strateji",
+        "description": "Mevcut sistemleri 'söküp değiştirmek' yerine ekosistem, eski yatırımlara saygı göstererek onların üzerine katman oluşturur. Salt okunur API'lere bağlanarak, genellikle analiz edilmeyen makine verilerinin %60-80'ini oluşturan 'Karanlık Veriyi' açığa çıkarır ve operasyonları bozmadan değere dönüştürür."
+      },
+      {
+        "title": "Verinin Demokratikleştirilmesi",
+        "subtitle": "Konuşma Tabanlı Erişim",
+        "description": "Konuşma tabanlı arayüzler ve mobil öncelikli ajanlar (WhatsApp) kullanarak sistem, karmaşık teknik panoların yarattığı bariyeri ortadan kaldırır. Yetkili herhangi bir paydaşın fabrikayı bir iş arkadaşıymış gibi sorgulamasını sağlar ve verinin herkes tarafından erişilebilir olduğu bir kültür oluşturur."
+      },
+      {
+        "title": "Yönergesel Operasyonlar",
+        "subtitle": "Geleceği Şekillendirmek",
+        "description": "Bu ekosistem tarafından tanımlanan gelecek, sistemlerin sadece geçmişi raporlamadığı, geleceği aktif olarak şekillendirdiği bir gelecektir. Platform, belirli finansal kayıpları (ör. Karanlık Veri Kaybında 8-12M$) tespit eder ve bu değeri geri kazanmak için aksiyon alınabilir, ajan odaklı reçeteler sunarak OEE gibi metrikleri %8-15 artırır."
+      }
+    ],
     "definition": "Ensō, Japon Zen sanatında bir seferde çizilen ve kusursuz olmayan güzelliği, enerjinin kesintisiz akışını temsil eden bir semboldür. Bizim felsefemizde bu, büyüme, bağlantı ve üretim zekasının sürekli döngüsünü temsil eder.",
     "steps": [
       {

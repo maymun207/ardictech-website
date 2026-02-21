@@ -2,11 +2,9 @@
 
 import type { Dictionary } from "@/types";
 import SectionWrapper from "@/components/ui/SectionWrapper";
-import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import { useState } from "react";
-import Button from "@/components/ui/Button";
-import { ArrowRight, Presentation, Wallet, Rocket, CheckCircle2 } from "lucide-react";
+import { Presentation, Wallet, Rocket, CheckCircle2 } from "lucide-react";
 
 interface EngagementPathProps {
     dict: Dictionary;
@@ -18,8 +16,12 @@ export default function EngagementPath({ dict }: EngagementPathProps) {
     const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
 
     const icons = [Presentation, Wallet, Rocket, CheckCircle2];
-    const colors = ["text-accent", "text-secondary", "text-[#E879F9]", "text-green-400"];
-    const glowColors = ["shadow-accent/40", "shadow-secondary/40", "shadow-[#E879F9]/40", "shadow-green-400/40"];
+    const accentColors = [
+        { text: "text-accent", bg: "bg-accent", border: "border-accent", glow: "shadow-accent/50" },
+        { text: "text-secondary", bg: "bg-secondary", border: "border-secondary", glow: "shadow-secondary/50" },
+        { text: "text-[#E879F9]", bg: "bg-[#E879F9]", border: "border-[#E879F9]", glow: "shadow-[#E879F9]/50" },
+        { text: "text-green-400", bg: "bg-green-400", border: "border-green-400", glow: "shadow-green-400/50" },
+    ];
 
     return (
         <SectionWrapper id="engagement-path" dark className="bg-black relative overflow-hidden">
@@ -27,6 +29,7 @@ export default function EngagementPath({ dict }: EngagementPathProps) {
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-full bg-[radial-gradient(circle_at_50%_50%,rgba(0,209,255,0.05)_0%,transparent_70%)] pointer-events-none" />
 
             <div className="mx-auto max-w-7xl relative z-10">
+                {/* Header */}
                 <div className="text-center mb-16 lg:mb-24">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
@@ -56,103 +59,114 @@ export default function EngagementPath({ dict }: EngagementPathProps) {
                     </motion.p>
                 </div>
 
-                {/* Main Infographic Image */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    className="relative w-full max-w-6xl mx-auto mb-20 bg-[#050505] rounded-[40px] border border-white/5 p-4 shadow-2xl group"
-                >
-                    <div className="relative aspect-[1200/540] rounded-[32px] overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000">
-                        <Image
-                            src="/milestones.jpeg"
-                            alt="De-risked Engagement Path Milestones"
-                            fill
-                            className="object-contain"
-                            priority
+                {/* ═══════════════════════════════════════════════════════ */}
+                {/* ANIMATED TIMELINE — Replaces the old milestones.jpeg  */}
+                {/* ═══════════════════════════════════════════════════════ */}
+                <div className="relative">
+                    {/* Horizontal progress line (desktop) */}
+                    <div className="hidden lg:block absolute top-[60px] left-[12.5%] right-[12.5%] h-[2px] bg-white/10 z-0">
+                        {/* Animated fill */}
+                        <motion.div
+                            initial={{ scaleX: 0 }}
+                            whileInView={{ scaleX: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+                            className="h-full bg-gradient-to-r from-accent via-secondary via-[#E879F9] to-green-400 origin-left"
                         />
-                        {/* Overlay to bridge the gaps */}
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none" />
+                        {/* Moving light particle */}
+                        <motion.div
+                            animate={{ left: ["0%", "100%"] }}
+                            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 1 }}
+                            className="absolute top-1/2 -translate-y-1/2 w-8 h-[2px] bg-white blur-[3px]"
+                        />
                     </div>
-                </motion.div>
 
-                {/* Interactive Hover Cards Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-                    {engagementPath.steps.map((step: any, i: number) => {
-                        const Icon = icons[i];
-                        const isHovered = hoveredIdx === i;
+                    {/* Vertical progress line (mobile) */}
+                    <div className="lg:hidden absolute top-0 bottom-0 left-[28px] w-[2px] bg-white/10 z-0">
+                        <motion.div
+                            initial={{ scaleY: 0 }}
+                            whileInView={{ scaleY: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 2, delay: 0.5, ease: "easeOut" }}
+                            className="w-full h-full bg-gradient-to-b from-accent via-secondary via-[#E879F9] to-green-400 origin-top"
+                        />
+                    </div>
 
-                        return (
-                            <motion.div
-                                key={i}
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: 0.1 * i }}
-                                onMouseEnter={() => setHoveredIdx(i)}
-                                onMouseLeave={() => setHoveredIdx(null)}
-                                className={`relative p-8 rounded-[32px] border transition-all duration-500 cursor-default h-full flex flex-col ${isHovered
-                                        ? `bg-white/[0.05] border-white/20 ${glowColors[i]} shadow-2xl scale-[1.02] z-20`
-                                        : "bg-white/[0.02] border-white/5 z-10"
-                                    }`}
-                            >
-                                <div className="flex items-center gap-4 mb-6">
-                                    <div className={`p-4 rounded-2xl bg-white/5 border border-white/10 ${colors[i]}`}>
-                                        <Icon className="w-6 h-6" />
-                                    </div>
-                                    <span className="text-white/30 font-mono text-sm font-bold">0{i + 1}</span>
-                                </div>
+                    {/* Timeline Nodes + Cards */}
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6 relative z-10">
+                        {engagementPath.steps.map((step: any, i: number) => {
+                            const Icon = icons[i];
+                            const color = accentColors[i];
+                            const isHovered = hoveredIdx === i;
 
-                                <h4 className={`text-xl font-bold text-white mb-2 transition-colors ${isHovered ? colors[i] : ""}`}>
-                                    {step.title}
-                                </h4>
-
-                                <span className={`text-xs font-bold tracking-widest uppercase mb-4 ${colors[i]}`}>
-                                    {step.duration}
-                                </span>
-
-                                <p className="text-neutral-400 text-sm leading-relaxed font-light flex-1">
-                                    {step.description}
-                                </p>
-
-                                {/* Hover Detail Expansion */}
-                                <AnimatePresence>
-                                    {isHovered && (
+                            return (
+                                <motion.div
+                                    key={i}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2 + i * 0.15 }}
+                                    onMouseEnter={() => setHoveredIdx(i)}
+                                    onMouseLeave={() => setHoveredIdx(null)}
+                                    className="flex flex-col items-center lg:items-center"
+                                >
+                                    {/* Node Circle */}
+                                    <motion.div
+                                        animate={isHovered ? { scale: 1.15 } : { scale: 1 }}
+                                        className={`relative flex items-center justify-center w-[56px] h-[56px] rounded-full border-2 ${color.border} bg-black mb-6 transition-shadow duration-500 ${isHovered ? `shadow-[0_0_25px] ${color.glow}` : ""}`}
+                                    >
+                                        <Icon className={`w-6 h-6 ${color.text}`} />
+                                        {/* Pulse ring */}
                                         <motion.div
-                                            initial={{ opacity: 0, height: 0 }}
-                                            animate={{ opacity: 1, height: "auto" }}
-                                            exit={{ opacity: 0, height: 0 }}
-                                            className="mt-6 pt-6 border-t border-white/10"
+                                            animate={{ scale: [1, 1.6, 1], opacity: [0.4, 0, 0.4] }}
+                                            transition={{ duration: 3, repeat: Infinity, delay: i * 0.5 }}
+                                            className={`absolute inset-0 rounded-full border ${color.border} opacity-0`}
+                                        />
+                                    </motion.div>
+
+                                    {/* Step Number */}
+                                    <span className={`text-xs font-mono font-bold ${color.text} tracking-widest mb-2`}>
+                                        STEP 0{i + 1}
+                                    </span>
+
+                                    {/* Duration Badge */}
+                                    <span className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase border ${color.border} ${color.text} bg-white/[0.03] mb-4`}>
+                                        {step.duration}
+                                    </span>
+
+                                    {/* Card */}
+                                    <div
+                                        className={`w-full p-6 rounded-2xl border transition-all duration-500 text-center lg:text-center ${isHovered
+                                            ? `bg-white/[0.06] border-white/20 shadow-2xl ${color.glow} shadow-lg`
+                                            : "bg-white/[0.02] border-white/5"
+                                            }`}
+                                    >
+                                        <h4 className={`text-lg font-bold text-white mb-3 transition-colors ${isHovered ? color.text : ""}`}>
+                                            {step.title}
+                                        </h4>
+                                        <p className="text-neutral-400 text-sm leading-relaxed font-light">
+                                            {step.description}
+                                        </p>
+
+                                        {/* Hover indicator */}
+                                        <motion.div
+                                            initial={false}
+                                            animate={{ opacity: isHovered ? 1 : 0, height: isHovered ? "auto" : 0 }}
+                                            className="overflow-hidden"
                                         >
-                                            <div className="flex items-center gap-2">
-                                                <div className={`w-1.5 h-1.5 rounded-full ${colors[i]} animate-pulse`} />
-                                                <span className="text-[10px] font-bold text-white uppercase tracking-widest">Active Verification Step</span>
+                                            <div className="mt-4 pt-4 border-t border-white/10 flex items-center justify-center gap-2">
+                                                <div className={`w-1.5 h-1.5 rounded-full ${color.bg} animate-pulse`} />
+                                                <span className="text-[10px] font-bold text-white/60 uppercase tracking-widest">
+                                                    {i === 0 ? "No Cost" : i === 1 ? "Low Risk" : i === 2 ? "KPI Validated" : "Full Scale"}
+                                                </span>
                                             </div>
                                         </motion.div>
-                                    )}
-                                </AnimatePresence>
-                            </motion.div>
-                        );
-                    })}
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
                 </div>
-
-                {/* Standard CTA Button */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: 0.4 }}
-                    className="mt-24 text-center"
-                >
-                    <Button
-                        href="#contact"
-                        variant="primary"
-                        size="lg"
-                    >
-                        Book an Executive Workshop
-                        <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                </motion.div>
             </div>
         </SectionWrapper>
     );

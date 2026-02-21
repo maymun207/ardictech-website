@@ -195,6 +195,45 @@ export default function OperationalEnso({ dict }: OperationalEnsoProps) {
             </div>
           </div>
 
+          {/* Pillar Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
+            {operationalEnso.pillars.map((pillar, i) => {
+              const icons = ['🧠', '💬', '🎯'];
+              return (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.15, duration: 0.6 }}
+                  className="relative group p-8 rounded-3xl bg-white/[0.03] border border-white/[0.06] hover:border-accent/30 transition-all duration-500 overflow-hidden"
+                >
+                  {/* Hover glow */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 bg-gradient-to-br from-accent/5 via-transparent to-transparent pointer-events-none" />
+
+                  {/* Icon */}
+                  <div className="text-3xl mb-5">{icons[i]}</div>
+
+                  {/* Title & Subtitle */}
+                  <h4 className="text-white text-xl font-bold mb-1 group-hover:text-accent transition-colors duration-300">
+                    {pillar.title}
+                  </h4>
+                  <p className="text-accent/70 text-xs font-bold tracking-[0.2em] uppercase mb-5">
+                    {pillar.subtitle}
+                  </p>
+
+                  {/* Description */}
+                  <p className="text-neutral-400 text-sm font-light leading-relaxed">
+                    {pillar.description}
+                  </p>
+
+                  {/* Bottom accent line */}
+                  <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-accent/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                </motion.div>
+              );
+            })}
+          </div>
+
           {/* Explanation Text Above Cards */}
           <div className="max-w-4xl mx-auto text-center mb-12">
             <p className="text-white/90 text-2xl md:text-3xl font-medium leading-relaxed">

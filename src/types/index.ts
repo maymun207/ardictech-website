@@ -260,6 +260,11 @@ export interface Dictionary {
     ensoSubheader: string;
     ensoSubtitle: string;
     manufacturingExplanation: string;
+    pillars: {
+      title: string;
+      subtitle: string;
+      description: string;
+    }[];
     definition: string;
     steps: {
       id: string;
